@@ -13,9 +13,9 @@ namespace SlimeColorShop.Gameplay
 
         void Start()
         {
-            redColorSlider.Init(this, Color.red);
-            greenColorSlider.Init(this, Color.green);
-            blueColorSlider.Init(this, Color.blue);
+            redColorSlider.Init(this, Color.red, UpdateTargetColor);
+            greenColorSlider.Init(this, Color.green, UpdateTargetColor);
+            blueColorSlider.Init(this, Color.blue, UpdateTargetColor);
 
             InitButtons();
         }

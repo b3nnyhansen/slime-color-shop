@@ -1,6 +1,8 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace SlimeColorShop.Gameplay
 {
@@ -9,12 +11,19 @@ namespace SlimeColorShop.Gameplay
         [SerializeField] private TMP_InputField colorValueText;
         [SerializeField] private Slider colorSlider;
         private ColorPicker colorPicker;
-        private bool isUpdating = false;
 
-        public void Init(ColorPicker colorPicker, Color color)
+        private bool isUpdating = false;
+        private Action onEndUpdateValueAction;
+
+        public void Init(
+            ColorPicker colorPicker,
+            Color color,
+            Action onEndUpdateValueAction
+        )
         {
             this.colorPicker = colorPicker;
             SetSliderColor(color);
+            this.onEndUpdateValueAction = onEndUpdateValueAction;
 
             colorSlider.onValueChanged.AddListener(
                 delegate
@@ -31,19 +40,20 @@ namespace SlimeColorShop.Gameplay
                         OnTextValueChanged();
                 }
             );
+
+            colorSlider.value = 255f;
         }
 
         private void OnSliderValueChanged()
         {
-            isUpdating = true;
+            SetIsUpdating(true);
             colorValueText.text = ((int)colorSlider.value).ToString();
-            colorPicker.UpdateTargetColor();
-            isUpdating = false;
+            SetIsUpdating(false);
         }
 
         private void OnTextValueChanged()
         {
-            isUpdating = true;
+            SetIsUpdating(true);
             if (int.TryParse(colorValueText.text, out int result))
             {
                 if (result > 255)
@@ -63,8 +73,7 @@ namespace SlimeColorShop.Gameplay
                 colorSlider.value = 0;
                 colorValueText.text = "0";
             }
-            colorPicker.UpdateTargetColor();
-            isUpdating = false;
+            SetIsUpdating(false);
         }
 
         public float GetSliderValue()
@@ -72,21 +81,25 @@ namespace SlimeColorShop.Gameplay
             return colorSlider.value / 255f;
         }
 
+        public bool IsUpdating()
+        {
+            return isUpdating;
+        }
+
         public void SetSliderColor(Color color)
         {
-            // ColorBlock cb = colorSlider.colors;
-            // cb.normalColor = color;
-            // cb.highlightedColor = color;
-            // cb.pressedColor = color;
-            // cb.selectedColor = color;
-            // cb.disabledColor = color;
-            // colorSlider.colors = cb;
-
             Image[] images = colorSlider.GetComponentsInChildren<Image>(true);
             foreach (Image img in images)
             {
                 img.color *= color;
             }
+        }
+
+        public void SetIsUpdating(bool isUpdating)
+        {
+            if (!isUpdating)
+                onEndUpdateValueAction?.Invoke();
+            this.isUpdating = isUpdating;
         }
     }
 }
