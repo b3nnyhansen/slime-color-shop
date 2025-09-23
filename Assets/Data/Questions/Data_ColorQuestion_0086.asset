@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b260f77eb81ec284cac61eec3990c14d, type: 3}
+  m_Name: Data_ColorQuestion_0086
+  m_EditorClassIdentifier: 
+  R: 219
+  G: 112
+  B: 147
+  ColorName: Merah violet pucat
+  ColorHexCode: '#DB7093'
+  ColorLikePhrase: Seperti selai stroberi
+  ColorCombinationPhrase: 86% merah, 44% hijau, 58% biru

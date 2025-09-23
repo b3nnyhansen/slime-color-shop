@@ -2,7 +2,6 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace SlimeColorShop.Gameplay
 {
@@ -28,7 +27,7 @@ namespace SlimeColorShop.Gameplay
             colorSlider.onValueChanged.AddListener(
                 delegate
                 {
-                    if (!isUpdating)
+                    if (!IsUpdating())
                         OnSliderValueChanged();
                 }
             );
@@ -36,7 +35,7 @@ namespace SlimeColorShop.Gameplay
             colorValueText.onValueChanged.AddListener(
                 delegate
                 {
-                    if (!isUpdating)
+                    if (!IsUpdating())
                         OnTextValueChanged();
                 }
             );
@@ -74,6 +73,11 @@ namespace SlimeColorShop.Gameplay
                 colorValueText.text = "0";
             }
             SetIsUpdating(false);
+        }
+
+        public int GetIntegerSliderValue()
+        {
+            return (int)colorSlider.value;
         }
 
         public float GetSliderValue()

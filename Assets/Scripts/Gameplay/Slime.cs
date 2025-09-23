@@ -1,16 +1,25 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Slime : MonoBehaviour
+namespace SlimeColorShop.Gameplay
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+[Serializable]
+    public class Slime : MonoBehaviour
     {
-        
-    }
+        [SerializeField] Image bodyImage;
+        [SerializeField] Image expressionImage;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void SetAppearance(Sprite bodySprite, Sprite expressionSprite)
+        {
+            bodyImage.sprite = bodySprite;
+            expressionImage.sprite = expressionSprite;
+            SetColor(Color.white);
+        }
+
+        public void SetColor(Color newColor)
+        {
+            bodyImage.color = newColor;
+        }
     }
 }

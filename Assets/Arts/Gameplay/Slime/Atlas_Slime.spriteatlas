@@ -38,84 +38,84 @@ SpriteAtlas:
     isAtlasV2: 0
     cachedData: {fileID: 0}
     packedSpriteRenderDataKeys:
-    - 28eb9150d06e6a3498d639a511d61cda: 9060932363653653245
-    - 28eb9150d06e6a3498d639a511d61cda: 854431918129019955
-    - 28eb9150d06e6a3498d639a511d61cda: 3446766396709060485
-    - bbfb0ab204e9d2c42b728c768d688829: 3108969968671159813
-    - bbfb0ab204e9d2c42b728c768d688829: -6884341949639018
-    - bbfb0ab204e9d2c42b728c768d688829: 2987229086940170886
+    - 28eb9150d06e6a3498d639a511d61cda: 21300000
+    - 399a3780f4b852d41966651cf1e7e010: 21300000
+    - bbfb0ab204e9d2c42b728c768d688829: 21300000
+    - 3e7f2214c63d9f24c91f413a2bb846b4: 21300000
+    - 3a99a414e6fe55141b50f9d455853010: 21300000
     - 7180bb6498ba5a143acc406ab9fe5dcd: -1366029819219543410
     - ddeb8fd494ee15545a7a53705f4b833a: -2125537475656028016
+    - dfd6fd1638c15374b9af4153f0df6ab9: 21300000
+    - 3e67e0260823c1e449c24e4fda1a9d28: 21300000
     - b4398d76aba81784283f4765cd83e9fe: -9099404721751556020
     - cdc3295765948de44a26db28928fa82a: -7386077837718810318
+    - b77fd3d863957de4aa867339cd0fb558: 21300000
+    - 8020b09910b5bbc41aa549671601ace1: 21300000
     - 9ae94e4a3924ec448bc441857f8ef051: -4438924616716004289
+    - 2dae1d1c9ce5fa24f88cc9587edc1ba5: 21300000
+    - 4794d1dce287b2a498925bdf321eb027: 21300000
     - f18c7e7da15c9df45b1d04c8bd352685: 7528491290148874033
-    - 0fb54ced1013abb4b8addabfb8c44a81: -2947535089763016046
-    - 0fb54ced1013abb4b8addabfb8c44a81: 6239922547100683380
-    - 0fb54ced1013abb4b8addabfb8c44a81: 8527452829918499232
+    - 0fb54ced1013abb4b8addabfb8c44a81: 21300000
     - 8c99cbfd1788ea94c819f73bd5f2c9ff: -7948120460648517106
-    - 93225c3e131ca7f42b92ef580346c7d8: 3506028811064689909
-    - 93225c3e131ca7f42b92ef580346c7d8: 455471275011830067
-    - 93225c3e131ca7f42b92ef580346c7d8: 5050370397474913014
+    - 93225c3e131ca7f42b92ef580346c7d8: 21300000
     - 90aaf35ec11aaa943b963cd6b9bd7888: -6275664628638233856
+    - e5a1662f3df7f1a46a99cf6d8c9f287a: 21300000
     - c063492f6aa932649a56550992789f0a: 5998090866509048081
     - 5357a06fa56161e429e62aa6e277ab38: -3641795964515294293
-    - 02f40bcf6f7707c4184b239ba307c15f: -2181490678282421001
-    - 02f40bcf6f7707c4184b239ba307c15f: -2560823051019052654
-    - 02f40bcf6f7707c4184b239ba307c15f: 1668586842316800377
+    - 02f40bcf6f7707c4184b239ba307c15f: 21300000
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
-  - {fileID: 9060932363653653245, guid: 28eb9150d06e6a3498d639a511d61cda, type: 3}
-  - {fileID: 854431918129019955, guid: 28eb9150d06e6a3498d639a511d61cda, type: 3}
-  - {fileID: 3446766396709060485, guid: 28eb9150d06e6a3498d639a511d61cda, type: 3}
-  - {fileID: 3108969968671159813, guid: bbfb0ab204e9d2c42b728c768d688829, type: 3}
-  - {fileID: -6884341949639018, guid: bbfb0ab204e9d2c42b728c768d688829, type: 3}
-  - {fileID: 2987229086940170886, guid: bbfb0ab204e9d2c42b728c768d688829, type: 3}
+  - {fileID: 21300000, guid: 28eb9150d06e6a3498d639a511d61cda, type: 3}
+  - {fileID: 21300000, guid: 399a3780f4b852d41966651cf1e7e010, type: 3}
+  - {fileID: 21300000, guid: bbfb0ab204e9d2c42b728c768d688829, type: 3}
+  - {fileID: 21300000, guid: 3e7f2214c63d9f24c91f413a2bb846b4, type: 3}
+  - {fileID: 21300000, guid: 3a99a414e6fe55141b50f9d455853010, type: 3}
   - {fileID: -1366029819219543410, guid: 7180bb6498ba5a143acc406ab9fe5dcd, type: 3}
   - {fileID: -2125537475656028016, guid: ddeb8fd494ee15545a7a53705f4b833a, type: 3}
+  - {fileID: 21300000, guid: dfd6fd1638c15374b9af4153f0df6ab9, type: 3}
+  - {fileID: 21300000, guid: 3e67e0260823c1e449c24e4fda1a9d28, type: 3}
   - {fileID: -9099404721751556020, guid: b4398d76aba81784283f4765cd83e9fe, type: 3}
   - {fileID: -7386077837718810318, guid: cdc3295765948de44a26db28928fa82a, type: 3}
+  - {fileID: 21300000, guid: b77fd3d863957de4aa867339cd0fb558, type: 3}
+  - {fileID: 21300000, guid: 8020b09910b5bbc41aa549671601ace1, type: 3}
   - {fileID: -4438924616716004289, guid: 9ae94e4a3924ec448bc441857f8ef051, type: 3}
+  - {fileID: 21300000, guid: 2dae1d1c9ce5fa24f88cc9587edc1ba5, type: 3}
+  - {fileID: 21300000, guid: 4794d1dce287b2a498925bdf321eb027, type: 3}
   - {fileID: 7528491290148874033, guid: f18c7e7da15c9df45b1d04c8bd352685, type: 3}
-  - {fileID: -2947535089763016046, guid: 0fb54ced1013abb4b8addabfb8c44a81, type: 3}
-  - {fileID: 6239922547100683380, guid: 0fb54ced1013abb4b8addabfb8c44a81, type: 3}
-  - {fileID: 8527452829918499232, guid: 0fb54ced1013abb4b8addabfb8c44a81, type: 3}
+  - {fileID: 21300000, guid: 0fb54ced1013abb4b8addabfb8c44a81, type: 3}
   - {fileID: -7948120460648517106, guid: 8c99cbfd1788ea94c819f73bd5f2c9ff, type: 3}
-  - {fileID: 3506028811064689909, guid: 93225c3e131ca7f42b92ef580346c7d8, type: 3}
-  - {fileID: 455471275011830067, guid: 93225c3e131ca7f42b92ef580346c7d8, type: 3}
-  - {fileID: 5050370397474913014, guid: 93225c3e131ca7f42b92ef580346c7d8, type: 3}
+  - {fileID: 21300000, guid: 93225c3e131ca7f42b92ef580346c7d8, type: 3}
   - {fileID: -6275664628638233856, guid: 90aaf35ec11aaa943b963cd6b9bd7888, type: 3}
+  - {fileID: 21300000, guid: e5a1662f3df7f1a46a99cf6d8c9f287a, type: 3}
   - {fileID: 5998090866509048081, guid: c063492f6aa932649a56550992789f0a, type: 3}
   - {fileID: -3641795964515294293, guid: 5357a06fa56161e429e62aa6e277ab38, type: 3}
-  - {fileID: -2181490678282421001, guid: 02f40bcf6f7707c4184b239ba307c15f, type: 3}
-  - {fileID: -2560823051019052654, guid: 02f40bcf6f7707c4184b239ba307c15f, type: 3}
-  - {fileID: 1668586842316800377, guid: 02f40bcf6f7707c4184b239ba307c15f, type: 3}
+  - {fileID: 21300000, guid: 02f40bcf6f7707c4184b239ba307c15f, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Slime_Expression_Flat1_0
-  - Slime_Expression_Flat1_1
-  - Slime_Expression_Flat1_2
-  - Slime_Expression_Flat4_1
-  - Slime_Expression_Flat4_0
-  - Slime_Expression_Flat4_2
+  - Slime_Expression_Flat1
+  - Slime_Expression_Sad3
+  - Slime_Expression_Flat4
+  - Slime_Expression_Sad1
+  - Slime_Expression_Happy3
   - Slime_Guest_Cow_0
   - Slime_Guest_Bird_0
+  - Slime_Expression_Happy4
+  - Slime_Expression_Happy5
   - Slime_Guest_Salamander_0
   - Slime_Guest_Cat_0
+  - Slime_Expression_Happy1
+  - Slime_Expression_Happy2
   - Slime_Guest_Octopus_0
+  - Slime_Expression_Sad2
+  - Slime_Expression_Sad4
   - Slime_Guest_Dog_0
-  - Slime_Expression_Flat3_2
-  - Slime_Expression_Flat3_0
-  - Slime_Expression_Flat3_1
+  - Slime_Expression_Flat3
   - Slime_Guest_Manta_0
-  - Slime_Expression_Flat5_0
-  - Slime_Expression_Flat5_1
-  - Slime_Expression_Flat5_2
+  - Slime_Expression_Flat5
   - Slime_Guest_Fish_0
+  - Slime_Expression_Sad5
   - Slime_Guest_Shell_0
   - Slime_Guest_Rabbit_0
-  - Slime_Expression_Flat2_2
-  - Slime_Expression_Flat2_1
-  - Slime_Expression_Flat2_0
+  - Slime_Expression_Flat2
   m_RenderDataMap: {}
   m_Tag: Atlas_Slime
   m_IsVariant: 0

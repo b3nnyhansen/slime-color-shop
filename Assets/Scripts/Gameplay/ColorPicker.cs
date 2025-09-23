@@ -11,7 +11,7 @@ namespace SlimeColorShop.Gameplay
         [SerializeField] private Button colorButton;
         [SerializeField] private Image targetImage;
 
-        void Start()
+        public void Init()
         {
             redColorSlider.Init(this, Color.red, UpdateTargetColor);
             greenColorSlider.Init(this, Color.green, UpdateTargetColor);
@@ -25,24 +25,23 @@ namespace SlimeColorShop.Gameplay
             colorButton.onClick.AddListener(
                 delegate
                 {
-                    Color32 newColor = new Color(
-                        redColorSlider.GetSliderValue(),
-                        greenColorSlider.GetSliderValue(),
-                        blueColorSlider.GetSliderValue()
+                    GameplaySceneManager.Instance.AnswerColorQuestion(
+                        redColorSlider.GetIntegerSliderValue(),
+                        greenColorSlider.GetIntegerSliderValue(),
+                        blueColorSlider.GetIntegerSliderValue()
                     );
-                    targetImage.color = newColor;
                 }
             );
         }
 
         public void UpdateTargetColor()
         {
-            Color32 newColor = new Color(
+            Color newColor = new Color(
                 redColorSlider.GetSliderValue(),
                 greenColorSlider.GetSliderValue(),
                 blueColorSlider.GetSliderValue()
             );
-            targetImage.color = newColor;
+            GameplaySceneManager.Instance.ColorSlimeTarget(newColor);
         }
     }
 }

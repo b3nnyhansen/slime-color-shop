@@ -1,5 +1,12 @@
 <Project>
   <PropertyGroup>
+    <!-- Force override even if project already sets LangVersion -->
+    <LangVersion>9.0</LangVersion>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+
+  <!-- Ensure this applies to all Unity editor projects -->
+  <PropertyGroup Condition="$(MSBuildProjectName.EndsWith('-Editor'))">
     <LangVersion>9.0</LangVersion>
     <ImplicitUsings>disable</ImplicitUsings>
   </PropertyGroup>
