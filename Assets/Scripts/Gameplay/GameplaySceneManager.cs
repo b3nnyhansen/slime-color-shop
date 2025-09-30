@@ -3,6 +3,7 @@ using SlimeColorShop.Data;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 namespace SlimeColorShop.Gameplay
 {
@@ -14,8 +15,10 @@ namespace SlimeColorShop.Gameplay
         [SerializeField] private ColorQuestionDatabase questionDatabase;
         [SerializeField] private SlimeDatabase slimeDatabase;
         [SerializeField] private TextMeshProUGUI colorQuestionText;
+        [SerializeField] private TextMeshProUGUI coinText;
         [SerializeField] private Slime targetSlime;
         private ColorQuestionEntry currentColorQuestion;
+        private bool isProcessingAnswer = false;
 
         void Start()
         {
@@ -34,30 +37,57 @@ namespace SlimeColorShop.Gameplay
         private void InitSlime()
         {
             int bodyId = UnityEngine.Random.Range(0, slimeDatabase.BodyEntryCount);
-            int expressionId = UnityEngine.Random.Range(0, slimeDatabase.ExpressionEntryCount);
+            int normalExpressionId = UnityEngine.Random.Range(0, slimeDatabase.NormalExpressionEntryCount);
+            int happyExpressionId = UnityEngine.Random.Range(0, slimeDatabase.HappyExpressionEntryCount);
+            int sadExpressionId = UnityEngine.Random.Range(0, slimeDatabase.SadExpressionEntryCount);
 
             Sprite bodySprite = slimeDatabase.GetBodyEntry(bodyId);
-            Sprite expressionSprite = slimeDatabase.GetExpressionEntry(expressionId);
+            Sprite normalExpressionSprite = slimeDatabase.GetNormalExpressionEntry(normalExpressionId);
+            Sprite happyExpressionSprite = slimeDatabase.GetHappyExpressionEntry(happyExpressionId);
+            Sprite sadExpressionSprite = slimeDatabase.GetSadExpressionEntry(sadExpressionId);
 
-            targetSlime.SetAppearance(bodySprite, expressionSprite);
+            targetSlime.Init(
+                bodySprite,
+                normalExpressionSprite,
+                happyExpressionSprite,
+                sadExpressionSprite
+            );
         }
 
         public void AnswerColorQuestion(int r, int g, int b)
         {
-            if (
-                currentColorQuestion.IsAnswerCorrect(
-                    r, g, b, GetThreshold()
-                )
-            )
-            {
-                InitQuestion();
-                InitSlime();
-            }
+            if (isProcessingAnswer)
+                return;
+
+            bool isChoice = currentColorQuestion.IsAnswerCorrect(
+                r, g, b, GetThreshold()
+            );
+            StartCoroutine(ShowResult(isChoice));
         }
 
         public void ColorSlimeTarget(Color newColor)
         {
             targetSlime.SetColor(newColor);
+        }
+
+        IEnumerator ShowResult(bool isCorrect)
+        {
+            isProcessingAnswer = true;
+            if (isCorrect)
+            {
+                IncreaseCoin();
+                targetSlime.SetExpressionToHappy();
+                UpdateColorQuestionText(ColorQuestionDisplayEnum.SUCCESS);
+            }
+            else
+            {
+                targetSlime.SetExpressionToSad();
+                UpdateColorQuestionText(ColorQuestionDisplayEnum.FAILURE);
+            }
+            yield return new WaitForSeconds(3f);
+            isProcessingAnswer = false;
+            InitQuestion();
+            InitSlime();
         }
 
         #region COLOR_QUESTION_DISPLAY
@@ -67,15 +97,25 @@ namespace SlimeColorShop.Gameplay
             NORMAL,
             HEX,
             LIKE_PHRASE,
-            COMBINATION_PHRASE
+            COMBINATION_PHRASE,
+            SUCCESS,
+            FAILURE
         }
+        ColorQuestionDisplayEnum[] regularQuestionDisplayEnums = {
+            ColorQuestionDisplayEnum.NORMAL, ColorQuestionDisplayEnum.HEX,
+            ColorQuestionDisplayEnum.LIKE_PHRASE, ColorQuestionDisplayEnum.COMBINATION_PHRASE
+        };
         private void UpdateColorQuestionText()
         {
-            ColorQuestionDisplayEnum currentDisplayOption = Utility
-                .GetRandomEnumValue<ColorQuestionDisplayEnum>();
+            ColorQuestionDisplayEnum currentDisplayOption = (ColorQuestionDisplayEnum)UnityEngine.Random.Range(
+                0, regularQuestionDisplayEnums.Length
+            );
             this.currentDisplayOption = currentDisplayOption;
-
-            switch (currentDisplayOption)
+            UpdateColorQuestionText(currentDisplayOption);
+        }
+        private void UpdateColorQuestionText(ColorQuestionDisplayEnum displayOption)
+        {
+            switch (displayOption)
             {
                 case ColorQuestionDisplayEnum.HEX:
                     colorQuestionText.text = currentColorQuestion.ColorHexCode;
@@ -85,6 +125,12 @@ namespace SlimeColorShop.Gameplay
                     break;
                 case ColorQuestionDisplayEnum.COMBINATION_PHRASE:
                     colorQuestionText.text = currentColorQuestion.ColorLikePhrase;
+                    break;
+                case ColorQuestionDisplayEnum.SUCCESS:
+                    colorQuestionText.text = "Yay! Warna ini sesuai permintaanku!";
+                    break;
+                case ColorQuestionDisplayEnum.FAILURE:
+                    colorQuestionText.text = "Warna ini tidak sesuai permintaanku...";
                     break;
                 default:
                     colorQuestionText.text = currentColorQuestion.ColorName;
@@ -110,6 +156,19 @@ namespace SlimeColorShop.Gameplay
                     break;
             }
             return threshold;
+        }
+        #endregion
+
+        #region COIN
+        int coinCount = 0;
+        private void IncreaseCoin()
+        {
+            coinCount += 10;
+            UpdateCoinText();
+        }
+        private void UpdateCoinText()
+        {
+            coinText.text = coinCount.ToString();
         }
         #endregion
     }

@@ -23,17 +23,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2eca23e5490aa6d4c88bb670bf061848, type: 2}
   - {fileID: 11400000, guid: 88f2d04743725504da8d87757870babc, type: 2}
   - {fileID: 11400000, guid: 07eb1a5409344de48a1d72fed716a6b7, type: 2}
-  ExpressionEntries:
+  NormalExpressionEntries:
   - {fileID: 11400000, guid: 5ebd9467c2503894c8eec0c270d1cafb, type: 2}
   - {fileID: 11400000, guid: d6a75185732b7e64ebe1bd6ac0da0b39, type: 2}
   - {fileID: 11400000, guid: 12100a0949810fd49996e3908305e0c7, type: 2}
   - {fileID: 11400000, guid: 061b4da44a3272340b6df1feb411699b, type: 2}
   - {fileID: 11400000, guid: ebaa016be21234744ac711766fc49962, type: 2}
+  HappyExpressionEntries:
   - {fileID: 11400000, guid: 46a1538ee73699a4b8893354fba76bd0, type: 2}
   - {fileID: 11400000, guid: 80ae3d24c0d46054c921e45ddad54432, type: 2}
   - {fileID: 11400000, guid: b828e5e4d01d39f439b4e47d461ee882, type: 2}
   - {fileID: 11400000, guid: 557d9d41166105e47a9e7426c814887b, type: 2}
   - {fileID: 11400000, guid: daa8221f2abe84f47a00f9b57d0667bf, type: 2}
+  SadExpressionEntries:
   - {fileID: 11400000, guid: 605da54eee3355440b14e422487a24cf, type: 2}
   - {fileID: 11400000, guid: 61cb58c15b9a15945a6ef41ebe7ca02d, type: 2}
   - {fileID: 11400000, guid: 163b4d5fa008b1d4b8dda84b584bfb3b, type: 2}
