@@ -9,5 +9,10 @@ namespace SlimeColorShop
             Array values = Enum.GetValues(typeof(T));
             return (T)values.GetValue(UnityEngine.Random.Range(0, values.Length));
         }
+
+        public static long GetCurrentTimestamp()
+        {
+            return DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+        }
     }
 }

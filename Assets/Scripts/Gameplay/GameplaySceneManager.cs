@@ -11,11 +11,12 @@ namespace SlimeColorShop.Gameplay
     public class GameplaySceneManager : MonoBehaviour
     {
         public static GameplaySceneManager Instance;
+        private InventoryManager inventoryManager;
         [SerializeField] private ColorPicker colorPicker;
+        [SerializeField] private RawImage blackScreenOverlay;
         [SerializeField] private ColorQuestionDatabase questionDatabase;
         [SerializeField] private SlimeDatabase slimeDatabase;
         [SerializeField] private TextMeshProUGUI colorQuestionText;
-        [SerializeField] private TextMeshProUGUI coinText;
         [SerializeField] private Slime targetSlime;
         private ColorQuestionEntry currentColorQuestion;
         private bool isProcessingAnswer = false;
@@ -23,9 +24,11 @@ namespace SlimeColorShop.Gameplay
         void Start()
         {
             Instance = this;
+            inventoryManager = InventoryManager.Instance;
             InitQuestion();
             colorPicker.Init();
             InitSlime();
+            HideBlackScreenOverlay();
         }
 
         private void InitQuestion()
@@ -34,6 +37,7 @@ namespace SlimeColorShop.Gameplay
             currentColorQuestion = questionDatabase.GetEntry(id);
             UpdateColorQuestionText();
         }
+
         private void InitSlime()
         {
             int bodyId = UnityEngine.Random.Range(0, slimeDatabase.BodyEntryCount);
@@ -88,6 +92,16 @@ namespace SlimeColorShop.Gameplay
             isProcessingAnswer = false;
             InitQuestion();
             InitSlime();
+        }
+
+        public void ShowBlackScreenOverlay()
+        {
+            blackScreenOverlay.gameObject.SetActive(true);
+        }
+
+        public void HideBlackScreenOverlay()
+        {
+            blackScreenOverlay.gameObject.SetActive(false);
         }
 
         #region COLOR_QUESTION_DISPLAY
@@ -160,15 +174,22 @@ namespace SlimeColorShop.Gameplay
         #endregion
 
         #region COIN
-        int coinCount = 0;
         private void IncreaseCoin()
         {
-            coinCount += 10;
-            UpdateCoinText();
-        }
-        private void UpdateCoinText()
-        {
-            coinText.text = coinCount.ToString();
+            int coinIncreaseValue = 5;
+            switch (currentDisplayOption)
+            {
+                case ColorQuestionDisplayEnum.HEX:
+                    coinIncreaseValue = 15;
+                    break;
+                case ColorQuestionDisplayEnum.LIKE_PHRASE:
+                    coinIncreaseValue = 10;
+                    break;
+                case ColorQuestionDisplayEnum.COMBINATION_PHRASE:
+                    coinIncreaseValue = 10;
+                    break;
+            }
+            inventoryManager.AddCoin(coinIncreaseValue);
         }
         #endregion
     }
