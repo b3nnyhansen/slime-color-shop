@@ -9,6 +9,7 @@ namespace SlimeColorShop
     {
         private InventoryManager inventoryManager;
         [SerializeField] private TextMeshProUGUI energyValueText;
+        Coroutine countdownCoroutine;
 
         private Action onCountdownEndAction;
         public void Init(
@@ -23,7 +24,12 @@ namespace SlimeColorShop
 
         public void StartCountdown()
         {
-            StartCoroutine(Countdown());
+            countdownCoroutine = StartCoroutine(Countdown());
+        }
+
+        public void StopCountdown()
+        {
+            StopCoroutine(countdownCoroutine);
         }
 
         public void SetEnergyValueText()
@@ -39,12 +45,13 @@ namespace SlimeColorShop
 
         IEnumerator Countdown()
         {
-            // int energyValue
-            // while (energyValue > 0)
-            // {
-            //     yield return new WaitForSeconds(1f);
-            //     inventoryManager.AddEnergyValue(-1);
-            // }
+            int energyValue = inventoryManager.LoadEnergyData();
+            while (energyValue > 0)
+            {
+                yield return new WaitForSeconds(1f);
+                inventoryManager.AddEnergyValue(-1);
+                energyValue = inventoryManager.LoadEnergyData();
+            }
             onCountdownEndAction?.Invoke();
             yield return new WaitForFixedUpdate();
         }

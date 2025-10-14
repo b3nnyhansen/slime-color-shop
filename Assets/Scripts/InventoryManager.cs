@@ -25,6 +25,11 @@ namespace SlimeColorShop
             energyManager.StartCountdown();
         }
 
+        public void StopEnergyCountdown()
+        {
+            energyManager.StopCountdown();
+        }
+
         public void AddEnergyValue(int value)
         {
             int curValue = LoadEnergyData();

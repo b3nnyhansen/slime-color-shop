@@ -28,6 +28,7 @@ namespace SlimeColorShop.Gameplay
             InitQuestion();
             colorPicker.Init();
             InitSlime();
+            inventoryManager.StartEnergyCountdown();
             HideBlackScreenOverlay();
         }
 
@@ -76,6 +77,7 @@ namespace SlimeColorShop.Gameplay
 
         IEnumerator ShowResult(bool isCorrect)
         {
+            inventoryManager.StopEnergyCountdown();
             isProcessingAnswer = true;
             if (isCorrect)
             {
@@ -92,6 +94,7 @@ namespace SlimeColorShop.Gameplay
             isProcessingAnswer = false;
             InitQuestion();
             InitSlime();
+            inventoryManager.StartEnergyCountdown();
         }
 
         public void ShowBlackScreenOverlay()
