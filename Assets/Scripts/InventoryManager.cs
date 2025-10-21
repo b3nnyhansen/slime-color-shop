@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -9,9 +10,10 @@ namespace SlimeColorShop
     {
         [SerializeField] private EnergyManager energyManager;
         [SerializeField] private TextMeshProUGUI coinText;
-        [SerializeField] private PlayerDataEntry energyData;
+        [SerializeField] private IntegerDataEntry energyData;
         [SerializeField] private PlayerDataEntry coinData;
         [SerializeField] private PlayerDataEntry lastLoginData;
+        private const int maximumEnergy = 60;
 
         protected override void Awake()
         {
@@ -23,6 +25,12 @@ namespace SlimeColorShop
         public void StartEnergyCountdown()
         {
             energyManager.StartCountdown();
+        }
+
+        public void StartEnergyCountdown(Action onCountdownEndAction)
+        {
+            energyManager.SetOnCountdownEndAction(onCountdownEndAction);
+            StartEnergyCountdown();
         }
 
         public void StopEnergyCountdown()
@@ -56,6 +64,11 @@ namespace SlimeColorShop
         }
 
         #region SAVE_METHODS
+        public void SaveEnergyData()
+        {
+            int value = energyData.DefaultValue;
+            energyData.SaveData(value);
+        }
         public void SaveEnergyData(int value)
         {
             energyData.SaveData(value);
@@ -67,6 +80,10 @@ namespace SlimeColorShop
         public void SaveLastLoginData()
         {
             long value = Utility.GetCurrentTimestamp();
+            SaveLastLoginData(value);
+        }
+        public void SaveLastLoginData(long value)
+        {
             lastLoginData.SaveData(value);
         }
         #endregion
@@ -74,7 +91,8 @@ namespace SlimeColorShop
         #region LOAD_METHODS
         public int LoadEnergyData()
         {
-            return (int)energyData.LoadData();
+            int value = (int)energyData.LoadData();
+            return value < maximumEnergy ? value : maximumEnergy;
         }
         public int LoadCoinData()
         {
@@ -85,5 +103,15 @@ namespace SlimeColorShop
             return (long)lastLoginData.LoadData();
         }
         #endregion
+
+        public bool IsEnergyEmpty()
+        {
+            return LoadCoinData() < 1;
+        }
+
+        public bool IsCostLessThanCoin(int cost)
+        {
+            return (cost - LoadCoinData()) < 1;
+        }
     }
 }

@@ -13,6 +13,8 @@ namespace SlimeColorShop.MainMenu
             playButton.Init(
                 delegate
                 {
+                    if (InventoryManager.Instance.IsEnergyEmpty())
+                        return;
                     LoadScene(SceneNameEnum.GAMEPLAY);
                 }
             );

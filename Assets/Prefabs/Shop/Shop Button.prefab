@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 8778997132695473528}
   - component: {fileID: 2209555241048827247}
   - component: {fileID: 2687802971184799763}
+  - component: {fileID: 4723340601700918844}
   m_Layer: 5
   m_Name: Shop Button
   m_TagString: Untagged
@@ -213,4 +214,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eac08098ba0f784c82eca8b9ba37e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopItemEntry: {fileID: 11400000, guid: 8080aed33ef872840a93869c285a013a, type: 2}
+  shopItemEntry: {fileID: 0}
+  displayText: {fileID: 1546154268387466627}
+  canvasGroup: {fileID: 4723340601700918844}
+--- !u!225 &4723340601700918844
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594713044527021775}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

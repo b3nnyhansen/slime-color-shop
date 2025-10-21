@@ -9,6 +9,7 @@ namespace SlimeColorShop
     {
         private InventoryManager inventoryManager;
         [SerializeField] private TextMeshProUGUI energyValueText;
+        private const int timeDifferenceThreshold = 900;
         Coroutine countdownCoroutine;
 
         private Action onCountdownEndAction;
@@ -17,9 +18,23 @@ namespace SlimeColorShop
             Action onCountdownEndAction = null)
         {
             this.inventoryManager = inventoryManager;
-            this.onCountdownEndAction = onCountdownEndAction;
+            SetOnCountdownEndAction(onCountdownEndAction);
 
+            ComputeTimeDifference();
             SetEnergyValueText();
+            StartCoroutine(Idle());
+        }
+
+        private void ComputeTimeDifference()
+        {
+            long prevTimeValue = inventoryManager.LoadLastLoginData();
+            long currentTimeValue = Utility.GetCurrentTimestamp();
+            long timeDifference = currentTimeValue - prevTimeValue;
+            if (timeDifference < timeDifferenceThreshold)
+                return;
+            int additionalEnergy = (int)(timeDifference / 60);
+            inventoryManager.SaveEnergyData();
+            inventoryManager.SaveLastLoginData(currentTimeValue);
         }
 
         public void StartCountdown()
@@ -32,12 +47,17 @@ namespace SlimeColorShop
             StopCoroutine(countdownCoroutine);
         }
 
+        public void SetOnCountdownEndAction(Action onCountdownEndAction)
+        {
+            this.onCountdownEndAction = onCountdownEndAction;
+        }
+
         public void SetEnergyValueText()
         {
             string text = inventoryManager.LoadEnergyData().ToString();
             SetEnergyValueText(text);
         }
-        
+
         public void SetEnergyValueText(string text)
         {
             energyValueText.text = text;
@@ -54,6 +74,15 @@ namespace SlimeColorShop
             }
             onCountdownEndAction?.Invoke();
             yield return new WaitForFixedUpdate();
+        }
+
+        IEnumerator Idle()
+        {
+            while(true)
+            {
+                ComputeTimeDifference();
+                yield return new WaitForSeconds(1f);
+            }
         }
     }
 }

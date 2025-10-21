@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 namespace SlimeColorShop
 {
@@ -13,6 +14,30 @@ namespace SlimeColorShop
         public static long GetCurrentTimestamp()
         {
             return DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+        }
+
+        public static void HideCanvasGroup(CanvasGroup canvasGroup)
+        {
+            canvasGroup.alpha = 0f;
+            DisableCanvasGroupInteractable(canvasGroup);
+        }
+
+        public static void ShowCanvasGroup(CanvasGroup canvasGroup)
+        {
+            canvasGroup.alpha = 0f;
+            EnableCanvasGroupInteractable(canvasGroup);
+        }
+
+        public static void DisableCanvasGroupInteractable(CanvasGroup canvasGroup)
+        {
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+        }
+
+        public static void EnableCanvasGroupInteractable(CanvasGroup canvasGroup)
+        {
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
         }
     }
 }

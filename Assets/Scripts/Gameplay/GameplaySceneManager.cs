@@ -1,9 +1,10 @@
 using System;
+using System.Collections;
 using SlimeColorShop.Data;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
-using System.Collections;
 
 namespace SlimeColorShop.Gameplay
 {
@@ -18,6 +19,7 @@ namespace SlimeColorShop.Gameplay
         [SerializeField] private SlimeDatabase slimeDatabase;
         [SerializeField] private TextMeshProUGUI colorQuestionText;
         [SerializeField] private Slime targetSlime;
+        [SerializeField] private Button returnButton;
         private ColorQuestionEntry currentColorQuestion;
         private bool isProcessingAnswer = false;
 
@@ -28,8 +30,14 @@ namespace SlimeColorShop.Gameplay
             InitQuestion();
             colorPicker.Init();
             InitSlime();
-            inventoryManager.StartEnergyCountdown();
             HideBlackScreenOverlay();
+            InitButtons();
+            inventoryManager.StartEnergyCountdown(
+                delegate
+                {
+                    ShowBlackScreenOverlay();
+                }
+            );
         }
 
         private void InitQuestion()
@@ -57,6 +65,26 @@ namespace SlimeColorShop.Gameplay
                 happyExpressionSprite,
                 sadExpressionSprite
             );
+        }
+
+        private void InitButtons()
+        {
+            returnButton.onClick.AddListener(
+                delegate
+                {
+                    LoadScene(SceneNameEnum.MAIN_MENU);
+                }
+            );
+        }
+
+        public void LoadScene(int sceneIndex)
+        {
+            SceneManager.LoadScene(sceneIndex);
+        }
+
+        public void LoadScene(SceneNameEnum sceneNameEnum)
+        {
+            LoadScene((int)sceneNameEnum);
         }
 
         public void AnswerColorQuestion(int r, int g, int b)
