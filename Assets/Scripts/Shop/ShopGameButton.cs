@@ -19,9 +19,14 @@ namespace SlimeColorShop.Shop
         public void UpdateButtonDisplay()
         {
             if (shopItemEntry == null)
+            {
                 Utility.HideCanvasGroup(canvasGroup);
+            }
             else
-                displayText.text = shopItemEntry.Cost.ToString();
+            {
+                displayText.text = GetItemCost().ToString();
+                Utility.ShowCanvasGroup(canvasGroup);
+            }
         }
 
         public int GetItemCost()

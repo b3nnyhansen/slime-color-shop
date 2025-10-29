@@ -24,7 +24,7 @@ namespace SlimeColorShop
 
         public static void ShowCanvasGroup(CanvasGroup canvasGroup)
         {
-            canvasGroup.alpha = 0f;
+            canvasGroup.alpha = 1f;
             EnableCanvasGroupInteractable(canvasGroup);
         }
 
