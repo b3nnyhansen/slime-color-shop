@@ -3,17 +3,17 @@ using UnityEngine;
 
 namespace SlimeColorShop.Data
 {
-    [CreateAssetMenu(fileName = "ShopItemDatabase", menuName = "Database/ShopItemDatabase")]
-    public class ShopItemDatabase : ScriptableObject
+    [CreateAssetMenu(fileName = "DecorationDatabase", menuName = "Database/DecorationDatabase")]
+    public class DecorationDatabase : ScriptableObject
     {
-        public List<ShopItemEntry> Entries;
+        public List<DecorationEntry> Entries;
 
         public int EntryCount
         {
             get { return Entries.Count; }
         }
 
-        public ShopItemEntry GetEntry(int id)
+        public DecorationEntry GetEntry(int id)
         {
             if (id < 0 || id >= EntryCount)
                 return null;

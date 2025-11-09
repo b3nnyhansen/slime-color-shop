@@ -9,6 +9,13 @@ namespace SlimeColorShop.Shop
         [SerializeField] private ShopItemEntry shopItemEntry;
         [SerializeField] private Text displayText;
         [SerializeField] private CanvasGroup canvasGroup;
+        private ShopSceneManager shopSceneManager;
+
+        public void Init(ShopSceneManager shopSceneManager)
+        {
+            this.shopSceneManager = shopSceneManager;
+            base.Init();
+        }
 
         public void SetShopItemEntry(ShopItemEntry shopItemEntry)
         {
@@ -25,7 +32,7 @@ namespace SlimeColorShop.Shop
             else
             {
                 displayText.text = GetItemCost().ToString();
-                Utility.ShowCanvasGroup(canvasGroup);
+                Utility.ShowCanvasGroup(canvasGroup, !shopItemEntry.IsBought());
             }
         }
 
@@ -39,11 +46,7 @@ namespace SlimeColorShop.Shop
             buttonComponent.onClick.AddListener(
                 delegate
                 {
-                    int cost = GetItemCost();
-                    if (!InventoryManager.Instance.IsCostLessThanCoin(cost))
-                        return;
-
-                    InventoryManager.Instance.AddCoin(-cost);
+                    shopSceneManager.ShowBuyConfirmationForm(shopItemEntry);
                     onClickAction?.Invoke();
                 }
             );

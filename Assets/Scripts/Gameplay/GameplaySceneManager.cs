@@ -3,13 +3,12 @@ using System.Collections;
 using SlimeColorShop.Data;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 namespace SlimeColorShop.Gameplay
 {
     [Serializable]
-    public class GameplaySceneManager : MonoBehaviour
+    public class GameplaySceneManager : BaseSceneManager
     {
         public static GameplaySceneManager Instance;
         private InventoryManager inventoryManager;
@@ -75,16 +74,6 @@ namespace SlimeColorShop.Gameplay
                     LoadScene(SceneNameEnum.MAIN_MENU);
                 }
             );
-        }
-
-        public void LoadScene(int sceneIndex)
-        {
-            SceneManager.LoadScene(sceneIndex);
-        }
-
-        public void LoadScene(SceneNameEnum sceneNameEnum)
-        {
-            LoadScene((int)sceneNameEnum);
         }
 
         public void AnswerColorQuestion(int r, int g, int b)

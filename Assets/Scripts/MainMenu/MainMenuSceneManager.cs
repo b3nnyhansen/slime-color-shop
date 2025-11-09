@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace SlimeColorShop.MainMenu
 {
-    public class MainMenuSceneManager : MonoBehaviour
+    public class MainMenuSceneManager : BaseSceneManager
     {
         [SerializeField] private GameButton playButton;
         [SerializeField] private GameButton shopButton;
@@ -24,16 +23,6 @@ namespace SlimeColorShop.MainMenu
                     LoadScene(SceneNameEnum.SHOP);
                 }
             );
-        }
-
-        public void LoadScene(int sceneIndex)
-        {
-            SceneManager.LoadScene(sceneIndex);
-        }
-
-        public void LoadScene(SceneNameEnum sceneNameEnum)
-        {
-            LoadScene((int)sceneNameEnum);
         }
     }
 }

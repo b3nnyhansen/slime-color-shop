@@ -22,10 +22,13 @@ namespace SlimeColorShop
             DisableCanvasGroupInteractable(canvasGroup);
         }
 
-        public static void ShowCanvasGroup(CanvasGroup canvasGroup)
+        public static void ShowCanvasGroup(CanvasGroup canvasGroup, bool isIncludingInteractable = true)
         {
             canvasGroup.alpha = 1f;
-            EnableCanvasGroupInteractable(canvasGroup);
+            if (isIncludingInteractable)
+                EnableCanvasGroupInteractable(canvasGroup);
+            else
+                DisableCanvasGroupInteractable(canvasGroup);
         }
 
         public static void DisableCanvasGroupInteractable(CanvasGroup canvasGroup)
