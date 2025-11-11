@@ -166,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shopItemDatabase: {fileID: 11400000, guid: 76cd6dcf077df67479b798c6312d09bf, type: 2}
+  decorationDatabase: {fileID: 11400000, guid: 47a335c699518b846b87475d177ad40c, type: 2}
   energyManager: {fileID: 5449416023660214969}
   coinText: {fileID: 8861824902030518786}
   energyData: {fileID: 11400000, guid: deea7547e78de804184348308a905502, type: 2}

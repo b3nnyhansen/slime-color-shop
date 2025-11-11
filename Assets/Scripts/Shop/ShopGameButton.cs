@@ -6,10 +6,11 @@ namespace SlimeColorShop.Shop
 {
     public class ShopGameButton : GameButton
     {
-        [SerializeField] private ShopItemEntry shopItemEntry;
         [SerializeField] private Text displayText;
         [SerializeField] private CanvasGroup canvasGroup;
+        [SerializeField] private Image itemImage;
         private ShopSceneManager shopSceneManager;
+        private ShopItemEntry shopItemEntry;
 
         public void Init(ShopSceneManager shopSceneManager)
         {
@@ -32,6 +33,7 @@ namespace SlimeColorShop.Shop
             else
             {
                 displayText.text = GetItemCost().ToString();
+                itemImage.sprite = shopItemEntry.ItemSprite;
                 Utility.ShowCanvasGroup(canvasGroup, !shopItemEntry.IsBought());
             }
         }

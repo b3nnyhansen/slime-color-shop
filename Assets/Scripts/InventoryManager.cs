@@ -9,6 +9,7 @@ namespace SlimeColorShop
     public class InventoryManager : Singleton<InventoryManager>
     {
         [SerializeField] private ShopItemDatabase shopItemDatabase;
+        [SerializeField] private DecorationDatabase decorationDatabase;
         [SerializeField] private EnergyManager energyManager;
         [SerializeField] private TextMeshProUGUI coinText;
         [SerializeField] private IntegerDataEntry energyData;
@@ -46,16 +47,22 @@ namespace SlimeColorShop
             energyManager.SetEnergyValueText();
         }
 
-        public void AddCoin(int value)
+        public void AddCoin(int value, bool isUpdatingDisplay = true)
         {
             int curValue = LoadCoinData();
             SaveCoinData(curValue + value);
-            SetCoinText();
+            if (isUpdatingDisplay)
+                SetCoinText();
         }
 
         public ShopItemDatabase GetShopItemDatabase()
         {
             return shopItemDatabase;
+        }
+
+        public DecorationDatabase GetDecorationDatabase()
+        {
+            return decorationDatabase;
         }
 
         public void SetCoinText()

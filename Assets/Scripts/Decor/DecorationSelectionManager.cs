@@ -1,32 +1,41 @@
+using System;
+using SlimeColorShop.Data;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace SlimeColorShop.Decor
 {
-    public class DecorationSelectionManager : MonoBehaviour
+    public class DecorationSelectionManager : BaseFormHandler
     {
-        [SerializeField] private CanvasGroup canvasGroupComponent;
-        [SerializeField] private Button outerScreenButton;
+        [SerializeField] private DecorationSelectButton removeDecorButton;
+        [SerializeField] private DecorationSelectButton decorationSelectButtonObject;
+        [SerializeField] private RectTransform selectionTransform;
+        private DecorSceneManager decorSceneManager;
 
-        public void Init()
+        public void Init(DecorSceneManager decorSceneManager, ShopItemDatabase shopItemDatabase)
         {
-            outerScreenButton.onClick.AddListener(
-                delegate
-                {
-                    HideCanvasGroup();
-                }
-            );
-            HideCanvasGroup();
+            this.decorSceneManager = decorSceneManager;
+            InitSelectButtons(shopItemDatabase);
+            base.Init();
         }
 
-        public void HideCanvasGroup()
+        private void InitSelectButtons(ShopItemDatabase shopItemDatabase)
         {
-            Utility.HideCanvasGroup(canvasGroupComponent);
+            removeDecorButton.Init(-1, null, ChangeDecoration);
+            for (int i = 0; i < shopItemDatabase.EntryCount; i++)
+            {
+                ShopItemEntry shopItemEntry = shopItemDatabase.GetEntry(i);
+                if (!shopItemEntry.IsBought())
+                    continue;
+                DecorationSelectButton instance = Instantiate(decorationSelectButtonObject, selectionTransform);
+                instance.Init(i, shopItemEntry, ChangeDecoration);
+            }
         }
-
-        public void ShowCanvasGroup()
+        
+        private void ChangeDecoration(int shopItemEntryId)
         {
-            Utility.ShowCanvasGroup(canvasGroupComponent);
+            decorSceneManager.SetSelectedShopItemEntryId(shopItemEntryId);
+            decorSceneManager.SaveDecoration();
         }
     }
 }

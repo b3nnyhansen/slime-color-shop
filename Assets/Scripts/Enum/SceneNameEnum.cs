@@ -4,6 +4,7 @@ namespace SlimeColorShop
     {
         MAIN_MENU,
         GAMEPLAY,
-        SHOP
+        SHOP,
+        DECOR
     }
 }

@@ -6,6 +6,7 @@ namespace SlimeColorShop.Data
     public class ShopItemEntry : PlayerDataEntry
     {
         public int Cost;
+        public Sprite ItemSprite;
         
         public override void SaveData(object data = null)
         {
@@ -20,6 +21,11 @@ namespace SlimeColorShop.Data
         public bool IsBought()
         {
             return (int)LoadData() == 1;
+        }
+
+        public Sprite GetItemSprite()
+        {
+            return ItemSprite;
         }
     }
 }

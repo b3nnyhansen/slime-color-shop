@@ -6,6 +6,7 @@ namespace SlimeColorShop.MainMenu
     {
         [SerializeField] private GameButton playButton;
         [SerializeField] private GameButton shopButton;
+        [SerializeField] private GameButton decorButton;
 
         void Start()
         {
@@ -21,6 +22,12 @@ namespace SlimeColorShop.MainMenu
                 delegate
                 {
                     LoadScene(SceneNameEnum.SHOP);
+                }
+            );
+            decorButton.Init(
+                delegate
+                {
+                    LoadScene(SceneNameEnum.DECOR);
                 }
             );
         }
