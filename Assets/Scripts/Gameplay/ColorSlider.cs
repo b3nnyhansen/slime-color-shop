@@ -21,7 +21,6 @@ namespace SlimeColorShop.Gameplay
         )
         {
             this.colorPicker = colorPicker;
-            SetSliderColor(color);
             this.onEndUpdateValueAction = onEndUpdateValueAction;
 
             colorSlider.onValueChanged.AddListener(

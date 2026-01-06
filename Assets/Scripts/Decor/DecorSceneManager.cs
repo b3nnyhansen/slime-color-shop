@@ -8,7 +8,7 @@ namespace SlimeColorShop.Decor
     public class DecorSceneManager : BaseSceneManager
     {
         [SerializeField] private GameButton returnButton;
-        [SerializeField] private List<DecorationButton> decorationButtons;
+        [SerializeField] private DecorationHandler decorationHandler;
         [SerializeField] private DecorationSelectionManager decorationSelectionManager;
         private ShopItemDatabase shopItemDatabase;
         private DecorationDatabase decorationDatabase;
@@ -24,7 +24,7 @@ namespace SlimeColorShop.Decor
                 }
             );
             InitSceneParameters();
-            InitDecorationButtons();
+            decorationHandler.Init(shopItemDatabase, decorationDatabase, OpenDecorationSelection);
             InitDecorationSelectionManager();
         }
 
@@ -32,36 +32,6 @@ namespace SlimeColorShop.Decor
         {
             shopItemDatabase = InventoryManager.Instance.GetShopItemDatabase();
             decorationDatabase = InventoryManager.Instance.GetDecorationDatabase();
-        }
-
-        private void InitDecorationButtons()
-        {
-            for (int i = 0; i < decorationDatabase.EntryCount; i++)
-            {
-                DecorationEntry decorationEntry = decorationDatabase.GetEntry(i);
-                int shopItemEntryId = (int)decorationEntry.LoadData();
-                Action onClickAction = delegate
-                {
-                    OpenDecorationSelection(i);
-                };
-                if (shopItemEntryId < 0)
-                {
-                    decorationButtons[i].Init(
-                        i,
-                        null,
-                        OpenDecorationSelection
-                    );
-                }
-                else
-                {
-                    ShopItemEntry shopItemEntry = shopItemDatabase.GetEntry(shopItemEntryId);
-                    decorationButtons[i].Init(
-                        i,
-                        shopItemEntry,
-                        OpenDecorationSelection
-                    );
-                }
-            }
         }
 
         private void InitDecorationSelectionManager()
@@ -91,8 +61,7 @@ namespace SlimeColorShop.Decor
             decorationEntry.SaveData(selectedShopItemEntryId);
             
             ShopItemEntry shopItemEntry = selectedShopItemEntryId < 0 ? null : shopItemDatabase.GetEntry(selectedShopItemEntryId);
-            DecorationButton selectedDecorationButton = decorationButtons[selectedDecorationButtonId];
-            selectedDecorationButton.SetShopItemEntry(shopItemEntry);
+            decorationHandler.SetDecorationButtonShopItemEntry(selectedDecorationButtonId, shopItemEntry);
         }
     }
 }

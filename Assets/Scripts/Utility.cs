@@ -42,5 +42,19 @@ namespace SlimeColorShop
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;
         }
+
+        public static Vector2 GetRandomPositionFromCenterBottomAnchoredRectTransform(RectTransform rectTransform)
+        {
+            float
+                xMin = rectTransform.anchoredPosition.x - rectTransform.sizeDelta.x / 2f,
+                xMax = rectTransform.anchoredPosition.x + rectTransform.sizeDelta.x / 2f,
+                yMin = rectTransform.anchoredPosition.y,
+                yMax = rectTransform.anchoredPosition.y + rectTransform.sizeDelta.y;
+            
+            return new Vector2(
+                UnityEngine.Random.Range(xMin, xMax),
+                UnityEngine.Random.Range(yMin, yMax)
+            );
+        }
     }
 }

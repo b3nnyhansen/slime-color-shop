@@ -21,6 +21,7 @@ namespace SlimeColorShop.Decor
                     onClickAction?.Invoke(this.buttonValue);
                 }
             );
+            imageComponent.color = Color.clear; // TEMPORARY
         }
         public void SetButtonValue(int buttonValue)
         {

@@ -13,28 +13,32 @@ namespace SlimeColorShop.Gameplay
         public static GameplaySceneManager Instance;
         private InventoryManager inventoryManager;
         [SerializeField] private ColorPicker colorPicker;
-        [SerializeField] private RawImage blackScreenOverlay;
         [SerializeField] private ColorQuestionDatabase questionDatabase;
         [SerializeField] private SlimeDatabase slimeDatabase;
         [SerializeField] private TextMeshProUGUI colorQuestionText;
         [SerializeField] private Slime targetSlime;
-        [SerializeField] private Button returnButton;
+        [SerializeField] private GameplayOverlayManager gameplayOverlayManager;
+        [SerializeField] private BonusDisplay bonusDisplay;
+        [SerializeField] private Button pauseButton;
         private ColorQuestionEntry currentColorQuestion;
         private bool isProcessingAnswer = false;
+        private int score;
 
         void Start()
         {
             Instance = this;
             inventoryManager = InventoryManager.Instance;
+            score = 0;
             InitQuestion();
             colorPicker.Init();
             InitSlime();
-            HideBlackScreenOverlay();
+            gameplayOverlayManager.Init();
+            bonusDisplay.Init();
             InitButtons();
             inventoryManager.StartEnergyCountdown(
                 delegate
                 {
-                    ShowBlackScreenOverlay();
+                    ShowGameOverScreen();
                 }
             );
         }
@@ -68,10 +72,10 @@ namespace SlimeColorShop.Gameplay
 
         private void InitButtons()
         {
-            returnButton.onClick.AddListener(
+            pauseButton.onClick.AddListener(
                 delegate
                 {
-                    LoadScene(SceneNameEnum.MAIN_MENU);
+                    ShowPauseScreen();
                 }
             );
         }
@@ -96,17 +100,24 @@ namespace SlimeColorShop.Gameplay
         {
             inventoryManager.StopEnergyCountdown();
             isProcessingAnswer = true;
+            int bonusPoint;
             if (isCorrect)
             {
                 IncreaseCoin();
+                bonusPoint = 1;
+                score++;
                 targetSlime.SetExpressionToHappy();
                 UpdateColorQuestionText(ColorQuestionDisplayEnum.SUCCESS);
             }
             else
             {
                 targetSlime.SetExpressionToSad();
+                bonusPoint = -1;
                 UpdateColorQuestionText(ColorQuestionDisplayEnum.FAILURE);
             }
+            bonusDisplay.AddBonusPoint(bonusPoint);
+            colorPicker.SetDoubleCoinIndicatorActive(bonusDisplay.IsBonusTakingEffect());
+            inventoryManager.SaveMaxScoreData(score);
             yield return new WaitForSeconds(3f);
             isProcessingAnswer = false;
             InitQuestion();
@@ -114,15 +125,43 @@ namespace SlimeColorShop.Gameplay
             inventoryManager.StartEnergyCountdown();
         }
 
-        public void ShowBlackScreenOverlay()
+        public void LoadMainMenuScene()
         {
-            blackScreenOverlay.gameObject.SetActive(true);
+            inventoryManager.StopEnergyCountdown();
+            UnpauseGame();
+            LoadScene(SceneNameEnum.MAIN_MENU);
         }
 
-        public void HideBlackScreenOverlay()
+        #region PAUSE_AND_GAME_OVER_CONTROL
+        public void PauseGame()
         {
-            blackScreenOverlay.gameObject.SetActive(false);
+            Time.timeScale = 0f;
         }
+
+        public void UnpauseGame()
+        {
+            Time.timeScale = 1f;
+        }
+
+        public void ShowPauseScreen()
+        {
+            PauseGame();
+            gameplayOverlayManager.ShowPauseScreen();
+        }
+
+        public void HidePauseScreen()
+        {
+            UnpauseGame();
+            gameplayOverlayManager.Hide();
+        }
+
+        public void ShowGameOverScreen()
+        {
+            gameplayOverlayManager.ShowGameOverScreen(
+                score, inventoryManager.LoadMaxScoreData()
+            );
+        }
+        #endregion
 
         #region COLOR_QUESTION_DISPLAY
         ColorQuestionDisplayEnum currentDisplayOption;
@@ -209,6 +248,8 @@ namespace SlimeColorShop.Gameplay
                     coinIncreaseValue = 10;
                     break;
             }
+            if (bonusDisplay.IsBonusTakingEffect())
+                coinIncreaseValue *= 2;
             inventoryManager.AddCoin(coinIncreaseValue);
         }
         #endregion

@@ -9,6 +9,7 @@ namespace SlimeColorShop.Gameplay
         [SerializeField] private ColorSlider greenColorSlider;
         [SerializeField] private ColorSlider blueColorSlider;
         [SerializeField] private Button colorButton;
+        [SerializeField] private Button doubleCoinIndicator;
         [SerializeField] private Image targetImage;
 
         public void Init()
@@ -32,6 +33,7 @@ namespace SlimeColorShop.Gameplay
                     );
                 }
             );
+            SetDoubleCoinIndicatorActive(false);
         }
 
         public void UpdateTargetColor()
@@ -42,6 +44,11 @@ namespace SlimeColorShop.Gameplay
                 blueColorSlider.GetSliderValue()
             );
             GameplaySceneManager.Instance.ColorSlimeTarget(newColor);
+        }
+
+        public void SetDoubleCoinIndicatorActive(bool interactable)
+        {
+            doubleCoinIndicator.interactable = interactable;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace SlimeColorShop
     {
         private InventoryManager inventoryManager;
         [SerializeField] private TextMeshProUGUI energyValueText;
+        [SerializeField] private TextMeshProUGUI energyTimeText;
         private const int timeDifferenceThreshold = 900;
         Coroutine countdownCoroutine;
 
@@ -31,8 +32,12 @@ namespace SlimeColorShop
             long currentTimeValue = Utility.GetCurrentTimestamp();
             long timeDifference = currentTimeValue - prevTimeValue;
             if (timeDifference < timeDifferenceThreshold)
+            {
+                SetEnergyTimeText(timeDifference);
                 return;
-            int additionalEnergy = (int)(timeDifference / 60);
+            }
+            // int additionalEnergy = (int)(timeDifference / 60);
+            SetEnergyTimeText("");
             inventoryManager.SaveEnergyData();
             inventoryManager.SaveLastLoginData(currentTimeValue);
         }
@@ -61,6 +66,20 @@ namespace SlimeColorShop
         public void SetEnergyValueText(string text)
         {
             energyValueText.text = text;
+        }
+
+        public void SetEnergyTimeText(long timeDifference)
+        {
+            long remainingTime = timeDifferenceThreshold - timeDifference;
+            long minutes = remainingTime / 60;
+            long seconds = remainingTime % 60;
+            string text = string.Format("{0:D2}:{1:D2}", minutes, seconds);
+            SetEnergyTimeText(text);
+        }
+
+        public void SetEnergyTimeText(string text)
+        {
+            energyTimeText.text = text;
         }
 
         IEnumerator Countdown()

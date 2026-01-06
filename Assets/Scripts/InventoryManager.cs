@@ -15,7 +15,11 @@ namespace SlimeColorShop
         [SerializeField] private IntegerDataEntry energyData;
         [SerializeField] private PlayerDataEntry coinData;
         [SerializeField] private PlayerDataEntry lastLoginData;
-        private const int maximumEnergy = 60;
+        [SerializeField] private PlayerDataEntry maxScoreData;
+        [SerializeField] private RectTransform coinDisplayRectTransform;
+        [SerializeField] private CoinChangeEffect coinChangeEffectObject;
+        private const int maximumEnergy = 180;
+        private Vector2 coinChangePosition = new Vector2(+90, -50);
 
         protected override void Awake()
         {
@@ -52,7 +56,10 @@ namespace SlimeColorShop
             int curValue = LoadCoinData();
             SaveCoinData(curValue + value);
             if (isUpdatingDisplay)
+            {
                 SetCoinText();
+                ShowChange(value);
+            }
         }
 
         public ShopItemDatabase GetShopItemDatabase()
@@ -99,6 +106,13 @@ namespace SlimeColorShop
         {
             lastLoginData.SaveData(value);
         }
+
+        public void SaveMaxScoreData(int value)
+        {
+            int prevMaxScore = LoadMaxScoreData();
+            if (value > prevMaxScore)
+                maxScoreData.SaveData(value);
+        }
         #endregion
 
         #region LOAD_METHODS
@@ -115,16 +129,27 @@ namespace SlimeColorShop
         {
             return (long)lastLoginData.LoadData();
         }
+
+        public int LoadMaxScoreData()
+        {
+            return (int)maxScoreData.LoadData();
+        }
         #endregion
 
         public bool IsEnergyEmpty()
         {
-            return LoadCoinData() < 1;
+            return LoadEnergyData() < 1;
         }
 
         public bool IsCostLessThanCoin(int cost)
         {
             return (cost - LoadCoinData()) < 1;
+        }
+
+        public void ShowChange(int value)
+        {
+            CoinChangeEffect instance = Instantiate(coinChangeEffectObject, coinDisplayRectTransform);
+            instance.Init(coinChangePosition, value);
         }
     }
 }

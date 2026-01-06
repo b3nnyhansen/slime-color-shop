@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Data_Player_Energy
   m_EditorClassIdentifier: 
   SaveId: PLAYER_ENERGY
-  DefaultValue: 60
+  DefaultValue: 180
