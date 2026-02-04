@@ -133,4 +133,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50816105a144a744b8ce9e7d5cab95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageComponent: {fileID: 7367102656810592628}
+  decorationImageComponent: {fileID: 7367102656810592628}

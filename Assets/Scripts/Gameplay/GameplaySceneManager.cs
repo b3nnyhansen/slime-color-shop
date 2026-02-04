@@ -47,7 +47,7 @@ namespace SlimeColorShop.Gameplay
         {
             int id = UnityEngine.Random.Range(0, questionDatabase.EntryCount);
             currentColorQuestion = questionDatabase.GetEntry(id);
-            UpdateColorQuestionText();
+            UpdateColorQuestionText(id);
         }
 
         private void InitSlime()
@@ -178,11 +178,15 @@ namespace SlimeColorShop.Gameplay
             ColorQuestionDisplayEnum.NORMAL, ColorQuestionDisplayEnum.HEX,
             ColorQuestionDisplayEnum.LIKE_PHRASE, ColorQuestionDisplayEnum.COMBINATION_PHRASE
         };
-        private void UpdateColorQuestionText()
+        private void UpdateColorQuestionText(int colorQuestionId = 0)
         {
-            ColorQuestionDisplayEnum currentDisplayOption = (ColorQuestionDisplayEnum)UnityEngine.Random.Range(
-                0, regularQuestionDisplayEnums.Length
-            );
+            int prevSavedDisplayId = questionDatabase.LoadData(colorQuestionId);
+            int displayId = UnityEngine.Random.Range(0, regularQuestionDisplayEnums.Length);
+            ColorQuestionDisplayEnum currentDisplayOption = (ColorQuestionDisplayEnum) displayId;
+
+            int nextSavedDisplayId = prevSavedDisplayId | (1 << displayId);
+            questionDatabase.SaveData(colorQuestionId, nextSavedDisplayId);
+
             this.currentDisplayOption = currentDisplayOption;
             UpdateColorQuestionText(currentDisplayOption);
         }

@@ -7,20 +7,19 @@ namespace SlimeColorShop.Decor
 {
     public class DecorationSelectButton : GameButton
     {
-        [SerializeField] private Image imageComponent;
         private ShopItemEntry shopItemEntry;
         private int buttonValue;
 
         public void Init(int buttonValue, ShopItemEntry shopItemEntry, Action<int> onClickAction = null)
         {
-            SetButtonValue(buttonValue);
-            SetShopItemEntry(shopItemEntry);
             base.Init(
                 delegate
                 {
                     onClickAction?.Invoke(this.buttonValue);
                 }
             );
+            SetButtonValue(buttonValue);
+            SetShopItemEntry(shopItemEntry);
         }
         public void SetButtonValue(int buttonValue)
         {
@@ -29,14 +28,14 @@ namespace SlimeColorShop.Decor
         public void SetShopItemEntry(ShopItemEntry shopItemEntry)
         {
             this.shopItemEntry = shopItemEntry;
-            SetImageSprite();
+            SetDecorationImageSprite();
         }
-        public void SetImageSprite()
+        public void SetDecorationImageSprite()
         {
             if (shopItemEntry != null)
-                SetImageSprite(shopItemEntry.ItemSprite);
+                SetDecorationImageSprite(shopItemEntry.ItemSprite);
         }
-        public void SetImageSprite(Sprite sprite)
+        public void SetDecorationImageSprite(Sprite sprite)
         {
             imageComponent.sprite = sprite;
         }

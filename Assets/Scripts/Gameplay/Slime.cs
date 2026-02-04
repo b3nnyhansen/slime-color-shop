@@ -7,13 +7,13 @@ namespace SlimeColorShop.Gameplay
     [Serializable]
     public class Slime : MonoBehaviour
     {
-        [SerializeField] Image bodyImage;
-        [SerializeField] Image expressionImage;
-        Sprite normalExpressionSprite;
-        Sprite happyExpressionSprite;
-        Sprite sadExpressionSprite;
+        [SerializeField] protected Image bodyImage;
+        [SerializeField] protected Image expressionImage;
+        protected Sprite normalExpressionSprite;
+        protected Sprite happyExpressionSprite;
+        protected Sprite sadExpressionSprite;
 
-        public void Init(
+        public virtual void Init(
             Sprite bodySprite,
             Sprite normalExpressionSprite,
             Sprite happyExpressionSprite,
