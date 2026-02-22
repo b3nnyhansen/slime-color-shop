@@ -185,6 +185,8 @@ namespace SlimeColorShop.Gameplay
             ColorQuestionDisplayEnum currentDisplayOption = (ColorQuestionDisplayEnum) displayId;
 
             int nextSavedDisplayId = prevSavedDisplayId | (1 << displayId);
+            if (nextSavedDisplayId > 1)
+                nextSavedDisplayId += 1;
             questionDatabase.SaveData(colorQuestionId, nextSavedDisplayId);
 
             this.currentDisplayOption = currentDisplayOption;

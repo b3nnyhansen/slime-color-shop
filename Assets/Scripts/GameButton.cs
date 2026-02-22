@@ -54,5 +54,19 @@ namespace SlimeColorShop
         {
             SetButtonColor(entry.R / 255f, entry.G / 255f, entry.B / 255f);
         }
+
+        public virtual void SetButtonFontSize(float fontSize, float minSize = 270f)
+        {
+            if(buttonTextComponent == null)
+                return;
+            RectTransform rectTransform = buttonTextComponent.GetComponent<RectTransform>();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
+            float preferredWidth = Utility.GetPreferredWidth(rectTransform);
+            
+            if(preferredWidth > minSize)
+                buttonTextComponent.fontSize = fontSize * minSize / preferredWidth * 0.95f;
+            else
+                buttonTextComponent.fontSize = fontSize;
+        }
     }
 }

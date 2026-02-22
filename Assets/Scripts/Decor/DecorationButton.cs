@@ -20,7 +20,6 @@ namespace SlimeColorShop.Decor
             );
             SetButtonValue(buttonValue);
             SetShopItemEntry(shopItemEntry);
-            // imageComponent.color = Color.clear; // TEMPORARY
         }
         public void SetButtonValue(int buttonValue)
         {
@@ -41,6 +40,10 @@ namespace SlimeColorShop.Decor
         public void SetDecorationImageSprite(Sprite sprite)
         {
             imageComponent.sprite = sprite;
+            if (sprite == null)
+                imageComponent.color = Color.clear;
+            else
+                imageComponent.color = Color.white;
         }
     }
 }

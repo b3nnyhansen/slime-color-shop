@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SlimeColorShop
 {
@@ -55,6 +56,12 @@ namespace SlimeColorShop
                 UnityEngine.Random.Range(xMin, xMax),
                 UnityEngine.Random.Range(yMin, yMax)
             );
+        }
+
+        public static float GetPreferredWidth(RectTransform rectTransform)
+        {
+            float preferredWidth = LayoutUtility.GetPreferredWidth(rectTransform);
+            return preferredWidth;
         }
     }
 }
