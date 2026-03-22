@@ -1,0 +1,13 @@
+
+Spine.png
+size: 523,412
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Slime_Guest_Cow
+  rotate: false
+  xy: 2, 2
+  size: 519, 408
+  orig: 519, 408
+  offset: 0, 0
+  index: -1

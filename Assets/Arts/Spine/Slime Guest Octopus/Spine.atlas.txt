@@ -1,0 +1,13 @@
+
+Spine.png
+size: 483,451
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Slime_Guest_Octopus
+  rotate: false
+  xy: 2, 2
+  size: 479, 447
+  orig: 479, 447
+  offset: 0, 0
+  index: -1

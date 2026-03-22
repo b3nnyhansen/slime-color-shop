@@ -1,0 +1,13 @@
+
+Spine.png
+size: 504,412
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Slime_Guest_Cat
+  rotate: false
+  xy: 2, 2
+  size: 500, 408
+  orig: 500, 408
+  offset: 0, 0
+  index: -1

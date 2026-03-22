@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using SlimeColorShop.Data;
+using TMPro;
+using SlimeColorShop.Audio;
 
 namespace SlimeColorShop.Shop
 {
     public class ShopGameButton : GameButton
     {
-        [SerializeField] private Text displayText;
+        [SerializeField] private TextMeshProUGUI displayText;
         [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private Image itemImage;
         private ShopSceneManager shopSceneManager;
@@ -50,6 +52,7 @@ namespace SlimeColorShop.Shop
                 {
                     shopSceneManager.ShowBuyConfirmationForm(shopItemEntry);
                     onClickAction?.Invoke();
+                    UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_BUTTON_CLICK);
                 }
             );
         }

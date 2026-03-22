@@ -1,12 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using TMPro;
 
 namespace SlimeColorShop.Shop
 {
     public class ShopPaginationButton : GameButton
     {
-        [SerializeField] private Text displayText;
+        [SerializeField] private TextMeshProUGUI displayText;
         [SerializeField] private CanvasGroup canvasGroup;
         private int pageNumber;
 

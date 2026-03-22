@@ -9,19 +9,21 @@ namespace SlimeColorShop.Decor
     {
         [SerializeField] private List<DecorationButton> decorationButtons;
 
-        public void Init(Action<int> onClickAction = null)
+        public void Init(Action<int> onClickAction = null, bool isShowingDefaultSprite = false)
         {
             Init(
                 InventoryManager.Instance.GetShopItemDatabase(),
                 InventoryManager.Instance.GetDecorationDatabase(),
-                onClickAction
+                onClickAction,
+                isShowingDefaultSprite
             );
         }
 
         public void Init(
             ShopItemDatabase shopItemDatabase,
             DecorationDatabase decorationDatabase,
-            Action<int> onClickAction
+            Action<int> onClickAction,
+            bool isShowingDefaultSprite = false
         )
         {
             for (int i = 0; i < decorationDatabase.EntryCount; i++)
@@ -33,7 +35,8 @@ namespace SlimeColorShop.Decor
                     decorationButtons[i].Init(
                         i,
                         null,
-                        onClickAction
+                        onClickAction,
+                        isShowingDefaultSprite
                     );
                 }
                 else
@@ -42,7 +45,8 @@ namespace SlimeColorShop.Decor
                     decorationButtons[i].Init(
                         i,
                         shopItemEntry,
-                        onClickAction
+                        onClickAction,
+                        isShowingDefaultSprite
                     );
                 }
             }

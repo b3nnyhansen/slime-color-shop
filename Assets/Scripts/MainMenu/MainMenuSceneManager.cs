@@ -1,6 +1,8 @@
 using SlimeColorShop.Data;
 using SlimeColorShop.Decor;
 using UnityEngine;
+using Spine.Unity;
+using SlimeColorShop.Audio;
 
 namespace SlimeColorShop.MainMenu
 {
@@ -12,8 +14,8 @@ namespace SlimeColorShop.MainMenu
         [SerializeField] private GameButton decorButton;
         [SerializeField] private ShowTextEffect showTextEffectObject;
         [SerializeField] private SlimeDatabase slimeDatabase;
-        [SerializeField] private PatrollingSlime patrollingSlime;
         [SerializeField] private PatrollingSlimeV2 patrollingSlimeV2;
+        [SerializeField] private SpineDatabase spineDatabase;
 
         void Start()
         {
@@ -45,6 +47,7 @@ namespace SlimeColorShop.MainMenu
             );
 
             InitPatrollingSlime();
+            UniversalAudioManager.Instance.PlayBGM(AudioEnum.BGM_MAINMENU);
         }
 
         private void InitPatrollingSlime()
@@ -65,8 +68,8 @@ namespace SlimeColorShop.MainMenu
             //     happyExpressionSprite,
             //     sadExpressionSprite
             // );
-
-            patrollingSlimeV2.Init();
+            SkeletonDataAsset skeletonDataAsset = spineDatabase.GetSkeletonDataAsset();
+            patrollingSlimeV2.Init(skeletonDataAsset);
         }
     }
 }

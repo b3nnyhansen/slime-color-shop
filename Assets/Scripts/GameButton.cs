@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using SlimeColorShop.Data;
+using SlimeColorShop.Audio;
 
 namespace SlimeColorShop
 {
@@ -12,6 +13,8 @@ namespace SlimeColorShop
         protected Image imageComponent;
         protected Button buttonComponent;
         protected TextMeshProUGUI buttonTextComponent;
+        protected Color originalButtonBackgroundColor;
+        protected Color originalButtonFontColor;
 
         public virtual void Init(Action onClickAction = null)
         {
@@ -26,6 +29,10 @@ namespace SlimeColorShop
             {
                 buttonTextComponent = null;
             }
+
+            originalButtonBackgroundColor = imageComponent.color;
+            if(buttonTextComponent != null)
+                originalButtonFontColor = buttonTextComponent.color;
             SetOnClickAction();
         }
 
@@ -35,6 +42,7 @@ namespace SlimeColorShop
                 delegate
                 {
                     onClickAction?.Invoke();
+                    UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_BUTTON_CLICK);
                 }
             );
         }
@@ -45,9 +53,14 @@ namespace SlimeColorShop
                 buttonTextComponent.text = text;
         }
 
+        public virtual void SetButtonColor(Color color)
+        {
+            imageComponent.color = color;
+        }
+
         public virtual void SetButtonColor(float r, float g, float b)
         {
-            imageComponent.color = new Color(r, g, b);
+            SetButtonColor(new Color(r, g, b));
         }
 
         public void SetButtonColor(ColorQuestionEntry entry)
@@ -67,6 +80,24 @@ namespace SlimeColorShop
                 buttonTextComponent.fontSize = fontSize * minSize / preferredWidth * 0.95f;
             else
                 buttonTextComponent.fontSize = fontSize;
+        }
+
+        public virtual void SetButtonFontColor(Color color)
+        {
+            if(buttonTextComponent != null)
+                buttonTextComponent.color = color;
+        }
+
+        public virtual void SetButtonInvisible()
+        {
+            SetButtonColor(Color.clear);
+            SetButtonFontColor(Color.clear);
+        }
+
+        public virtual void SetButtonVisible()
+        {
+            SetButtonColor(originalButtonBackgroundColor);
+            SetButtonFontColor(originalButtonFontColor);
         }
     }
 }

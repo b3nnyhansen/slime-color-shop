@@ -24,7 +24,7 @@ namespace SlimeColorShop.Decor
                 }
             );
             InitSceneParameters();
-            decorationHandler.Init(shopItemDatabase, decorationDatabase, OpenDecorationSelection);
+            decorationHandler.Init(shopItemDatabase, decorationDatabase, OpenDecorationSelection, isShowingDefaultSprite: true);
             InitDecorationSelectionManager();
         }
 

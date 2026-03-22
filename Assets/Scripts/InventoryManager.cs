@@ -18,6 +18,12 @@ namespace SlimeColorShop
         [SerializeField] private PlayerDataEntry maxScoreData;
         [SerializeField] private RectTransform coinDisplayRectTransform;
         [SerializeField] private CoinChangeEffect coinChangeEffectObject;
+        [SerializeField] private AudioDatabase audioDatabase;
+        [SerializeField] private PlayerDataEntry bgmData;
+        [SerializeField] private PlayerDataEntry sfxData;
+        [SerializeField] private GameButton settingButton;
+        [SerializeField] private SettingFormHandler settingFormHandler;
+        
         private const int maximumEnergy = 180;
         private Vector2 coinChangePosition = new Vector2(+90, -50);
 
@@ -26,6 +32,18 @@ namespace SlimeColorShop
             base.Awake();
             SetCoinText();
             energyManager.Init(Instance);
+            settingFormHandler.Init();
+            InitButtons();
+        }
+
+        private void InitButtons()
+        {
+            settingButton.Init(
+                delegate
+                {
+                    settingFormHandler.ShowCanvasGroup();
+                }
+            );
         }
 
         public void StartEnergyCountdown()
@@ -113,6 +131,18 @@ namespace SlimeColorShop
             if (value > prevMaxScore)
                 maxScoreData.SaveData(value);
         }
+
+        public void ChangeBGMSetting()
+        {
+            bool isMuted = IsBGMMuted();
+            bgmData.SaveData(isMuted ? 1 : 0);
+        }
+
+        public void ChangeSFXSetting()
+        {
+            bool isMuted = IsSFXMuted();
+            sfxData.SaveData(isMuted ? 1 : 0);
+        }
         #endregion
 
         #region LOAD_METHODS
@@ -150,6 +180,21 @@ namespace SlimeColorShop
         {
             CoinChangeEffect instance = Instantiate(coinChangeEffectObject, coinDisplayRectTransform);
             instance.Init(coinChangePosition, value);
+        }
+
+        public bool IsBGMMuted()
+        {
+            return bgmData.LoadData().Equals(0);
+        }
+
+        public bool IsSFXMuted()
+        {
+            return sfxData.LoadData().Equals(0);
+        }
+
+        public AudioClip GetAudioClip(AudioEnum audioEnum)
+        {
+            return audioDatabase.GetAudioClip(audioEnum);
         }
     }
 }

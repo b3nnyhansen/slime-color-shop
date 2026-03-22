@@ -1,0 +1,13 @@
+
+Spine.png
+size: 551,386
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Slime_Guest_Dog
+  rotate: false
+  xy: 2, 2
+  size: 547, 382
+  orig: 547, 382
+  offset: 0, 0
+  index: -1

@@ -11,11 +11,19 @@ namespace SlimeColorShop.MainMenu
         private RectTransform parentRectTransform;
         private RectTransform rectTransformComponent;
 
-        public void Init()
+        public void Init(SkeletonDataAsset skeletonDataAsset = null)
         {
             parentRectTransform = transform.parent.GetComponent<RectTransform>();
             rectTransformComponent = GetComponent<RectTransform>();
 
+            if (skeletonDataAsset != null)
+                skeletonGraphic.skeletonDataAsset = skeletonDataAsset;
+            
+            skeletonGraphic.initialSkinName = "default";
+            skeletonGraphic.startingAnimation = null;
+            skeletonGraphic.Initialize(true);
+            skeletonGraphic.SetMaterialDirty();
+            
             skeletonGraphic.AnimationState.SetAnimation(0, "animation", true);
 
             StartCoroutine(Patrol());

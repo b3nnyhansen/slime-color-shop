@@ -24,7 +24,10 @@ namespace SlimeColorShop.Gameplay
             this.happyExpressionSprite = happyExpressionSprite;
             this.sadExpressionSprite = sadExpressionSprite;
 
-            SetAppearance(bodySprite, normalExpressionSprite);
+            if (bodySprite != null)
+                SetAppearance(bodySprite, normalExpressionSprite);
+            else
+                SetAppearance(normalExpressionSprite);
         }
 
         public void SetAppearance(Sprite bodySprite, Sprite expressionSprite)
@@ -34,20 +37,27 @@ namespace SlimeColorShop.Gameplay
             SetColor(Color.white);
         }
 
+        public void SetAppearance(Sprite expressionSprite)
+        {
+            SetExpression(expressionSprite);
+            SetColor(Color.white);
+        }
+
+        public virtual void SetColor(Color newColor)
+        {
+            bodyImage.color = newColor;
+        }
+
         public void SetExpression(Sprite expressionSprite)
         {
             expressionImage.sprite = expressionSprite;
-        }
-
-        public void SetColor(Color newColor)
-        {
-            bodyImage.color = newColor;
         }
 
         public void SetExpressionToHappy()
         {
             SetExpression(happyExpressionSprite);
         }
+
         public void SetExpressionToSad()
         {
             SetExpression(sadExpressionSprite);

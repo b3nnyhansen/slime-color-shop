@@ -1,0 +1,13 @@
+
+Spine.png
+size: 546,394
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Slime_Guest_Bird
+  rotate: false
+  xy: 2, 2
+  size: 542, 390
+  orig: 542, 390
+  offset: 0, 0
+  index: -1

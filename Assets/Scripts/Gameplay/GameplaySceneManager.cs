@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using SlimeColorShop.Data;
+using SlimeColorShop.Audio;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Spine.Unity;
 
 namespace SlimeColorShop.Gameplay
 {
@@ -16,10 +18,12 @@ namespace SlimeColorShop.Gameplay
         [SerializeField] private ColorQuestionDatabase questionDatabase;
         [SerializeField] private SlimeDatabase slimeDatabase;
         [SerializeField] private TextMeshProUGUI colorQuestionText;
-        [SerializeField] private Slime targetSlime;
+        private Slime obsoleteTargetSlime;
+        [SerializeField] private SlimeV2 targetSlime;
         [SerializeField] private GameplayOverlayManager gameplayOverlayManager;
         [SerializeField] private BonusDisplay bonusDisplay;
         [SerializeField] private Button pauseButton;
+        [SerializeField] private SpineDatabase spineDatabase;
         private ColorQuestionEntry currentColorQuestion;
         private bool isProcessingAnswer = false;
         private int score;
@@ -31,7 +35,7 @@ namespace SlimeColorShop.Gameplay
             score = 0;
             InitQuestion();
             colorPicker.Init();
-            InitSlime();
+            InitSlimeV2();
             gameplayOverlayManager.Init();
             bonusDisplay.Init();
             InitButtons();
@@ -41,6 +45,7 @@ namespace SlimeColorShop.Gameplay
                     ShowGameOverScreen();
                 }
             );
+            UniversalAudioManager.Instance.PlayBGM(AudioEnum.BGM_PLAY);
         }
 
         private void InitQuestion()
@@ -62,11 +67,30 @@ namespace SlimeColorShop.Gameplay
             Sprite happyExpressionSprite = slimeDatabase.GetHappyExpressionEntry(happyExpressionId);
             Sprite sadExpressionSprite = slimeDatabase.GetSadExpressionEntry(sadExpressionId);
 
-            targetSlime.Init(
+            obsoleteTargetSlime.Init(
                 bodySprite,
                 normalExpressionSprite,
                 happyExpressionSprite,
                 sadExpressionSprite
+            );
+        }
+
+        private void InitSlimeV2()
+        {
+            int normalExpressionId = UnityEngine.Random.Range(0, slimeDatabase.NormalExpressionEntryCount);
+            int happyExpressionId = UnityEngine.Random.Range(0, slimeDatabase.HappyExpressionEntryCount);
+            int sadExpressionId = UnityEngine.Random.Range(0, slimeDatabase.SadExpressionEntryCount);
+
+            Sprite normalExpressionSprite = slimeDatabase.GetNormalExpressionEntry(normalExpressionId);
+            Sprite happyExpressionSprite = slimeDatabase.GetHappyExpressionEntry(happyExpressionId);
+            Sprite sadExpressionSprite = slimeDatabase.GetSadExpressionEntry(sadExpressionId);
+            SkeletonDataAsset skeletonDataAsset = spineDatabase.GetSkeletonDataAsset();
+
+            targetSlime.Init(
+                normalExpressionSprite,
+                happyExpressionSprite,
+                sadExpressionSprite,
+                skeletonDataAsset
             );
         }
 
@@ -108,12 +132,14 @@ namespace SlimeColorShop.Gameplay
                 score++;
                 targetSlime.SetExpressionToHappy();
                 UpdateColorQuestionText(ColorQuestionDisplayEnum.SUCCESS);
+                UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_SUCCESS);
             }
             else
             {
                 targetSlime.SetExpressionToSad();
                 bonusPoint = -1;
                 UpdateColorQuestionText(ColorQuestionDisplayEnum.FAILURE);
+                UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_FAILURE);
             }
             bonusDisplay.AddBonusPoint(bonusPoint);
             colorPicker.SetDoubleCoinIndicatorActive(bonusDisplay.IsBonusTakingEffect());
@@ -121,7 +147,7 @@ namespace SlimeColorShop.Gameplay
             yield return new WaitForSeconds(3f);
             isProcessingAnswer = false;
             InitQuestion();
-            InitSlime();
+            InitSlimeV2();
             inventoryManager.StartEnergyCountdown();
         }
 
@@ -160,6 +186,7 @@ namespace SlimeColorShop.Gameplay
             gameplayOverlayManager.ShowGameOverScreen(
                 score, inventoryManager.LoadMaxScoreData()
             );
+            UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_TIMEUP);
         }
         #endregion
 
