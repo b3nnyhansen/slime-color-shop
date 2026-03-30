@@ -30,6 +30,16 @@ namespace SlimeColorShop.Gameplay
 
         void Start()
         {
+            BlackScreen.Instance.DoFadeIn(
+                onPostTransitionAction: delegate
+                {
+                    InitScene();
+                }
+            );
+        }
+
+        private void InitScene()
+        {
             Instance = this;
             inventoryManager = InventoryManager.Instance;
             score = 0;

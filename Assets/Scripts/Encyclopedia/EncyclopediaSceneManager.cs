@@ -9,14 +9,22 @@ namespace SlimeColorShop.Encyclopedia
         [SerializeField] private GameButton encyclopediaItemButtonObject;
         [SerializeField] private RectTransform scrollViewContentTransform;
         [SerializeField] private EncyclopediaQuestionItemViewer itemViewer;
+        [SerializeField] private GameButton returnButton;
 
         void Start()
         {
             InitScene();
+            InventoryManager.Instance.LoadBannerAd();
         }
 
         private void InitScene()
         {
+            returnButton.Init(
+                delegate
+                {
+                    LoadScene(SceneNameEnum.MAIN_MENU);
+                }
+            );
             itemViewer.Init();
             InitEncyclopediaItemButtons();
         }

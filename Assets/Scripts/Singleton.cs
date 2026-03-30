@@ -22,17 +22,22 @@ namespace SlimeColorShop
             }
         }
 
-        protected virtual void Awake()
+        void Awake()
         {
-            if (instance == null)
-            {
-                instance = this as T;
-                DontDestroyOnLoad(gameObject);
-            }
-            else if (instance != this)
+            if (instance != null && instance != this)
             {
                 Destroy(gameObject);
+                return;
             }
+
+            instance = this as T;
+            DontDestroyOnLoad(gameObject);
+            DoAwakeEvent();
+        }
+
+        protected virtual void DoAwakeEvent()
+        {
+            
         }
     }
 }

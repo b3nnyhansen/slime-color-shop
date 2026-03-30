@@ -27,6 +27,7 @@ namespace SlimeColorShop.Shop
             );
             shopBuyConfirmationForm.Init(ConfirmPurchase);
             InitShopGameButtons();
+            InventoryManager.Instance.LoadBannerAd();
         }
 
         private void InitShopGameButtons()

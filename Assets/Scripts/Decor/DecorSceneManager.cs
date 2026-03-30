@@ -26,6 +26,7 @@ namespace SlimeColorShop.Decor
             InitSceneParameters();
             decorationHandler.Init(shopItemDatabase, decorationDatabase, OpenDecorationSelection, isShowingDefaultSprite: true);
             InitDecorationSelectionManager();
+            InventoryManager.Instance.LoadBannerAd();
         }
 
         private void InitSceneParameters()

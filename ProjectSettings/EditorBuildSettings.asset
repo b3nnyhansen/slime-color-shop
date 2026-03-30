@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene_Decor.unity
     guid: 25b759de079e8f246940dafdf7760478
+  - enabled: 1
+    path: Assets/Scenes/Scene_Encyclopedia.unity
+    guid: 50077d4b963e3f544a1c07f385fc637f
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

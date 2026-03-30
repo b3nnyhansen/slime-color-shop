@@ -5,6 +5,7 @@ namespace SlimeColorShop
         MAIN_MENU,
         GAMEPLAY,
         SHOP,
-        DECOR
+        DECOR,
+        ENCYCLOPEDIA
     }
 }

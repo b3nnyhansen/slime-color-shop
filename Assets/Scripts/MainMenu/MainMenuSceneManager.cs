@@ -12,6 +12,7 @@ namespace SlimeColorShop.MainMenu
         [SerializeField] private GameButton playButton;
         [SerializeField] private GameButton shopButton;
         [SerializeField] private GameButton decorButton;
+        [SerializeField] private GameButton encyclopediaButton;
         [SerializeField] private ShowTextEffect showTextEffectObject;
         [SerializeField] private SlimeDatabase slimeDatabase;
         [SerializeField] private PatrollingSlimeV2 patrollingSlimeV2;
@@ -30,7 +31,13 @@ namespace SlimeColorShop.MainMenu
                         instance.Init(Vector2.zero, "Not enough energy!", Color.red);
                         return;
                     }
-                    LoadScene(SceneNameEnum.GAMEPLAY);
+                    BlackScreen.Instance.DoFadeOut(
+                        onPostTransitionAction: delegate
+                        {
+                            UniversalAudioManager.Instance.StopBGMAudio();
+                            LoadScene(SceneNameEnum.GAMEPLAY);
+                        }
+                    );
                 }
             );
             shopButton.Init(
@@ -45,9 +52,16 @@ namespace SlimeColorShop.MainMenu
                     LoadScene(SceneNameEnum.DECOR);
                 }
             );
+            encyclopediaButton.Init(
+                delegate
+                {
+                    LoadScene(SceneNameEnum.ENCYCLOPEDIA);
+                }
+            );
 
             InitPatrollingSlime();
             UniversalAudioManager.Instance.PlayBGM(AudioEnum.BGM_MAINMENU);
+            InventoryManager.Instance.LoadBannerAd();
         }
 
         private void InitPatrollingSlime()

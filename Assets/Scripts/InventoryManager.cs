@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using SlimeColorShop.Data;
+using SlimeColorShop.Ads;
 
 namespace SlimeColorShop
 {
@@ -23,17 +24,18 @@ namespace SlimeColorShop
         [SerializeField] private PlayerDataEntry sfxData;
         [SerializeField] private GameButton settingButton;
         [SerializeField] private SettingFormHandler settingFormHandler;
+        [SerializeField] private AdManager adManager;
         
         private const int maximumEnergy = 180;
         private Vector2 coinChangePosition = new Vector2(+90, -50);
 
-        protected override void Awake()
+        protected override void DoAwakeEvent()
         {
-            base.Awake();
             SetCoinText();
             energyManager.Init(Instance);
             settingFormHandler.Init();
             InitButtons();
+            adManager.Init();
         }
 
         private void InitButtons()
@@ -99,6 +101,11 @@ namespace SlimeColorShop
         public void SetCoinText(string text)
         {
             coinText.text = text;
+        }
+
+        public void LoadBannerAd()
+        {
+            adManager.LoadBannerAd();
         }
 
         #region SAVE_METHODS

@@ -7,9 +7,8 @@ namespace SlimeColorShop.Audio
         [SerializeField] protected BaseAudioManager bgmAudioManager;
         [SerializeField] protected BaseAudioManager sfxAudioManager;
 
-        protected override void Awake()
+        protected override void DoAwakeEvent()
         {
-            base.Awake();
             bgmAudioManager.Init();
             sfxAudioManager.Init();
         }
@@ -28,6 +27,16 @@ namespace SlimeColorShop.Audio
         {
             bgmAudioManager.UpdateAudioVolume();
             sfxAudioManager.UpdateAudioVolume();
+        }
+
+        public void UpdateAudioVolume(float bgmVolume)
+        {
+            bgmAudioManager.UpdateAudioVolume(bgmVolume);
+        }
+
+        public void StopBGMAudio()
+        {
+            bgmAudioManager.StopAudio();
         }
     }
 }

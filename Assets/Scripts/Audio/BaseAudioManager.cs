@@ -27,12 +27,23 @@ namespace SlimeColorShop.Audio
             audioSource.Play();
         }
 
+        public void StopAudio()
+        {
+            audioSource.Stop();
+            currentAudioEnum = AudioEnum.NONE;
+        }
+
         public void UpdateAudioVolume()
         {
             if(IsMuted())
                 audioSource.volume = 0f;
             else
                 audioSource.volume = 1f;
+        }
+
+        public void UpdateAudioVolume(float volume)
+        {
+            audioSource.volume = volume;
         }
 
         public abstract bool IsMuted();
