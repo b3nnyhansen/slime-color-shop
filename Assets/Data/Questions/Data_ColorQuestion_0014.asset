@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 140
   B: 0
-  ColorName: Jingga tua
-  ColorHexCode: '#FF8C00'
-  ColorLikePhrase: Seperti wortel manis
-  ColorCombinationPhrase: 100% merah, 55% hijau
+  ColorName_EN: Dark orange
+  ColorHexCode_EN: '#FF8C00'
+  ColorLikePhrase_EN: Like a sweet carrot
+  ColorCombinationPhrase_EN: 100% red, 55% green
+  ColorName_ID: Jingga tua
+  ColorHexCode_ID: '#FF8C00'
+  ColorLikePhrase_ID: Seperti wortel manis
+  ColorCombinationPhrase_ID: 100% merah, 55% hijau

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 235
   B: 205
-  ColorName: Almond pucat
-  ColorHexCode: '#FFEBCD'
-  ColorLikePhrase: Seperti permen karamel
-  ColorCombinationPhrase: 100% merah, 92% hijau, 80% biru
+  ColorName_EN: Blanched almond
+  ColorHexCode_EN: '#FFEBCD'
+  ColorLikePhrase_EN: Like caramel candy
+  ColorCombinationPhrase_EN: 100% red, 92% green, 80% blue
+  ColorName_ID: Almond pucat
+  ColorHexCode_ID: '#FFEBCD'
+  ColorLikePhrase_ID: Seperti permen karamel
+  ColorCombinationPhrase_ID: 100% merah, 92% hijau, 80% biru

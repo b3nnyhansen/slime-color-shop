@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 199
   G: 21
   B: 133
-  ColorName: Merah violet sedang
-  ColorHexCode: '#C71585'
-  ColorLikePhrase: Seperti selai raspberry
-  ColorCombinationPhrase: 78% merah, 8% hijau, 52% biru
+  ColorName_EN: Medium violet red
+  ColorHexCode_EN: '#C71585'
+  ColorLikePhrase_EN: Like raspberry jam
+  ColorCombinationPhrase_EN: 78% red, 8% green, 52% blue
+  ColorName_ID: Merah violet sedang
+  ColorHexCode_ID: '#C71585'
+  ColorLikePhrase_ID: Seperti selai raspberry
+  ColorCombinationPhrase_ID: 78% merah, 8% hijau, 52% biru

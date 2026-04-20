@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 255
   B: 0
-  ColorName: Kuning terang
-  ColorHexCode: '#FFFF00'
-  ColorLikePhrase: Seperti pisang
-  ColorCombinationPhrase: 100% merah, 100% hijau
+  ColorName_EN: Yellow
+  ColorHexCode_EN: '#FFFF00'
+  ColorLikePhrase_EN: Like a banana
+  ColorCombinationPhrase_EN: 100% red, 100% green
+  ColorName_ID: Kuning terang
+  ColorHexCode_ID: '#FFFF00'
+  ColorLikePhrase_ID: Seperti pisang
+  ColorCombinationPhrase_ID: 100% merah, 100% hijau

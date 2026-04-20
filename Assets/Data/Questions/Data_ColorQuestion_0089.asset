@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 182
   B: 193
-  ColorName: Merah muda lembut
-  ColorHexCode: '#FFB6C1'
-  ColorLikePhrase: Seperti bunga sakura
-  ColorCombinationPhrase: 100% merah, 71% hijau, 76% biru
+  ColorName_EN: Light pink
+  ColorHexCode_EN: '#FFB6C1'
+  ColorLikePhrase_EN: Like a cherry blossom
+  ColorCombinationPhrase_EN: 100% red, 71% green, 76% blue
+  ColorName_ID: Merah muda lembut
+  ColorHexCode_ID: '#FFB6C1'
+  ColorLikePhrase_ID: Seperti bunga sakura
+  ColorCombinationPhrase_ID: 100% merah, 71% hijau, 76% biru

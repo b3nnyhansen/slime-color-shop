@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 220
   G: 220
   B: 220
-  ColorName: Putih perak
-  ColorHexCode: '#DCDCDC'
-  ColorLikePhrase: Seperti gula bubuk
-  ColorCombinationPhrase: 86% merah, 86% hijau, 86% biru
+  ColorName_EN: Gainsboro
+  ColorHexCode_EN: '#DCDCDC'
+  ColorLikePhrase_EN: Like powdered sugar
+  ColorCombinationPhrase_EN: 86% red, 86% green, 86% blue
+  ColorName_ID: Putih perak
+  ColorHexCode_ID: '#DCDCDC'
+  ColorLikePhrase_ID: Seperti gula bubuk
+  ColorCombinationPhrase_ID: 86% merah, 86% hijau, 86% biru

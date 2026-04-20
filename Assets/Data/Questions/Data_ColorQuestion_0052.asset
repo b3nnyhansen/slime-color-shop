@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 127
   G: 255
   B: 212
-  ColorName: Hijau laut bening
-  ColorHexCode: '#7FFFD4'
-  ColorLikePhrase: Seperti es krim mint
-  ColorCombinationPhrase: 50% merah, 100% hijau, 83% biru
+  ColorName_EN: Aqua marine
+  ColorHexCode_EN: '#7FFFD4'
+  ColorLikePhrase_EN: Like mint ice cream
+  ColorCombinationPhrase_EN: 50% red, 100% green, 83% blue
+  ColorName_ID: Hijau laut bening
+  ColorHexCode_ID: '#7FFFD4'
+  ColorLikePhrase_ID: Seperti es krim mint
+  ColorCombinationPhrase_ID: 50% merah, 100% hijau, 83% biru

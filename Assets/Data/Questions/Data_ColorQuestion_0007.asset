@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 127
   B: 80
-  ColorName: Merah karang
-  ColorHexCode: '#FF7F50'
-  ColorLikePhrase: Seperti buah persik segar
-  ColorCombinationPhrase: 100% merah, 50% hijau, 31% biru
+  ColorName_EN: Coral
+  ColorHexCode_EN: '#FF7F50'
+  ColorLikePhrase_EN: Like a fresh peach
+  ColorCombinationPhrase_EN: 100% red, 50% green, 31% blue
+  ColorName_ID: Merah karang
+  ColorHexCode_ID: '#FF7F50'
+  ColorLikePhrase_ID: Seperti buah persik segar
+  ColorCombinationPhrase_ID: 100% merah, 50% hijau, 31% biru

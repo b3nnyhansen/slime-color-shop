@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 102
   G: 205
   B: 170
-  ColorName: Hijau mint
-  ColorHexCode: '#66CDAA'
-  ColorLikePhrase: Seperti permen mint
-  ColorCombinationPhrase: 40% merah, 80% hijau, 67% biru
+  ColorName_EN: Medium aqua marine
+  ColorHexCode_EN: '#66CDAA'
+  ColorLikePhrase_EN: Like mint candy
+  ColorCombinationPhrase_EN: 40% red, 80% green, 67% blue
+  ColorName_ID: Hijau mint
+  ColorHexCode_ID: '#66CDAA'
+  ColorLikePhrase_ID: Seperti permen mint
+  ColorCombinationPhrase_ID: 40% merah, 80% hijau, 67% biru

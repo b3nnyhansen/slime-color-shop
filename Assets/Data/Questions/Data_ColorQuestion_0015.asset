@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 165
   B: 0
-  ColorName: Jingga
-  ColorHexCode: '#FFA500'
-  ColorLikePhrase: Seperti jeruk manis
-  ColorCombinationPhrase: 100% merah, 65% hijau
+  ColorName_EN: Orange
+  ColorHexCode_EN: '#FFA500'
+  ColorLikePhrase_EN: Like a sweet orange
+  ColorCombinationPhrase_EN: 100% red, 65% green
+  ColorName_ID: Jingga
+  ColorHexCode_ID: '#FFA500'
+  ColorLikePhrase_ID: Seperti jeruk manis
+  ColorCombinationPhrase_ID: 100% merah, 65% hijau

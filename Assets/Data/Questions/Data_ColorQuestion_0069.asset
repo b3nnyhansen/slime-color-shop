@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 75
   G: 0
   B: 130
-  ColorName: Indigo
-  ColorHexCode: '#4B0082'
-  ColorLikePhrase: Seperti jus anggur pekat
-  ColorCombinationPhrase: 29% merah, 51% biru
+  ColorName_EN: Indigo
+  ColorHexCode_EN: '#4B0082'
+  ColorLikePhrase_EN: Like dark grape juice
+  ColorCombinationPhrase_EN: 29% red, 51% blue
+  ColorName_ID: Indigo
+  ColorHexCode_ID: '#4B0082'
+  ColorLikePhrase_ID: Seperti jus anggur pekat
+  ColorCombinationPhrase_ID: 29% merah, 51% biru

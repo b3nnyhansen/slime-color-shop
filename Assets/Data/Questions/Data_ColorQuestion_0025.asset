@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 85
   G: 107
   B: 47
-  ColorName: Hijau zaitun tua
-  ColorHexCode: '#556B2F'
-  ColorLikePhrase: Seperti katak hutan
-  ColorCombinationPhrase: 33% merah, 42% hijau, 18% biru
+  ColorName_EN: Dark olive green
+  ColorHexCode_EN: '#556B2F'
+  ColorLikePhrase_EN: Like a forest frog
+  ColorCombinationPhrase_EN: 33% red, 42% green, 18% blue
+  ColorName_ID: Hijau zaitun tua
+  ColorHexCode_ID: '#556B2F'
+  ColorLikePhrase_ID: Seperti katak hutan
+  ColorCombinationPhrase_ID: 33% merah, 42% hijau, 18% biru

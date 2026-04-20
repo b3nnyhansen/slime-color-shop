@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 72
   G: 209
   B: 204
-  ColorName: Toska sedang
-  ColorHexCode: '#48D1CC'
-  ColorLikePhrase: Seperti kaca laut biru-hijau
-  ColorCombinationPhrase: 28% merah, 82% hijau, 80% biru
+  ColorName_EN: Medium turquoise
+  ColorHexCode_EN: '#48D1CC'
+  ColorLikePhrase_EN: Like blue-green sea glass
+  ColorCombinationPhrase_EN: 28% red, 82% green, 80% blue
+  ColorName_ID: Toska sedang
+  ColorHexCode_ID: '#48D1CC'
+  ColorLikePhrase_ID: Seperti kaca laut biru-hijau
+  ColorCombinationPhrase_ID: 28% merah, 82% hijau, 80% biru

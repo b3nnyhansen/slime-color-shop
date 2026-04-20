@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 154
   G: 205
   B: 50
-  ColorName: Kuning hijau
-  ColorHexCode: '#9ACD32'
-  ColorLikePhrase: Seperti apel hijau
-  ColorCombinationPhrase: 60% merah, 80% hijau, 20% biru
+  ColorName_EN: Yellow green
+  ColorHexCode_EN: '#9ACD32'
+  ColorLikePhrase_EN: Like a green apple
+  ColorCombinationPhrase_EN: 60% red, 80% green, 20% blue
+  ColorName_ID: Kuning hijau
+  ColorHexCode_ID: '#9ACD32'
+  ColorLikePhrase_ID: Seperti apel hijau
+  ColorCombinationPhrase_ID: 60% merah, 80% hijau, 20% biru

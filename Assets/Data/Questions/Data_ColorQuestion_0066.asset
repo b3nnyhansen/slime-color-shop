@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 0
   B: 255
-  ColorName: Biru
-  ColorHexCode: '#0000FF'
-  ColorLikePhrase: Seperti burung blue jay
-  ColorCombinationPhrase: 100% biru
+  ColorName_EN: Blue
+  ColorHexCode_EN: '#0000FF'
+  ColorLikePhrase_EN: Like a blue jay bird
+  ColorCombinationPhrase_EN: 100% blue
+  ColorName_ID: Biru
+  ColorHexCode_ID: '#0000FF'
+  ColorLikePhrase_ID: Seperti burung blue jay
+  ColorCombinationPhrase_ID: 100% biru

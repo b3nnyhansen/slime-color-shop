@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 138
   G: 43
   B: 226
-  ColorName: Biru violet
-  ColorHexCode: '#8A2BE2'
-  ColorLikePhrase: Seperti permen anggur
-  ColorCombinationPhrase: 54% merah, 17% hijau, 89% biru
+  ColorName_EN: Blue violet
+  ColorHexCode_EN: '#8A2BE2'
+  ColorLikePhrase_EN: Like grape candy
+  ColorCombinationPhrase_EN: 54% red, 17% green, 89% blue
+  ColorName_ID: Biru violet
+  ColorHexCode_ID: '#8A2BE2'
+  ColorLikePhrase_ID: Seperti permen anggur
+  ColorCombinationPhrase_ID: 54% merah, 17% hijau, 89% biru

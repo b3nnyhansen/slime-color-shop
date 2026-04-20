@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 240
   G: 248
   B: 255
-  ColorName: Putih kebiruan
-  ColorHexCode: '#F0F8FF'
-  ColorLikePhrase: Seperti salju segar
-  ColorCombinationPhrase: 94% merah, 97% hijau, 100% biru
+  ColorName_EN: Alice blue
+  ColorHexCode_EN: '#F0F8FF'
+  ColorLikePhrase_EN: Like fresh snow
+  ColorCombinationPhrase_EN: 94% red, 97% green, 100% blue
+  ColorName_ID: Putih kebiruan
+  ColorHexCode_ID: '#F0F8FF'
+  ColorLikePhrase_ID: Seperti salju segar
+  ColorCombinationPhrase_ID: 94% merah, 97% hijau, 100% biru

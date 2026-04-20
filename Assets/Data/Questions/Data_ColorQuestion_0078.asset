@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 128
   G: 0
   B: 128
-  ColorName: Ungu
-  ColorHexCode: '#800080'
-  ColorLikePhrase: Seperti bunga tulip ungu
-  ColorCombinationPhrase: 50% merah, 50% biru
+  ColorName_EN: Purple
+  ColorHexCode_EN: '#800080'
+  ColorLikePhrase_EN: Like a purple tulip
+  ColorCombinationPhrase_EN: 50% red, 50% blue
+  ColorName_ID: Ungu
+  ColorHexCode_ID: '#800080'
+  ColorLikePhrase_ID: Seperti bunga tulip ungu
+  ColorCombinationPhrase_ID: 50% merah, 50% biru

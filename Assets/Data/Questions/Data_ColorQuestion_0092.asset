@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 245
   G: 245
   B: 220
-  ColorName: Beige
-  ColorHexCode: '#F5F5DC'
-  ColorLikePhrase: Seperti bantal empuk
-  ColorCombinationPhrase: 96% merah, 96% hijau, 86% biru
+  ColorName_EN: Beige
+  ColorHexCode_EN: '#F5F5DC'
+  ColorLikePhrase_EN: Like a comfy pillow
+  ColorCombinationPhrase_EN: 96% red, 96% green, 86% blue
+  ColorName_ID: Beige
+  ColorHexCode_ID: '#F5F5DC'
+  ColorLikePhrase_ID: Seperti bantal empuk
+  ColorCombinationPhrase_ID: 96% merah, 96% hijau, 86% biru

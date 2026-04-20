@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 228
   B: 181
-  ColorName: Cokelat lembut
-  ColorHexCode: '#FFE4B5'
-  ColorLikePhrase: Seperti panekuk
-  ColorCombinationPhrase: 100% merah, 89% hijau, 71% biru
+  ColorName_EN: Moccasin
+  ColorHexCode_EN: '#FFE4B5'
+  ColorLikePhrase_EN: Like a pancake
+  ColorCombinationPhrase_EN: 100% red, 89% green, 71% blue
+  ColorName_ID: Cokelat lembut
+  ColorHexCode_ID: '#FFE4B5'
+  ColorLikePhrase_ID: Seperti panekuk
+  ColorCombinationPhrase_ID: 100% merah, 89% hijau, 71% biru

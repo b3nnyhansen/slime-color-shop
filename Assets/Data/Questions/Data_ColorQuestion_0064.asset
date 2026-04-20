@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 0
   B: 139
-  ColorName: Biru tua
-  ColorHexCode: '#00008B'
-  ColorLikePhrase: Seperti pai berry gelap
-  ColorCombinationPhrase: 55% biru
+  ColorName_EN: Dark blue
+  ColorHexCode_EN: '#00008B'
+  ColorLikePhrase_EN: Like dark berry pie
+  ColorCombinationPhrase_EN: 55% blue
+  ColorName_ID: Biru tua
+  ColorHexCode_ID: '#00008B'
+  ColorLikePhrase_ID: Seperti pai berry gelap
+  ColorCombinationPhrase_ID: 55% biru

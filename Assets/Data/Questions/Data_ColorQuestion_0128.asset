@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 250
   B: 250
-  ColorName: Putih salju
-  ColorHexCode: '#FFFAFA'
-  ColorLikePhrase: Seperti mawar putih
-  ColorCombinationPhrase: 100% merah, 98% hijau, 98% biru
+  ColorName_EN: Snow
+  ColorHexCode_EN: '#FFFAFA'
+  ColorLikePhrase_EN: Like white roses
+  ColorCombinationPhrase_EN: 100% red, 98% green, 98% blue
+  ColorName_ID: Putih salju
+  ColorHexCode_ID: '#FFFAFA'
+  ColorLikePhrase_ID: Seperti mawar putih
+  ColorCombinationPhrase_ID: 100% merah, 98% hijau, 98% biru

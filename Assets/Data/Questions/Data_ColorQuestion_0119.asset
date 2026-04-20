@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 119
   G: 136
   B: 153
-  ColorName: Abu-abu kebiruan
-  ColorHexCode: '#778899'
-  ColorLikePhrase: Seperti langit berawan
-  ColorCombinationPhrase: 47% merah, 53% hijau, 60% biru
+  ColorName_EN: Light slate gray
+  ColorHexCode_EN: '#778899'
+  ColorLikePhrase_EN: Like a cloudy sky
+  ColorCombinationPhrase_EN: 47% red, 53% green, 60% blue
+  ColorName_ID: Abu-abu kebiruan
+  ColorHexCode_ID: '#778899'
+  ColorLikePhrase_ID: Seperti langit berawan
+  ColorCombinationPhrase_ID: 47% merah, 53% hijau, 60% biru

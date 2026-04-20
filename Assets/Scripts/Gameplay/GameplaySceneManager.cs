@@ -30,16 +30,6 @@ namespace SlimeColorShop.Gameplay
 
         void Start()
         {
-            BlackScreen.Instance.DoFadeIn(
-                onPostTransitionAction: delegate
-                {
-                    InitScene();
-                }
-            );
-        }
-
-        private void InitScene()
-        {
             Instance = this;
             inventoryManager = InventoryManager.Instance;
             score = 0;
@@ -49,6 +39,24 @@ namespace SlimeColorShop.Gameplay
             gameplayOverlayManager.Init();
             bonusDisplay.Init();
             InitButtons();
+
+            if (BlackScreen.Instance.IsBlackedOut)
+            {
+                BlackScreen.Instance.DoFadeIn(
+                    onPostTransitionAction: delegate
+                    {
+                        InitScene();
+                    }
+                );
+            }
+            else
+            {
+                InitScene();
+            }
+        }
+
+        private void InitScene()
+        {
             inventoryManager.StartEnergyCountdown(
                 delegate
                 {
@@ -87,20 +95,16 @@ namespace SlimeColorShop.Gameplay
 
         private void InitSlimeV2()
         {
-            int normalExpressionId = UnityEngine.Random.Range(0, slimeDatabase.NormalExpressionEntryCount);
-            int happyExpressionId = UnityEngine.Random.Range(0, slimeDatabase.HappyExpressionEntryCount);
-            int sadExpressionId = UnityEngine.Random.Range(0, slimeDatabase.SadExpressionEntryCount);
-
-            Sprite normalExpressionSprite = slimeDatabase.GetNormalExpressionEntry(normalExpressionId);
-            Sprite happyExpressionSprite = slimeDatabase.GetHappyExpressionEntry(happyExpressionId);
-            Sprite sadExpressionSprite = slimeDatabase.GetSadExpressionEntry(sadExpressionId);
-            SkeletonDataAsset skeletonDataAsset = spineDatabase.GetSkeletonDataAsset();
+            SkeletonDataAsset skeletonDataAsset_Slime = spineDatabase.GetSkeletonDataAsset_Slime();
+            SkeletonDataAsset skeletonDataAsset_ExpressionNormal = spineDatabase.GetSkeletonDataAsset_ExpressionNormal();
+            SkeletonDataAsset skeletonDataAsset_ExpressionHappy = spineDatabase.GetSkeletonDataAsset_ExpressionHappy();
+            SkeletonDataAsset skeletonDataAsset_ExpressionSad = spineDatabase.GetSkeletonDataAsset_ExpressionSad();
 
             targetSlime.Init(
-                normalExpressionSprite,
-                happyExpressionSprite,
-                sadExpressionSprite,
-                skeletonDataAsset
+                skeletonDataAsset_Slime,
+                skeletonDataAsset_ExpressionNormal,
+                skeletonDataAsset_ExpressionHappy,
+                skeletonDataAsset_ExpressionSad
             );
         }
 
@@ -110,6 +114,7 @@ namespace SlimeColorShop.Gameplay
                 delegate
                 {
                     ShowPauseScreen();
+                    UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_BUTTON_CLICK);
                 }
             );
         }
@@ -140,13 +145,13 @@ namespace SlimeColorShop.Gameplay
                 IncreaseCoin();
                 bonusPoint = 1;
                 score++;
-                targetSlime.SetExpressionToHappy();
+                targetSlime.SetExpressionToHappyV2();
                 UpdateColorQuestionText(ColorQuestionDisplayEnum.SUCCESS);
                 UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_SUCCESS);
             }
             else
             {
-                targetSlime.SetExpressionToSad();
+                targetSlime.SetExpressionToSadV2();
                 bonusPoint = -1;
                 UpdateColorQuestionText(ColorQuestionDisplayEnum.FAILURE);
                 UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_FAILURE);
@@ -165,7 +170,13 @@ namespace SlimeColorShop.Gameplay
         {
             inventoryManager.StopEnergyCountdown();
             UnpauseGame();
-            LoadScene(SceneNameEnum.MAIN_MENU);
+            BlackScreen.Instance.DoFadeOut(
+                onPostTransitionAction: delegate
+                {
+                    UniversalAudioManager.Instance.StopBGMAudio();
+                    LoadScene(SceneNameEnum.MAIN_MENU);
+                }
+            );
         }
 
         #region PAUSE_AND_GAME_OVER_CONTROL
@@ -196,6 +207,7 @@ namespace SlimeColorShop.Gameplay
             gameplayOverlayManager.ShowGameOverScreen(
                 score, inventoryManager.LoadMaxScoreData()
             );
+            inventoryManager.ShowInterstitial();
             UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_TIMEUP);
         }
         #endregion
@@ -234,13 +246,13 @@ namespace SlimeColorShop.Gameplay
             switch (displayOption)
             {
                 case ColorQuestionDisplayEnum.HEX:
-                    colorQuestionText.text = currentColorQuestion.ColorHexCode;
+                    colorQuestionText.text = currentColorQuestion.GetColorHexCode();
                     break;
                 case ColorQuestionDisplayEnum.LIKE_PHRASE:
-                    colorQuestionText.text = currentColorQuestion.ColorLikePhrase;
+                    colorQuestionText.text = currentColorQuestion.GetLikePhrase();
                     break;
                 case ColorQuestionDisplayEnum.COMBINATION_PHRASE:
-                    colorQuestionText.text = currentColorQuestion.ColorLikePhrase;
+                    colorQuestionText.text = currentColorQuestion.GetLikePhrase();
                     break;
                 case ColorQuestionDisplayEnum.SUCCESS:
                     colorQuestionText.text = "Yay! Warna ini sesuai permintaanku!";
@@ -249,7 +261,7 @@ namespace SlimeColorShop.Gameplay
                     colorQuestionText.text = "Warna ini tidak sesuai permintaanku...";
                     break;
                 default:
-                    colorQuestionText.text = currentColorQuestion.ColorName;
+                    colorQuestionText.text = currentColorQuestion.GetColorName();
                     break;
             }
         }
@@ -265,7 +277,7 @@ namespace SlimeColorShop.Gameplay
                     threshold = 15;
                     break;
                 case ColorQuestionDisplayEnum.COMBINATION_PHRASE:
-                    threshold = 10;
+                    threshold = 15;
                     break;
                 default:
                     threshold = 10;

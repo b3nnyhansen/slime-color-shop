@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 250
   B: 240
-  ColorName: Putih bunga
-  ColorHexCode: '#FFFAF0'
-  ColorLikePhrase: Seperti es krim vanila
-  ColorCombinationPhrase: 100% merah, 98% hijau, 94% biru
+  ColorName_EN: Floral white
+  ColorHexCode_EN: '#FFFAF0'
+  ColorLikePhrase_EN: Like vanilla ice cream
+  ColorCombinationPhrase_EN: 100% red, 98% green, 94% blue
+  ColorName_ID: Putih bunga
+  ColorHexCode_ID: '#FFFAF0'
+  ColorLikePhrase_ID: Seperti es krim vanila
+  ColorCombinationPhrase_ID: 100% merah, 98% hijau, 94% biru

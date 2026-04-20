@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 47
   G: 79
   B: 79
-  ColorName: Hijau abu-abu tua
-  ColorHexCode: '#2F4F4F'
-  ColorLikePhrase: Seperti rumput laut kering
-  ColorCombinationPhrase: 18% merah, 31% hijau, 31% biru
+  ColorName_EN: Dark slate gray
+  ColorHexCode_EN: '#2F4F4F'
+  ColorLikePhrase_EN: Like dried seaweed
+  ColorCombinationPhrase_EN: 18% red, 31% green, 31% blue
+  ColorName_ID: Hijau abu-abu tua
+  ColorHexCode_ID: '#2F4F4F'
+  ColorLikePhrase_ID: Seperti rumput laut kering
+  ColorCombinationPhrase_ID: 18% merah, 31% hijau, 31% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 139
   G: 0
   B: 0
-  ColorName: Merah gelap
-  ColorHexCode: '#8B0000'
-  ColorLikePhrase: Seperti kuda kastanye
-  ColorCombinationPhrase: 55% merah
+  ColorName_EN: Dark red
+  ColorHexCode_EN: '#8B0000'
+  ColorLikePhrase_EN: Like a chestnut horse
+  ColorCombinationPhrase_EN: 55% red
+  ColorName_ID: Merah gelap
+  ColorHexCode_ID: '#8B0000'
+  ColorLikePhrase_ID: Seperti kuda kastanye
+  ColorCombinationPhrase_ID: 55% merah

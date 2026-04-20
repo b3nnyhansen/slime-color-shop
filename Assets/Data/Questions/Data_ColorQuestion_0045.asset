@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 128
   B: 128
-  ColorName: Hijau toska
-  ColorHexCode: '#008080'
-  ColorLikePhrase: Seperti air laut dalam
-  ColorCombinationPhrase: 50% hijau, 50% biru
+  ColorName_EN: Teal
+  ColorHexCode_EN: '#008080'
+  ColorLikePhrase_EN: Like deep ocean water
+  ColorCombinationPhrase_EN: 50% green, 50% blue
+  ColorName_ID: Hijau toska
+  ColorHexCode_ID: '#008080'
+  ColorLikePhrase_ID: Seperti air laut dalam
+  ColorCombinationPhrase_ID: 50% hijau, 50% biru

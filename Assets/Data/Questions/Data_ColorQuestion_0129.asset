@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 105
   G: 105
   B: 105
-  ColorName: Abu-abu redup
-  ColorHexCode: '#696969'
-  ColorLikePhrase: Seperti batu
-  ColorCombinationPhrase: 41% merah, 41% hijau, 41% biru
+  ColorName_EN: Dim gray
+  ColorHexCode_EN: '#696969'
+  ColorLikePhrase_EN: Like a rock
+  ColorCombinationPhrase_EN: 41% red, 41% green, 41% blue
+  ColorName_ID: Abu-abu redup
+  ColorHexCode_ID: '#696969'
+  ColorLikePhrase_ID: Seperti batu
+  ColorCombinationPhrase_ID: 41% merah, 41% hijau, 41% biru

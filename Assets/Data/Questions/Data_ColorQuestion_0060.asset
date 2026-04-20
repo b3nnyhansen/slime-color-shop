@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 135
   G: 206
   B: 235
-  ColorName: Biru langit
-  ColorHexCode: '#87CEEB'
-  ColorLikePhrase: Seperti marshmallow biru
-  ColorCombinationPhrase: 53% merah, 81% hijau, 92% biru
+  ColorName_EN: Sky blue
+  ColorHexCode_EN: '#87CEEB'
+  ColorLikePhrase_EN: Like blue marshmallow
+  ColorCombinationPhrase_EN: 53% red, 81% green, 92% blue
+  ColorName_ID: Biru langit
+  ColorHexCode_ID: '#87CEEB'
+  ColorLikePhrase_ID: Seperti marshmallow biru
+  ColorCombinationPhrase_ID: 53% merah, 81% hijau, 92% biru

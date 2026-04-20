@@ -103,10 +103,17 @@ namespace SlimeColorShop
             coinText.text = text;
         }
 
+        #region AD_METHODS
         public void LoadBannerAd()
         {
             adManager.LoadBannerAd();
         }
+
+        public void ShowInterstitial()
+        {
+            adManager.ShowInterstitial();
+        }
+        #endregion
 
         #region SAVE_METHODS
         public void SaveEnergyData()

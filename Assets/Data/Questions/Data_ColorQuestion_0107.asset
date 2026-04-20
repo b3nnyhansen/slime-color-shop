@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 188
   G: 143
   B: 143
-  ColorName: Cokelat merah muda
-  ColorHexCode: '#BC8F8F'
-  ColorLikePhrase: Seperti susu cokelat
-  ColorCombinationPhrase: 74% merah, 56% hijau, 56% biru
+  ColorName_EN: Rosy brown
+  ColorHexCode_EN: '#BC8F8F'
+  ColorLikePhrase_EN: Like chocolate milk
+  ColorCombinationPhrase_EN: 74% red, 56% green, 56% blue
+  ColorName_ID: Cokelat merah muda
+  ColorHexCode_ID: '#BC8F8F'
+  ColorLikePhrase_ID: Seperti susu cokelat
+  ColorCombinationPhrase_ID: 74% merah, 56% hijau, 56% biru

@@ -13,10 +13,10 @@ namespace SlimeColorShop.Encyclopedia
 
         public void SetTexts(ColorQuestionEntry entry, int displayState = 0)
         {
-            colorNameText.text = (displayState & 1) > 0 ? entry.ColorName : "???";
-            colorHexcodeText.text = (displayState & 2) > 0 ? entry.ColorHexCode : "???";
-            colorLikePhraseText.text = (displayState & 4) > 0 ? entry.ColorLikePhrase : "???";
-            colorCombinationPhraseText.text = (displayState & 8) > 0 ? entry.ColorCombinationPhrase : "???";
+            colorNameText.text = (displayState & 1) > 0 ? entry.GetColorName() : "???";
+            colorHexcodeText.text = (displayState & 2) > 0 ? entry.GetColorHexCode() : "???";
+            colorLikePhraseText.text = (displayState & 4) > 0 ? entry.GetLikePhrase() : "???";
+            colorCombinationPhraseText.text = (displayState & 8) > 0 ? entry.GetCombinationPhrase() : "???";
         }
 
         public void ShowQuestionItem(ColorQuestionEntry entry, int displayState = 0)

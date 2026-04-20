@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 230
   G: 230
   B: 250
-  ColorName: Lavender
-  ColorHexCode: '#E6E6FA'
-  ColorLikePhrase: Seperti bunga lavender
-  ColorCombinationPhrase: 90% merah, 90% hijau, 98% biru
+  ColorName_EN: Lavender
+  ColorHexCode_EN: '#E6E6FA'
+  ColorLikePhrase_EN: Like lavender flowers
+  ColorCombinationPhrase_EN: 90% red, 90% green, 98% blue
+  ColorName_ID: Lavender
+  ColorHexCode_ID: '#E6E6FA'
+  ColorLikePhrase_ID: Seperti bunga lavender
+  ColorCombinationPhrase_ID: 90% merah, 90% hijau, 98% biru

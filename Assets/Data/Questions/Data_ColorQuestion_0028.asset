@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 127
   G: 255
   B: 0
-  ColorName: Hijau pucuk pisang
-  ColorHexCode: '#7FFF00'
-  ColorLikePhrase: Seperti burung nuri
-  ColorCombinationPhrase: 50% merah, 100% hijau
+  ColorName_EN: Chartreuse
+  ColorHexCode_EN: '#7FFF00'
+  ColorLikePhrase_EN: Like a parrot
+  ColorCombinationPhrase_EN: 50% red, 100% green
+  ColorName_ID: Hijau pucuk pisang
+  ColorHexCode_ID: '#7FFF00'
+  ColorLikePhrase_ID: Seperti burung nuri
+  ColorCombinationPhrase_ID: 50% merah, 100% hijau

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 233
   G: 150
   B: 122
-  ColorName: Merah salmon tua
-  ColorHexCode: '#E9967A'
-  ColorLikePhrase: Seperti ikan salmon matang
-  ColorCombinationPhrase: 91% merah, 59% hijau, 48% biru
+  ColorName_EN: Dark salmon
+  ColorHexCode_EN: '#E9967A'
+  ColorLikePhrase_EN: Like cooked salmon
+  ColorCombinationPhrase_EN: 91% red, 59% green, 48% blue
+  ColorName_ID: Merah salmon tua
+  ColorHexCode_ID: '#E9967A'
+  ColorLikePhrase_ID: Seperti ikan salmon matang
+  ColorCombinationPhrase_ID: 91% merah, 59% hijau, 48% biru

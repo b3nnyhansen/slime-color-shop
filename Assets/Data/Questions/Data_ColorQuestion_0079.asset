@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 216
   G: 191
   B: 216
-  ColorName: Ungu lembut
-  ColorHexCode: '#D8BFD8'
-  ColorLikePhrase: Seperti permen ungu lembut
-  ColorCombinationPhrase: 85% merah, 75% hijau, 85% biru
+  ColorName_EN: Thistle
+  ColorHexCode_EN: '#D8BFD8'
+  ColorLikePhrase_EN: Like soft purple candy
+  ColorCombinationPhrase_EN: 85% red, 75% green, 85% blue
+  ColorName_ID: Ungu lembut
+  ColorHexCode_ID: '#D8BFD8'
+  ColorLikePhrase_ID: Seperti permen ungu lembut
+  ColorCombinationPhrase_ID: 85% merah, 75% hijau, 85% biru

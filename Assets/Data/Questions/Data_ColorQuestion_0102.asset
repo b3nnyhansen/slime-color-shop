@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 210
   G: 105
   B: 30
-  ColorName: Cokelat
-  ColorHexCode: '#D2691E'
-  ColorLikePhrase: Seperti kayu manis
-  ColorCombinationPhrase: 82% merah, 41% hijau, 12% biru
+  ColorName_EN: Chocolate
+  ColorHexCode_EN: '#D2691E'
+  ColorLikePhrase_EN: Like a cinnamon
+  ColorCombinationPhrase_EN: 82% red, 41% green, 12% blue
+  ColorName_ID: Cokelat
+  ColorHexCode_ID: '#D2691E'
+  ColorLikePhrase_ID: Seperti kayu manis
+  ColorCombinationPhrase_ID: 82% merah, 41% hijau, 12% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 128
   G: 128
   B: 128
-  ColorName: Abu-abu
-  ColorHexCode: '#808080'
-  ColorLikePhrase: Seperti merpati kota
-  ColorCombinationPhrase: 50% merah, 50% hijau, 50% biru
+  ColorName_EN: Gray
+  ColorHexCode_EN: '#808080'
+  ColorLikePhrase_EN: Like a city pigeon
+  ColorCombinationPhrase_EN: 50% red, 50% green, 50% blue
+  ColorName_ID: Abu-abu
+  ColorHexCode_ID: '#808080'
+  ColorLikePhrase_ID: Seperti merpati kota
+  ColorCombinationPhrase_ID: 50% merah, 50% hijau, 50% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 228
   B: 225
-  ColorName: Mawar kabut
-  ColorHexCode: '#FFE4E1'
-  ColorLikePhrase: Seperti kelopak mawar pucat
-  ColorCombinationPhrase: 100% merah, 89% hijau, 88% biru
+  ColorName_EN: Misty rose
+  ColorHexCode_EN: '#FFE4E1'
+  ColorLikePhrase_EN: Like a pale pink rose petal
+  ColorCombinationPhrase_EN: 100% red, 89% green, 88% blue
+  ColorName_ID: Mawar kabut
+  ColorHexCode_ID: '#FFE4E1'
+  ColorLikePhrase_ID: Seperti kelopak mawar pucat
+  ColorCombinationPhrase_ID: 100% merah, 89% hijau, 88% biru

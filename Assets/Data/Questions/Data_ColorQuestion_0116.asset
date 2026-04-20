@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 245
   B: 238
-  ColorName: Putih merah muda pucat
-  ColorHexCode: '#FFF5EE'
-  ColorLikePhrase: Seperti krim kocok
-  ColorCombinationPhrase: 100% merah, 96% hijau, 93% biru
+  ColorName_EN: Sea shell
+  ColorHexCode_EN: '#FFF5EE'
+  ColorLikePhrase_EN: Like whipped cream
+  ColorCombinationPhrase_EN: 100% red, 96% green, 93% blue
+  ColorName_ID: Putih merah muda pucat
+  ColorHexCode_ID: '#FFF5EE'
+  ColorLikePhrase_ID: Seperti krim kocok
+  ColorCombinationPhrase_ID: 100% merah, 96% hijau, 93% biru

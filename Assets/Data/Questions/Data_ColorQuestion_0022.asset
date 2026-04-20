@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 128
   G: 128
   B: 0
-  ColorName: Hijau zaitun
-  ColorHexCode: '#808000'
-  ColorLikePhrase: Seperti daun zaitun
-  ColorCombinationPhrase: 50% merah, 50% hijau
+  ColorName_EN: Olive
+  ColorHexCode_EN: '#808000'
+  ColorLikePhrase_EN: Like olive leaves
+  ColorCombinationPhrase_EN: 50% red, 50% green
+  ColorName_ID: Hijau zaitun
+  ColorHexCode_ID: '#808000'
+  ColorLikePhrase_ID: Seperti daun zaitun
+  ColorCombinationPhrase_ID: 50% merah, 50% hijau

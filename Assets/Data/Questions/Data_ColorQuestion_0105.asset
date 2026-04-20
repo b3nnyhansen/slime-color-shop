@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 222
   G: 184
   B: 135
-  ColorName: Cokelat kayu tua
-  ColorHexCode: '#DEB887'
-  ColorLikePhrase: Seperti kelinci cokelat
-  ColorCombinationPhrase: 87% merah, 72% hijau, 53% biru
+  ColorName_EN: Burly wood
+  ColorHexCode_EN: '#DEB887'
+  ColorLikePhrase_EN: Like a brown rabbit
+  ColorCombinationPhrase_EN: 87% red, 72% green, 53% blue
+  ColorName_ID: Cokelat kayu tua
+  ColorHexCode_ID: '#DEB887'
+  ColorLikePhrase_ID: Seperti kelinci cokelat
+  ColorCombinationPhrase_ID: 87% merah, 72% hijau, 53% biru

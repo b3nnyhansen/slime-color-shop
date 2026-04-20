@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 0
   B: 128
-  ColorName: Biru laut
-  ColorHexCode: '#000080'
-  ColorLikePhrase: Seperti lumba-lumba laut
-  ColorCombinationPhrase: 50% biru
+  ColorName_EN: Navy
+  ColorHexCode_EN: '#000080'
+  ColorLikePhrase_EN: Like a navy dolphin
+  ColorCombinationPhrase_EN: 50% blue
+  ColorName_ID: Biru laut
+  ColorHexCode_ID: '#000080'
+  ColorLikePhrase_ID: Seperti lumba-lumba laut
+  ColorCombinationPhrase_ID: 50% biru

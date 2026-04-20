@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 105
   B: 180
-  ColorName: Merah muda terang
-  ColorHexCode: '#FF69B4'
-  ColorLikePhrase: Seperti anak babi
-  ColorCombinationPhrase: 100% merah, 41% hijau, 71% biru
+  ColorName_EN: Hot pink
+  ColorHexCode_EN: '#FF69B4'
+  ColorLikePhrase_EN: Like a piglet
+  ColorCombinationPhrase_EN: 100% red, 41% green, 71% blue
+  ColorName_ID: Merah muda terang
+  ColorHexCode_ID: '#FF69B4'
+  ColorLikePhrase_ID: Seperti anak babi
+  ColorCombinationPhrase_ID: 100% merah, 41% hijau, 71% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 124
   G: 252
   B: 0
-  ColorName: Hijau rumput
-  ColorHexCode: '#7CFC00'
-  ColorLikePhrase: Seperti bola tenis
-  ColorCombinationPhrase: 49% merah, 99% hijau
+  ColorName_EN: Lawn green
+  ColorHexCode_EN: '#7CFC00'
+  ColorLikePhrase_EN: Like a tennis ball
+  ColorCombinationPhrase_EN: 49% red, 99% green
+  ColorName_ID: Hijau rumput
+  ColorHexCode_ID: '#7CFC00'
+  ColorLikePhrase_ID: Seperti bola tenis
+  ColorCombinationPhrase_ID: 49% merah, 99% hijau

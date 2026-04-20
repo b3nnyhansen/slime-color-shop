@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 65
   G: 105
   B: 225
-  ColorName: Biru royal
-  ColorHexCode: '#4169E1'
-  ColorLikePhrase: Seperti capung biru
-  ColorCombinationPhrase: 25% merah, 41% hijau, 88% biru
+  ColorName_EN: Royal blue
+  ColorHexCode_EN: '#4169E1'
+  ColorLikePhrase_EN: Like a blue dragonfly
+  ColorCombinationPhrase_EN: 25% red, 41% green, 88% blue
+  ColorName_ID: Biru royal
+  ColorHexCode_ID: '#4169E1'
+  ColorLikePhrase_ID: Seperti capung biru
+  ColorCombinationPhrase_ID: 25% merah, 41% hijau, 88% biru

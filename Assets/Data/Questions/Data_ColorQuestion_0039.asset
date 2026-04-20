@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 255
   B: 127
-  ColorName: Hijau musim semi
-  ColorHexCode: '#00FF7F'
-  ColorLikePhrase: Seperti pohon di musim semi
-  ColorCombinationPhrase: 100% hijau, 50% biru
+  ColorName_EN: Spring green
+  ColorHexCode_EN: '#00FF7F'
+  ColorLikePhrase_EN: Like a tree in spring
+  ColorCombinationPhrase_EN: 100% green, 50% blue
+  ColorName_ID: Hijau musim semi
+  ColorHexCode_ID: '#00FF7F'
+  ColorLikePhrase_ID: Seperti pohon di musim semi
+  ColorCombinationPhrase_ID: 100% hijau, 50% biru

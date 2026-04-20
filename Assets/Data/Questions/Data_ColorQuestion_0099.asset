@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 255
   B: 224
-  ColorName: Kuning pucat
-  ColorHexCode: '#FFFFE0'
-  ColorLikePhrase: Seperti minuman lemon
-  ColorCombinationPhrase: 100% merah, 100% hijau, 88% biru
+  ColorName_EN: Light yellow
+  ColorHexCode_EN: '#FFFFE0'
+  ColorLikePhrase_EN: Like lemonade
+  ColorCombinationPhrase_EN: 100% red, 100% green, 88% blue
+  ColorName_ID: Kuning pucat
+  ColorHexCode_ID: '#FFFFE0'
+  ColorLikePhrase_ID: Seperti minuman lemon
+  ColorCombinationPhrase_ID: 100% merah, 100% hijau, 88% biru

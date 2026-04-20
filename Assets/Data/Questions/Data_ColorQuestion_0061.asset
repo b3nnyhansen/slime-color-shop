@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 135
   G: 206
   B: 250
-  ColorName: Biru langit muda
-  ColorHexCode: '#87CEFA'
-  ColorLikePhrase: Seperti bunga morning glory
-  ColorCombinationPhrase: 53% merah, 81% hijau, 98% biru
+  ColorName_EN: Light sky blue
+  ColorHexCode_EN: '#87CEFA'
+  ColorLikePhrase_EN: Like a morning glory flower
+  ColorCombinationPhrase_EN: 53% red, 81% green, 98% blue
+  ColorName_ID: Biru langit muda
+  ColorHexCode_ID: '#87CEFA'
+  ColorLikePhrase_ID: Seperti bunga morning glory
+  ColorCombinationPhrase_ID: 53% merah, 81% hijau, 98% biru

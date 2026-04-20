@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 34
   G: 139
   B: 34
-  ColorName: Hijau hutan
-  ColorHexCode: '#228B22'
-  ColorLikePhrase: Seperti kulit semangka
-  ColorCombinationPhrase: 20% merah, 80% hijau, 20% biru
+  ColorName_EN: Forest green
+  ColorHexCode_EN: '#228B22'
+  ColorLikePhrase_EN: Like watermelon rind
+  ColorCombinationPhrase_EN: 20% red, 80% green, 20% blue
+  ColorName_ID: Hijau hutan
+  ColorHexCode_ID: '#228B22'
+  ColorLikePhrase_ID: Seperti kulit semangka
+  ColorCombinationPhrase_ID: 20% merah, 80% hijau, 20% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 69
   B: 0
-  ColorName: Jingga kemerahan
-  ColorHexCode: '#FF4500'
-  ColorLikePhrase: Seperti ikan mas yang cerah
-  ColorCombinationPhrase: 100% merah, 27% hijau
+  ColorName_EN: Orange red
+  ColorHexCode_EN: '#FF4500'
+  ColorLikePhrase_EN: Like a bright goldfish
+  ColorCombinationPhrase_EN: 100% red, 27% green
+  ColorName_ID: Jingga kemerahan
+  ColorHexCode_ID: '#FF4500'
+  ColorLikePhrase_ID: Seperti ikan mas yang cerah
+  ColorCombinationPhrase_ID: 100% merah, 27% hijau

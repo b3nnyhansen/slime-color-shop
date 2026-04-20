@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 189
   G: 183
   B: 107
-  ColorName: Hijau kuning tua
-  ColorHexCode: '#BDB76B'
-  ColorLikePhrase: Seperti bebek liar
-  ColorCombinationPhrase: 74% merah, 72% hijau, 42% biru
+  ColorName_EN: Dark khaki
+  ColorHexCode_EN: '#BDB76B'
+  ColorLikePhrase_EN: Like a wild duck
+  ColorCombinationPhrase_EN: 74% red, 72% green, 42% blue
+  ColorName_ID: Hijau kuning tua
+  ColorHexCode_ID: '#BDB76B'
+  ColorLikePhrase_ID: Seperti bebek liar
+  ColorCombinationPhrase_ID: 74% merah, 72% hijau, 42% biru

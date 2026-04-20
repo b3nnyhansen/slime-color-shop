@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 95
   G: 158
   B: 160
-  ColorName: Biru hijau kusam
-  ColorHexCode: '#5F9EA0'
-  ColorLikePhrase: Seperti teh herbal
-  ColorCombinationPhrase: 37% merah, 62% hijau, 63% biru
+  ColorName_EN: Cadet blue
+  ColorHexCode_EN: '#5F9EA0'
+  ColorLikePhrase_EN: Like herbal tea
+  ColorCombinationPhrase_EN: 37% red, 62% green, 63% blue
+  ColorName_ID: Biru hijau kusam
+  ColorHexCode_ID: '#5F9EA0'
+  ColorLikePhrase_ID: Seperti teh herbal
+  ColorCombinationPhrase_ID: 37% merah, 62% hijau, 63% biru

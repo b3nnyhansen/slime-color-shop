@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 184
   G: 134
   B: 11
-  ColorName: Emas tua
-  ColorHexCode: '#B8860B'
-  ColorLikePhrase: Seperti bulu singa
-  ColorCombinationPhrase: 72% merah, 53% hijau, 4% biru
+  ColorName_EN: Dark golden rod
+  ColorHexCode_EN: '#B8860B'
+  ColorLikePhrase_EN: "Like a lion\u2019s fur"
+  ColorCombinationPhrase_EN: 72% red, 53% green, 4% blue
+  ColorName_ID: Emas tua
+  ColorHexCode_ID: '#B8860B'
+  ColorLikePhrase_ID: Seperti bulu singa
+  ColorCombinationPhrase_ID: 72% merah, 53% hijau, 4% biru

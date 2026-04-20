@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 218
   G: 112
   B: 214
-  ColorName: Ungu anggrek
-  ColorHexCode: '#DA70D6'
-  ColorLikePhrase: Seperti krayon ungu
-  ColorCombinationPhrase: 85% merah, 44% hijau, 84% biru
+  ColorName_EN: Orchid
+  ColorHexCode_EN: '#DA70D6'
+  ColorLikePhrase_EN: Like a purple crayon
+  ColorCombinationPhrase_EN: 85% red, 44% green, 84% blue
+  ColorName_ID: Ungu anggrek
+  ColorHexCode_ID: '#DA70D6'
+  ColorLikePhrase_ID: Seperti krayon ungu
+  ColorCombinationPhrase_ID: 85% merah, 44% hijau, 84% biru

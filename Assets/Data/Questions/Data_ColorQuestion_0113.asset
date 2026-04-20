@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 250
   G: 240
   B: 230
-  ColorName: Putih krem lembut
-  ColorHexCode: '#FAF0E6'
-  ColorLikePhrase: Seperti pasir kerang
-  ColorCombinationPhrase: 98% merah, 94% hijau, 90% biru
+  ColorName_EN: Linen
+  ColorHexCode_EN: '#FAF0E6'
+  ColorLikePhrase_EN: Like seashell sand
+  ColorCombinationPhrase_EN: 98% red, 94% green, 90% blue
+  ColorName_ID: Putih krem lembut
+  ColorHexCode_ID: '#FAF0E6'
+  ColorLikePhrase_ID: Seperti pasir kerang
+  ColorCombinationPhrase_ID: 98% merah, 94% hijau, 90% biru

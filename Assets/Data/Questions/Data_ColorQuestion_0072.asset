@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 123
   G: 104
   B: 238
-  ColorName: Biru batu sedang
-  ColorHexCode: '#7B68EE'
-  ColorLikePhrase: Seperti langit senja
-  ColorCombinationPhrase: 48% merah, 41% hijau, 93% biru
+  ColorName_EN: Medium slate blue
+  ColorHexCode_EN: '#7B68EE'
+  ColorLikePhrase_EN: Like twilight sky
+  ColorCombinationPhrase_EN: 48% red, 41% green, 93% blue
+  ColorName_ID: Biru batu sedang
+  ColorHexCode_ID: '#7B68EE'
+  ColorLikePhrase_ID: Seperti langit senja
+  ColorCombinationPhrase_ID: 48% merah, 41% hijau, 93% biru

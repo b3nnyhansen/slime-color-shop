@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 144
   G: 238
   B: 144
-  ColorName: Hijau muda
-  ColorHexCode: '#90EE90'
-  ColorLikePhrase: Seperti anggur hijau
-  ColorCombinationPhrase: 56% merah, 74% hijau, 56% biru
+  ColorName_EN: Light green
+  ColorHexCode_EN: '#90EE90'
+  ColorLikePhrase_EN: Like green grapes
+  ColorCombinationPhrase_EN: 56% red, 74% green, 56% blue
+  ColorName_ID: Hijau muda
+  ColorHexCode_ID: '#90EE90'
+  ColorLikePhrase_ID: Seperti anggur hijau
+  ColorCombinationPhrase_ID: 56% merah, 74% hijau, 56% biru

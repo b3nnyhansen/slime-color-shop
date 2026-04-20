@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 210
   G: 180
   B: 140
-  ColorName: Cokelat muda pucat
-  ColorHexCode: '#D2B48C'
-  ColorLikePhrase: Seperti rusa muda
-  ColorCombinationPhrase: 82% merah, 71% hijau, 55% biru
+  ColorName_EN: Tan
+  ColorHexCode_EN: '#D2B48C'
+  ColorLikePhrase_EN: Like a fawn
+  ColorCombinationPhrase_EN: 82% red, 71% green, 55% blue
+  ColorName_ID: Cokelat muda pucat
+  ColorHexCode_ID: '#D2B48C'
+  ColorLikePhrase_ID: Seperti rusa muda
+  ColorCombinationPhrase_ID: 82% merah, 71% hijau, 55% biru

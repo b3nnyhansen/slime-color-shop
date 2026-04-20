@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 240
   G: 230
   B: 140
-  ColorName: Kuning khaki
-  ColorHexCode: '#F0E68C'
-  ColorLikePhrase: Seperti anak ayam
-  ColorCombinationPhrase: 94% merah, 90% hijau, 55% biru
+  ColorName_EN: Khaki
+  ColorHexCode_EN: '#F0E68C'
+  ColorLikePhrase_EN: Like a baby chick
+  ColorCombinationPhrase_EN: 94% red, 90% green, 55% blue
+  ColorName_ID: Kuning khaki
+  ColorHexCode_ID: '#F0E68C'
+  ColorLikePhrase_ID: Seperti anak ayam
+  ColorCombinationPhrase_ID: 94% merah, 90% hijau, 55% biru

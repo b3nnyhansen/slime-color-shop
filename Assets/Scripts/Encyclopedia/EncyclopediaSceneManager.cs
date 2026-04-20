@@ -41,7 +41,7 @@ namespace SlimeColorShop.Encyclopedia
                     }
                 );
                 
-                string buttonName = (displayState & 1) > 0 ? entry.ColorName : "???";
+                string buttonName = (displayState & 1) > 0 ? entry.GetColorName() : "???";
                 newButton.SetButtonText(buttonName);
                 newButton.SetButtonColor(entry);
                 newButton.SetButtonFontSize(60f);

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 64
   G: 224
   B: 208
-  ColorName: Toska segar
-  ColorHexCode: '#40E0D0'
-  ColorLikePhrase: Seperti batu pirus
-  ColorCombinationPhrase: 25% merah, 88% hijau, 82% biru
+  ColorName_EN: Turquoise
+  ColorHexCode_EN: '#40E0D0'
+  ColorLikePhrase_EN: Like turquoise jewelry
+  ColorCombinationPhrase_EN: 25% red, 88% green, 82% blue
+  ColorName_ID: Toska segar
+  ColorHexCode_ID: '#40E0D0'
+  ColorLikePhrase_ID: Seperti batu pirus
+  ColorCombinationPhrase_ID: 25% merah, 88% hijau, 82% biru

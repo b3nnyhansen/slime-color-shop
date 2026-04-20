@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 128
   G: 0
   B: 0
-  ColorName: Merah tua
-  ColorHexCode: '#800000'
-  ColorLikePhrase: Seperti batu bata merah
-  ColorCombinationPhrase: 50% merah
+  ColorName_EN: Maroon
+  ColorHexCode_EN: '#800000'
+  ColorLikePhrase_EN: Like a red brick
+  ColorCombinationPhrase_EN: 50% red
+  ColorName_ID: Merah tua
+  ColorHexCode_ID: '#800000'
+  ColorLikePhrase_ID: Seperti batu bata merah
+  ColorCombinationPhrase_ID: 50% merah

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 25
   G: 25
   B: 112
-  ColorName: Biru tengah malam
-  ColorHexCode: '#191970'
-  ColorLikePhrase: Seperti selai blueberry
-  ColorCombinationPhrase: 10% merah, 10% hijau, 44% biru
+  ColorName_EN: Midnight blue
+  ColorHexCode_EN: '#191970'
+  ColorLikePhrase_EN: Like blueberry jam
+  ColorCombinationPhrase_EN: 10% red, 10% green, 44% blue
+  ColorName_ID: Biru tengah malam
+  ColorHexCode_ID: '#191970'
+  ColorLikePhrase_ID: Seperti selai blueberry
+  ColorCombinationPhrase_ID: 10% merah, 10% hijau, 44% biru

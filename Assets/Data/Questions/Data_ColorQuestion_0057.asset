@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 191
   B: 255
-  ColorName: Biru langit cerah
-  ColorHexCode: '#00BFFF'
-  ColorLikePhrase: Seperti es permen karet
-  ColorCombinationPhrase: 75% hijau, 100% biru
+  ColorName_EN: Deep sky blue
+  ColorHexCode_EN: '#00BFFF'
+  ColorLikePhrase_EN: Like bubble gum ice
+  ColorCombinationPhrase_EN: 75% green, 100% blue
+  ColorName_ID: Biru langit cerah
+  ColorHexCode_ID: '#00BFFF'
+  ColorLikePhrase_ID: Seperti es permen karet
+  ColorCombinationPhrase_ID: 75% hijau, 100% biru

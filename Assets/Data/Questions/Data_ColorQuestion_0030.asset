@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 100
   B: 0
-  ColorName: Hijau tua
-  ColorHexCode: '#006400'
-  ColorLikePhrase: Seperti kura-kura
-  ColorCombinationPhrase: 39% hijau
+  ColorName_EN: Dark green
+  ColorHexCode_EN: '#006400'
+  ColorLikePhrase_EN: Like a turtle
+  ColorCombinationPhrase_EN: 39% green
+  ColorName_ID: Hijau tua
+  ColorHexCode_ID: '#006400'
+  ColorLikePhrase_ID: Seperti kura-kura
+  ColorCombinationPhrase_ID: 39% hijau

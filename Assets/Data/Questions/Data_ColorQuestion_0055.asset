@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 70
   G: 130
   B: 180
-  ColorName: Biru baja
-  ColorHexCode: '#4682B4'
-  ColorLikePhrase: Seperti yogurt blueberry
-  ColorCombinationPhrase: 27% merah, 51% hijau, 71% biru
+  ColorName_EN: Steel blue
+  ColorHexCode_EN: '#4682B4'
+  ColorLikePhrase_EN: Like blueberry yogurt
+  ColorCombinationPhrase_EN: 27% red, 51% green, 71% blue
+  ColorName_ID: Biru baja
+  ColorHexCode_ID: '#4682B4'
+  ColorLikePhrase_ID: Seperti yogurt blueberry
+  ColorCombinationPhrase_ID: 27% merah, 51% hijau, 71% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 221
   G: 160
   B: 221
-  ColorName: Plum
-  ColorHexCode: '#DDA0DD'
-  ColorLikePhrase: Seperti tapak kucing yang lembut
-  ColorCombinationPhrase: 87% merah, 63% hijau, 87% biru
+  ColorName_EN: Plum
+  ColorHexCode_EN: '#DDA0DD'
+  ColorLikePhrase_EN: Like a soft kitten paw
+  ColorCombinationPhrase_EN: 87% red, 63% green, 87% blue
+  ColorName_ID: Plum
+  ColorHexCode_ID: '#DDA0DD'
+  ColorLikePhrase_ID: Seperti tapak kucing yang lembut
+  ColorCombinationPhrase_ID: 87% merah, 63% hijau, 87% biru

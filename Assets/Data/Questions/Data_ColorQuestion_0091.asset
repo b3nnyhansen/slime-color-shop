@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 250
   G: 235
   B: 215
-  ColorName: Putih antik
-  ColorHexCode: '#FAEBD7'
-  ColorLikePhrase: Seperti kue vanila
-  ColorCombinationPhrase: 98% merah, 92% hijau, 84% biru
+  ColorName_EN: Antique white
+  ColorHexCode_EN: '#FAEBD7'
+  ColorLikePhrase_EN: Like vanilla cake
+  ColorCombinationPhrase_EN: 98% red, 92% green, 84% blue
+  ColorName_ID: Putih antik
+  ColorHexCode_ID: '#FAEBD7'
+  ColorLikePhrase_ID: Seperti kue vanila
+  ColorCombinationPhrase_ID: 98% merah, 92% hijau, 84% biru

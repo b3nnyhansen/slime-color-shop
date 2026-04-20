@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 239
   B: 213
-  ColorName: Krem persik muda
-  ColorHexCode: '#FFEFD5'
-  ColorLikePhrase: Seperti kulit aprikot
-  ColorCombinationPhrase: 100% merah, 94% hijau, 84% biru
+  ColorName_EN: Papaya whip
+  ColorHexCode_EN: '#FFEFD5'
+  ColorLikePhrase_EN: Like an apricot skin
+  ColorCombinationPhrase_EN: 100% red, 94% green, 84% blue
+  ColorName_ID: Krem persik muda
+  ColorHexCode_ID: '#FFEFD5'
+  ColorLikePhrase_ID: Seperti kulit aprikot
+  ColorCombinationPhrase_ID: 100% merah, 94% hijau, 84% biru

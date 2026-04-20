@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 178
   G: 34
   B: 34
-  ColorName: Bata merah
-  ColorHexCode: '#B22222'
-  ColorLikePhrase: Seperti dinding bata merah
-  ColorCombinationPhrase: 70% merah, 13% hijau, 13% biru
+  ColorName_EN: Firebrick
+  ColorHexCode_EN: '#B22222'
+  ColorLikePhrase_EN: Like a firebrick wall
+  ColorCombinationPhrase_EN: 70% red, 13% green, 13% blue
+  ColorName_ID: Bata merah
+  ColorHexCode_ID: '#B22222'
+  ColorLikePhrase_ID: Seperti dinding bata merah
+  ColorCombinationPhrase_ID: 70% merah, 13% hijau, 13% biru

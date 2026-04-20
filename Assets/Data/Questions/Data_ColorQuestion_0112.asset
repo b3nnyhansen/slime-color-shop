@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 240
   B: 245
-  ColorName: Rona lavender
-  ColorHexCode: '#FFF0F5'
-  ColorLikePhrase: Seperti permen kapas
-  ColorCombinationPhrase: 100% merah, 94% hijau, 96% biru
+  ColorName_EN: Lavender blush
+  ColorHexCode_EN: '#FFF0F5'
+  ColorLikePhrase_EN: Like a cotton candy
+  ColorCombinationPhrase_EN: 100% red, 94% green, 96% blue
+  ColorName_ID: Rona lavender
+  ColorHexCode_ID: '#FFF0F5'
+  ColorLikePhrase_ID: Seperti permen kapas
+  ColorCombinationPhrase_ID: 100% merah, 94% hijau, 96% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 147
   G: 112
   B: 219
-  ColorName: Ungu sedang
-  ColorHexCode: '#9370DB'
-  ColorLikePhrase: Seperti kelopak bunga lilac
-  ColorCombinationPhrase: 58% merah, 44% hijau, 86% biru
+  ColorName_EN: Medium purple
+  ColorHexCode_EN: '#9370DB'
+  ColorLikePhrase_EN: Like lilac petals
+  ColorCombinationPhrase_EN: 58% red, 44% green, 86% blue
+  ColorName_ID: Ungu sedang
+  ColorHexCode_ID: '#9370DB'
+  ColorLikePhrase_ID: Seperti kelopak bunga lilac
+  ColorCombinationPhrase_ID: 58% merah, 44% hijau, 86% biru

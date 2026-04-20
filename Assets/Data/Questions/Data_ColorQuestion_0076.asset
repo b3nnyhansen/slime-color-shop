@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 153
   G: 50
   B: 204
-  ColorName: Ungu anggrek tua
-  ColorHexCode: '#9932CC'
-  ColorLikePhrase: Seperti permen anggur kenyal
-  ColorCombinationPhrase: 60% merah, 20% hijau, 80% biru
+  ColorName_EN: Dark orchid
+  ColorHexCode_EN: '#9932CC'
+  ColorLikePhrase_EN: Like grape gummies
+  ColorCombinationPhrase_EN: 60% red, 20% green, 80% blue
+  ColorName_ID: Ungu anggrek tua
+  ColorHexCode_ID: '#9932CC'
+  ColorLikePhrase_ID: Seperti permen anggur kenyal
+  ColorCombinationPhrase_ID: 60% merah, 20% hijau, 80% biru

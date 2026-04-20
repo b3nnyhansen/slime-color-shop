@@ -28,20 +28,28 @@ namespace SlimeColorShop.Editor
                 int r = int.Parse(content[0]);
                 int g = int.Parse(content[1]);
                 int b = int.Parse(content[2]);
-                string colorName = content[3];
-                string colorHexCode = content[4];
-                string colorLikePhrase = content[5];
-                string colorCombinationPhrase = content[6];
+                string colorName_EN = content[3];
+                string colorHexCode_EN = content[4];
+                string colorLikePhrase_EN = content[5];
+                string colorCombinationPhrase_EN = content[6];
+                string colorName_ID = content[7];
+                string colorHexCode_ID = content[8];
+                string colorLikePhrase_ID = content[9];
+                string colorCombinationPhrase_ID = content[10];
 
                 string entryFilePath = string.Format(entryStringPathFormat, dataPath, i);
                 ColorQuestionEntry entry = ScriptableObject.CreateInstance<ColorQuestionEntry>();
                 entry.R = r;
                 entry.G = g;
                 entry.B = b;
-                entry.ColorName = colorName;
-                entry.ColorHexCode = colorHexCode;
-                entry.ColorLikePhrase = colorLikePhrase;
-                entry.ColorCombinationPhrase = colorCombinationPhrase;
+                entry.ColorName_EN = colorName_EN;
+                entry.ColorHexCode_EN = colorHexCode_EN;
+                entry.ColorLikePhrase_EN = colorLikePhrase_EN;
+                entry.ColorCombinationPhrase_EN = colorCombinationPhrase_EN;
+                entry.ColorName_ID = colorName_ID;
+                entry.ColorHexCode_ID = colorHexCode_ID;
+                entry.ColorLikePhrase_ID = colorLikePhrase_ID;
+                entry.ColorCombinationPhrase_ID = colorCombinationPhrase_ID;
 
                 try
                 {

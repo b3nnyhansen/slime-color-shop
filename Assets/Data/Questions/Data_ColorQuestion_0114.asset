@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 253
   G: 245
   B: 230
-  ColorName: Putih gading muda
-  ColorHexCode: '#FDF5E6'
-  ColorLikePhrase: Seperti merpati putih
-  ColorCombinationPhrase: 99% merah, 96% hijau, 90% biru
+  ColorName_EN: Old lace
+  ColorHexCode_EN: '#FDF5E6'
+  ColorLikePhrase_EN: Like a white dove
+  ColorCombinationPhrase_EN: 99% red, 96% green, 90% blue
+  ColorName_ID: Putih gading muda
+  ColorHexCode_ID: '#FDF5E6'
+  ColorLikePhrase_ID: Seperti merpati putih
+  ColorCombinationPhrase_ID: 99% merah, 96% hijau, 90% biru

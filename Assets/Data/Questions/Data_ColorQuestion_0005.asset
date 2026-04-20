@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 220
   G: 20
   B: 60
-  ColorName: Merah delima
-  ColorHexCode: '#DC143C'
-  ColorLikePhrase: Seperti buah delima segar
-  ColorCombinationPhrase: 86% merah, 8% hijau, 24% biru
+  ColorName_EN: Crimson
+  ColorHexCode_EN: '#DC143C'
+  ColorLikePhrase_EN: Like fresh raspberries
+  ColorCombinationPhrase_EN: 86% red, 8% green, 24% blue
+  ColorName_ID: Merah delima
+  ColorHexCode_ID: '#DC143C'
+  ColorLikePhrase_ID: Seperti buah delima segar
+  ColorCombinationPhrase_ID: 86% merah, 8% hijau, 24% biru

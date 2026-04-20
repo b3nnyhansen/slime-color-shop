@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 222
   B: 173
-  ColorName: Cokelat karamel
-  ColorHexCode: '#FFDEAD'
-  ColorLikePhrase: Seperti kue vanila
-  ColorCombinationPhrase: 100% merah, 87% hijau, 68% biru
+  ColorName_EN: Navajo white
+  ColorHexCode_EN: '#FFDEAD'
+  ColorLikePhrase_EN: Like vanilla cake
+  ColorCombinationPhrase_EN: 100% red, 87% green, 68% blue
+  ColorName_ID: Cokelat karamel
+  ColorHexCode_ID: '#FFDEAD'
+  ColorLikePhrase_ID: Seperti kue vanila
+  ColorCombinationPhrase_ID: 100% merah, 87% hijau, 68% biru

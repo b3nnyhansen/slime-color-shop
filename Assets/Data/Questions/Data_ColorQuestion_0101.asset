@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 160
   G: 82
   B: 45
-  ColorName: Cokelat sienna
-  ColorHexCode: '#A0522D'
-  ColorLikePhrase: Seperti rubah
-  ColorCombinationPhrase: 63% merah, 32% hijau, 18% biru
+  ColorName_EN: Sienna
+  ColorHexCode_EN: '#A0522D'
+  ColorLikePhrase_EN: Like a fox
+  ColorCombinationPhrase_EN: 63% red, 32% green, 18% blue
+  ColorName_ID: Cokelat sienna
+  ColorHexCode_ID: '#A0522D'
+  ColorLikePhrase_ID: Seperti rubah
+  ColorCombinationPhrase_ID: 63% merah, 32% hijau, 18% biru

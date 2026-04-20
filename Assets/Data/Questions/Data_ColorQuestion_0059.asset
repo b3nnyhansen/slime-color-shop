@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 173
   G: 216
   B: 230
-  ColorName: Biru muda
-  ColorHexCode: '#ADD8E6'
-  ColorLikePhrase: Seperti langit cerah
-  ColorCombinationPhrase: 68% merah, 85% hijau, 90% biru
+  ColorName_EN: Light blue
+  ColorHexCode_EN: '#ADD8E6'
+  ColorLikePhrase_EN: Like a clear sky
+  ColorCombinationPhrase_EN: 68% red, 85% green, 90% blue
+  ColorName_ID: Biru muda
+  ColorHexCode_ID: '#ADD8E6'
+  ColorLikePhrase_ID: Seperti langit cerah
+  ColorCombinationPhrase_ID: 68% merah, 85% hijau, 90% biru

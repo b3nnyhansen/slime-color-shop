@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 46
   G: 139
   B: 87
-  ColorName: Hijau laut
-  ColorHexCode: '#2E8B57'
-  ColorLikePhrase: Seperti rumput laut
-  ColorCombinationPhrase: 18% merah, 55% hijau, 34% biru
+  ColorName_EN: Sea green
+  ColorHexCode_EN: '#2E8B57'
+  ColorLikePhrase_EN: Like seaweed
+  ColorCombinationPhrase_EN: 18% red, 55% green, 34% blue
+  ColorName_ID: Hijau laut
+  ColorHexCode_ID: '#2E8B57'
+  ColorLikePhrase_ID: Seperti rumput laut
+  ColorCombinationPhrase_ID: 18% merah, 55% hijau, 34% biru

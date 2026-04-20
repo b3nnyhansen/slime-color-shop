@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 245
   G: 255
   B: 250
-  ColorName: Biru langit pucat
-  ColorHexCode: '#F5FFFA'
-  ColorLikePhrase: Seperti busa laut pucat
-  ColorCombinationPhrase: 96% merah, 100% hijau, 98% biru
+  ColorName_EN: Mint cream
+  ColorHexCode_EN: '#F5FFFA'
+  ColorLikePhrase_EN: Like pae seafoam
+  ColorCombinationPhrase_EN: 96% red, 100% green, 98% blue
+  ColorName_ID: Biru langit pucat
+  ColorHexCode_ID: '#F5FFFA'
+  ColorLikePhrase_ID: Seperti busa laut pucat
+  ColorCombinationPhrase_ID: 96% merah, 100% hijau, 98% biru

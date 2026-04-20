@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 139
   B: 139
-  ColorName: Hijau toska tua
-  ColorHexCode: '#008B8B'
-  ColorLikePhrase: Seperti kura-kura laut
-  ColorCombinationPhrase: 55% hijau, 55% biru
+  ColorName_EN: Dark cyan
+  ColorHexCode_EN: '#008B8B'
+  ColorLikePhrase_EN: Like a sea turtle
+  ColorCombinationPhrase_EN: 55% green, 55% blue
+  ColorName_ID: Hijau toska tua
+  ColorHexCode_ID: '#008B8B'
+  ColorLikePhrase_ID: Seperti kura-kura laut
+  ColorCombinationPhrase_ID: 55% hijau, 55% biru

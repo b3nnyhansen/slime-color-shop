@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 250
   B: 154
-  ColorName: Hijau aloe
-  ColorHexCode: '#00FA9A'
-  ColorLikePhrase: Seperti lidah buaya
-  ColorCombinationPhrase: 98% hijau, 60% biru
+  ColorName_EN: Medium spring green
+  ColorHexCode_EN: '#00FA9A'
+  ColorLikePhrase_EN: Like aloe vera
+  ColorCombinationPhrase_EN: 98% green, 60% blue
+  ColorName_ID: Hijau aloe
+  ColorHexCode_ID: '#00FA9A'
+  ColorLikePhrase_ID: Seperti lidah buaya
+  ColorCombinationPhrase_ID: 98% hijau, 60% biru

@@ -60,8 +60,22 @@ namespace SlimeColorShop.MainMenu
             );
 
             InitPatrollingSlime();
-            UniversalAudioManager.Instance.PlayBGM(AudioEnum.BGM_MAINMENU);
-            InventoryManager.Instance.LoadBannerAd();
+
+            if (BlackScreen.Instance.IsBlackedOut)
+            {
+                BlackScreen.Instance.DoFadeIn(
+                    onPostTransitionAction: delegate
+                    {
+                        UniversalAudioManager.Instance.PlayBGM(AudioEnum.BGM_MAINMENU);
+                        InventoryManager.Instance.LoadBannerAd();
+                    }
+                );
+            }
+            else
+            {
+                UniversalAudioManager.Instance.PlayBGM(AudioEnum.BGM_MAINMENU);
+                InventoryManager.Instance.LoadBannerAd();
+            }
         }
 
         private void InitPatrollingSlime()

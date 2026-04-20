@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 106
   G: 90
   B: 205
-  ColorName: Biru batu
-  ColorHexCode: '#6A5ACD'
-  ColorLikePhrase: Seperti blueberry
-  ColorCombinationPhrase: 42% merah, 35% hijau, 80% biru
+  ColorName_EN: Slate blue
+  ColorHexCode_EN: '#6A5ACD'
+  ColorLikePhrase_EN: Like a blueberry
+  ColorCombinationPhrase_EN: 42% red, 35% green, 80% blue
+  ColorName_ID: Biru batu
+  ColorHexCode_ID: '#6A5ACD'
+  ColorLikePhrase_ID: Seperti blueberry
+  ColorCombinationPhrase_ID: 42% merah, 35% hijau, 80% biru

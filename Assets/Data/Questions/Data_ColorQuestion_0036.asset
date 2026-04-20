@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 152
   G: 251
   B: 152
-  ColorName: Hijau pucat
-  ColorHexCode: '#98FB98'
-  ColorLikePhrase: Seperti agar-agar hijau
-  ColorCombinationPhrase: 98% hijau, 60% biru
+  ColorName_EN: Pale green
+  ColorHexCode_EN: '#98FB98'
+  ColorLikePhrase_EN: Like green jelly
+  ColorCombinationPhrase_EN: 98% green, 60% blue
+  ColorName_ID: Hijau pucat
+  ColorHexCode_ID: '#98FB98'
+  ColorLikePhrase_ID: Seperti agar-agar hijau
+  ColorCombinationPhrase_ID: 98% hijau, 60% biru

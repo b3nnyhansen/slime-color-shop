@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 245
   G: 245
   B: 245
-  ColorName: Asap putih
-  ColorHexCode: '#F5F5F5'
-  ColorLikePhrase: Seperti kapas
-  ColorCombinationPhrase: 96% merah, 96% hijau, 96% biru
+  ColorName_EN: White smoke
+  ColorHexCode_EN: '#F5F5F5'
+  ColorLikePhrase_EN: Like cottons
+  ColorCombinationPhrase_EN: 96% red, 96% green, 96% blue
+  ColorName_ID: Asap putih
+  ColorHexCode_ID: '#F5F5F5'
+  ColorLikePhrase_ID: Seperti kapas
+  ColorCombinationPhrase_ID: 96% merah, 96% hijau, 96% biru

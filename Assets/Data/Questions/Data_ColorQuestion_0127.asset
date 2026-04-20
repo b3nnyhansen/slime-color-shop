@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 240
   G: 255
   B: 255
-  ColorName: Biru salju
-  ColorHexCode: '#F0FFFF'
-  ColorLikePhrase: Seperti air kolam renang
-  ColorCombinationPhrase: 94% merah, 100% hijau, 100% biru
+  ColorName_EN: Azure
+  ColorHexCode_EN: '#F0FFFF'
+  ColorLikePhrase_EN: Like a swimming pool water
+  ColorCombinationPhrase_EN: 94% red, 100% green, 100% blue
+  ColorName_ID: Biru salju
+  ColorHexCode_ID: '#F0FFFF'
+  ColorLikePhrase_ID: Seperti air kolam renang
+  ColorCombinationPhrase_ID: 94% merah, 100% hijau, 100% biru

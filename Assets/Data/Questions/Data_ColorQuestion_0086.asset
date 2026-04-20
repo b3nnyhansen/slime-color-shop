@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 219
   G: 112
   B: 147
-  ColorName: Merah violet pucat
-  ColorHexCode: '#DB7093'
-  ColorLikePhrase: Seperti selai stroberi
-  ColorCombinationPhrase: 86% merah, 44% hijau, 58% biru
+  ColorName_EN: Pale violet red
+  ColorHexCode_EN: '#DB7093'
+  ColorLikePhrase_EN: Like strawberry jam
+  ColorCombinationPhrase_EN: 86% red, 44% green, 58% blue
+  ColorName_ID: Merah violet pucat
+  ColorHexCode_ID: '#DB7093'
+  ColorLikePhrase_ID: Seperti selai stroberi
+  ColorCombinationPhrase_ID: 86% merah, 44% hijau, 58% biru

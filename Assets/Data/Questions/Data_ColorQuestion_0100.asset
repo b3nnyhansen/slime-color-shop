@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 139
   G: 69
   B: 19
-  ColorName: Cokelat gelap
-  ColorHexCode: '#8B4513'
-  ColorLikePhrase: Seperti kursi kayu
-  ColorCombinationPhrase: 55% merah, 27% hijau, 7% biru
+  ColorName_EN: Saddle brown
+  ColorHexCode_EN: '#8B4513'
+  ColorLikePhrase_EN: Like a wooden chair
+  ColorCombinationPhrase_EN: 55% red, 27% green, 7% blue
+  ColorName_ID: Cokelat gelap
+  ColorHexCode_ID: '#8B4513'
+  ColorLikePhrase_ID: Seperti kursi kayu
+  ColorCombinationPhrase_ID: 55% merah, 27% hijau, 7% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 205
   G: 133
   B: 63
-  ColorName: Cokelat karamel tua
-  ColorHexCode: '#CD853F'
-  ColorLikePhrase: Seperti selai kacang
-  ColorCombinationPhrase: 80% merah, 52% hijau, 25% biru
+  ColorName_EN: Peru
+  ColorHexCode_EN: '#CD853F'
+  ColorLikePhrase_EN: Like peanut butter
+  ColorCombinationPhrase_EN: 80% red, 52% green, 25% blue
+  ColorName_ID: Cokelat karamel tua
+  ColorHexCode_ID: '#CD853F'
+  ColorLikePhrase_ID: Seperti selai kacang
+  ColorCombinationPhrase_ID: 80% merah, 52% hijau, 25% biru

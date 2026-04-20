@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 248
   G: 248
   B: 255
-  ColorName: Putih hantu
-  ColorHexCode: '#F8F8FF'
-  ColorLikePhrase: Seperti sprei putih bersih
-  ColorCombinationPhrase: 97% merah, 97% hijau, 100% biru
+  ColorName_EN: Ghost white
+  ColorHexCode_EN: '#F8F8FF'
+  ColorLikePhrase_EN: Like clean white sheets
+  ColorCombinationPhrase_EN: 97% red, 97% green, 100% blue
+  ColorName_ID: Putih hantu
+  ColorHexCode_ID: '#F8F8FF'
+  ColorLikePhrase_ID: Seperti sprei putih bersih
+  ColorCombinationPhrase_ID: 97% merah, 97% hijau, 100% biru

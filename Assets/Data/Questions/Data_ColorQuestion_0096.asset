@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 248
   B: 220
-  ColorName: Kuning jagung pucat
-  ColorHexCode: '#FFF8DC'
-  ColorLikePhrase: Seperti anak ayam
-  ColorCombinationPhrase: 100% merah, 97% hijau, 86% biru
+  ColorName_EN: Corn silk
+  ColorHexCode_EN: '#FFF8DC'
+  ColorLikePhrase_EN: Like a chick
+  ColorCombinationPhrase_EN: 100% red, 97% green, 86% blue
+  ColorName_ID: Kuning jagung pucat
+  ColorHexCode_ID: '#FFF8DC'
+  ColorLikePhrase_ID: Seperti anak ayam
+  ColorCombinationPhrase_ID: 100% merah, 97% hijau, 86% biru

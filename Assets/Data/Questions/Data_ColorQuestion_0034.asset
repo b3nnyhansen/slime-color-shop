@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 50
   G: 205
   B: 50
-  ColorName: Hijau limau
-  ColorHexCode: '#32CD32'
-  ColorLikePhrase: Seperti daun limau
-  ColorCombinationPhrase: 60% merah, 98% hijau, 60% biru
+  ColorName_EN: Lime green
+  ColorHexCode_EN: '#32CD32'
+  ColorLikePhrase_EN: Like a lime leaf
+  ColorCombinationPhrase_EN: 60% red, 98% green, 60% blue
+  ColorName_ID: Hijau limau
+  ColorHexCode_ID: '#32CD32'
+  ColorLikePhrase_ID: Seperti daun limau
+  ColorCombinationPhrase_ID: 60% merah, 98% hijau, 60% biru

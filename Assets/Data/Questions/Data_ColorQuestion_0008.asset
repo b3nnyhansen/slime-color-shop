@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 205
   G: 92
   B: 92
-  ColorName: Merah mawar tua
-  ColorHexCode: '#CD5C5C'
-  ColorLikePhrase: Seperti mawar tua berdebu
-  ColorCombinationPhrase: 80% merah, 36% hijau, 36% biru
+  ColorName_EN: Indian red
+  ColorHexCode_EN: '#CD5C5C'
+  ColorLikePhrase_EN: Like a dusty rose
+  ColorCombinationPhrase_EN: 80% red, 36% green, 36% blue
+  ColorName_ID: Merah mawar tua
+  ColorHexCode_ID: '#CD5C5C'
+  ColorLikePhrase_ID: Seperti mawar tua berdebu
+  ColorCombinationPhrase_ID: 80% merah, 36% hijau, 36% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 148
   G: 0
   B: 211
-  ColorName: Ungu gelap
-  ColorHexCode: '#9400D3'
-  ColorLikePhrase: Seperti burung kolibri berkilau
-  ColorCombinationPhrase: 58% merah, 83% biru
+  ColorName_EN: Dark violet
+  ColorHexCode_EN: '#9400D3'
+  ColorLikePhrase_EN: Like a shiny hummingbird
+  ColorCombinationPhrase_EN: 58% red, 83% blue
+  ColorName_ID: Ungu gelap
+  ColorHexCode_ID: '#9400D3'
+  ColorLikePhrase_ID: Seperti burung kolibri berkilau
+  ColorCombinationPhrase_ID: 58% merah, 83% biru

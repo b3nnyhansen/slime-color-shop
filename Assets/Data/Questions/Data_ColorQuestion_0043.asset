@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 32
   G: 178
   B: 170
-  ColorName: Hijau laut muda
-  ColorHexCode: '#20B2AA'
-  ColorLikePhrase: Seperti rumput laut muda
-  ColorCombinationPhrase: 13% merah, 70% hijau, 67% biru
+  ColorName_EN: Light sea green
+  ColorHexCode_EN: '#20B2AA'
+  ColorLikePhrase_EN: Like sea grass
+  ColorCombinationPhrase_EN: 13% red, 70% green, 67% blue
+  ColorName_ID: Hijau laut muda
+  ColorHexCode_ID: '#20B2AA'
+  ColorLikePhrase_ID: Seperti rumput laut muda
+  ColorCombinationPhrase_ID: 13% merah, 70% hijau, 67% biru

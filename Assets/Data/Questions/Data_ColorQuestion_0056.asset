@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 100
   G: 149
   B: 237
-  ColorName: Biru bunga jagung
-  ColorHexCode: '#6495ED'
-  ColorLikePhrase: Seperti permen blueberry
-  ColorCombinationPhrase: 39% merah, 58% hijau, 93% biru
+  ColorName_EN: Corn flower blue
+  ColorHexCode_EN: '#6495ED'
+  ColorLikePhrase_EN: Like blueberry candy
+  ColorCombinationPhrase_EN: 39% red, 58% green, 93% blue
+  ColorName_ID: Biru bunga jagung
+  ColorHexCode_ID: '#6495ED'
+  ColorLikePhrase_ID: Seperti permen blueberry
+  ColorCombinationPhrase_ID: 39% merah, 58% hijau, 93% biru

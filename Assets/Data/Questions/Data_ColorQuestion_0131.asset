@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 169
   G: 169
   B: 169
-  ColorName: Abu-abu tua
-  ColorHexCode: '#A9A9A9'
-  ColorLikePhrase: Seperti sendok logam
-  ColorCombinationPhrase: 66% merah, 66% hijau, 66% biru
+  ColorName_EN: Dark gray
+  ColorHexCode_EN: '#A9A9A9'
+  ColorLikePhrase_EN: Like a metal spoon
+  ColorCombinationPhrase_EN: 66% red, 66% green, 66% blue
+  ColorName_ID: Abu-abu tua
+  ColorHexCode_ID: '#A9A9A9'
+  ColorLikePhrase_ID: Seperti sendok logam
+  ColorCombinationPhrase_ID: 66% merah, 66% hijau, 66% biru

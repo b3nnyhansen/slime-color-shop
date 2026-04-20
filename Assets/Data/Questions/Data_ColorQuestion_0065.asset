@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 0
   B: 205
-  ColorName: Biru sedang
-  ColorHexCode: '#0000CD'
-  ColorLikePhrase: Seperti bunga bluebell
-  ColorCombinationPhrase: 80% biru
+  ColorName_EN: Medium blue
+  ColorHexCode_EN: '#0000CD'
+  ColorLikePhrase_EN: Like bluebell flower
+  ColorCombinationPhrase_EN: 80% blue
+  ColorName_ID: Biru sedang
+  ColorHexCode_ID: '#0000CD'
+  ColorLikePhrase_ID: Seperti bunga bluebell
+  ColorCombinationPhrase_ID: 80% biru

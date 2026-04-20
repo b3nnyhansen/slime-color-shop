@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 143
   G: 188
   B: 143
-  ColorName: Hijau laut tua
-  ColorHexCode: '#8FBC8F'
-  ColorLikePhrase: Seperti alga di laut dalam
-  ColorCombinationPhrase: 18% merah, 55% hijau, 34% biru
+  ColorName_EN: Dark sea green
+  ColorHexCode_EN: '#8FBC8F'
+  ColorLikePhrase_EN: Like algae in the deep sea
+  ColorCombinationPhrase_EN: 18% red, 55% green, 34% blue
+  ColorName_ID: Hijau laut tua
+  ColorHexCode_ID: '#8FBC8F'
+  ColorLikePhrase_ID: Seperti alga di laut dalam
+  ColorCombinationPhrase_ID: 18% merah, 55% hijau, 34% biru

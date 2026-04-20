@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 0
   B: 0
-  ColorName: Merah terang
-  ColorHexCode: '#FF0000'
-  ColorLikePhrase: Seperti mobil pemadam kebakaran
-  ColorCombinationPhrase: 100% merah
+  ColorName_EN: Red
+  ColorHexCode_EN: '#FF0000'
+  ColorLikePhrase_EN: Like a firetruck
+  ColorCombinationPhrase_EN: 100% red
+  ColorName_ID: Merah terang
+  ColorHexCode_ID: '#FF0000'
+  ColorLikePhrase_ID: Seperti mobil pemadam kebakaran
+  ColorCombinationPhrase_ID: 100% merah

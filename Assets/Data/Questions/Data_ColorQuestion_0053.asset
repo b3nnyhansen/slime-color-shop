@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 176
   G: 224
   B: 230
-  ColorName: Biru bedak
-  ColorHexCode: '#B0E0E6'
-  ColorLikePhrase: Seperti lumba-lumba kecil
-  ColorCombinationPhrase: 69% merah, 88% hijau, 90% biru
+  ColorName_EN: Powder blue
+  ColorHexCode_EN: '#B0E0E6'
+  ColorLikePhrase_EN: Like a baby dolphin
+  ColorCombinationPhrase_EN: 69% red, 88% green, 90% blue
+  ColorName_ID: Biru bedak
+  ColorHexCode_ID: '#B0E0E6'
+  ColorLikePhrase_ID: Seperti lumba-lumba kecil
+  ColorCombinationPhrase_ID: 69% merah, 88% hijau, 90% biru

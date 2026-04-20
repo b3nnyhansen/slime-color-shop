@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 211
   G: 211
   B: 211
-  ColorName: Abu-abu muda
-  ColorHexCode: '#D3D3D3'
-  ColorLikePhrase: Seperti kabut
-  ColorCombinationPhrase: 83% merah, 83% hijau, 83% biru
+  ColorName_EN: Light gray
+  ColorHexCode_EN: '#D3D3D3'
+  ColorLikePhrase_EN: Like fog
+  ColorCombinationPhrase_EN: 83% red, 83% green, 83% blue
+  ColorName_ID: Abu-abu muda
+  ColorHexCode_ID: '#D3D3D3'
+  ColorLikePhrase_ID: Seperti kabut
+  ColorCombinationPhrase_ID: 83% merah, 83% hijau, 83% biru

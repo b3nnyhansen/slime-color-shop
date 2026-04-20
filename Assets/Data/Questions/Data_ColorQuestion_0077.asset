@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 186
   G: 85
   B: 211
-  ColorName: Ungu anggrek sedang
-  ColorHexCode: '#BA55D3'
-  ColorLikePhrase: Seperti spidol ungu
-  ColorCombinationPhrase: 73% merah, 33% hijau, 83% biru
+  ColorName_EN: Medium orchid
+  ColorHexCode_EN: '#BA55D3'
+  ColorLikePhrase_EN: Like a purple marker
+  ColorCombinationPhrase_EN: 73% red, 33% green, 83% blue
+  ColorName_ID: Ungu anggrek sedang
+  ColorHexCode_ID: '#BA55D3'
+  ColorLikePhrase_ID: Seperti spidol ungu
+  ColorCombinationPhrase_ID: 73% merah, 33% hijau, 83% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 215
   B: 0
-  ColorName: Emas
-  ColorHexCode: '#FFD700'
-  ColorLikePhrase: Seperti koin emas
-  ColorCombinationPhrase: 100% merah, 84% hijau
+  ColorName_EN: Gold
+  ColorHexCode_EN: '#FFD700'
+  ColorLikePhrase_EN: Like a gold coin
+  ColorCombinationPhrase_EN: 100% red, 84% green
+  ColorName_ID: Emas
+  ColorHexCode_ID: '#FFD700'
+  ColorLikePhrase_ID: Seperti koin emas
+  ColorCombinationPhrase_ID: 100% merah, 84% hijau

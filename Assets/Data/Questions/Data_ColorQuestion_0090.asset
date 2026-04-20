@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 192
   B: 203
-  ColorName: Merah muda
-  ColorHexCode: '#FFC0CB'
-  ColorLikePhrase: Seperti hidung anak kucing
-  ColorCombinationPhrase: 100% merah, 75% hijau, 80% biru
+  ColorName_EN: Pink
+  ColorHexCode_EN: '#FFC0CB'
+  ColorLikePhrase_EN: "Like a kitten\u2019s nose"
+  ColorCombinationPhrase_EN: 100% red, 75% green, 80% blue
+  ColorName_ID: Merah muda
+  ColorHexCode_ID: '#FFC0CB'
+  ColorLikePhrase_ID: Seperti hidung anak kucing
+  ColorCombinationPhrase_ID: 100% merah, 75% hijau, 80% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 175
   G: 238
   B: 238
-  ColorName: Toska laut
-  ColorHexCode: '#AFEEEE'
-  ColorLikePhrase: Seperti agar kelapa
-  ColorCombinationPhrase: 69% merah, 93% hijau, 93% biru
+  ColorName_EN: Pale turquoise
+  ColorHexCode_EN: '#AFEEEE'
+  ColorLikePhrase_EN: Like coconut jelly
+  ColorCombinationPhrase_EN: 69% red, 93% green, 93% blue
+  ColorName_ID: Toska laut
+  ColorHexCode_ID: '#AFEEEE'
+  ColorLikePhrase_ID: Seperti agar kelapa
+  ColorCombinationPhrase_ID: 69% merah, 93% hijau, 93% biru

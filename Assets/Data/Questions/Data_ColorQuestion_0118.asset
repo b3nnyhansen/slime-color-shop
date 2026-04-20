@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 112
   G: 128
   B: 144
-  ColorName: Abu-abu batu
-  ColorHexCode: '#708090'
-  ColorLikePhrase: Seperti batu abu-abu
-  ColorCombinationPhrase: 44% merah, 50% hijau, 56% biru
+  ColorName_EN: Slate gray
+  ColorHexCode_EN: '#708090'
+  ColorLikePhrase_EN: Like gray rocks
+  ColorCombinationPhrase_EN: 44% red, 50% green, 56% blue
+  ColorName_ID: Abu-abu batu
+  ColorHexCode_ID: '#708090'
+  ColorLikePhrase_ID: Seperti batu abu-abu
+  ColorCombinationPhrase_ID: 44% merah, 50% hijau, 56% biru

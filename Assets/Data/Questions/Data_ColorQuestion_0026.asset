@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 107
   G: 142
   B: 35
-  ColorName: Hijau lumut
-  ColorHexCode: '#6B8E23'
-  ColorLikePhrase: Seperti lumut
-  ColorCombinationPhrase: 42% merah, 55% hijau, 14% biru
+  ColorName_EN: Olive drab
+  ColorHexCode_EN: '#6B8E23'
+  ColorLikePhrase_EN: Like moss
+  ColorCombinationPhrase_EN: 42% red, 55% green, 14% blue
+  ColorName_ID: Hijau lumut
+  ColorHexCode_ID: '#6B8E23'
+  ColorLikePhrase_ID: Seperti lumut
+  ColorCombinationPhrase_ID: 42% merah, 55% hijau, 14% biru

@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 60
   G: 179
   B: 113
-  ColorName: Hijau tua segar
-  ColorHexCode: '#3CB371'
-  ColorLikePhrase: Seperti kadal hijau
-  ColorCombinationPhrase: 24% merah, 70% hijau, 44% biru
+  ColorName_EN: Medium sea green
+  ColorHexCode_EN: '#3CB371'
+  ColorLikePhrase_EN: Like a green lizard
+  ColorCombinationPhrase_EN: 24% red, 70% green, 44% blue
+  ColorName_ID: Hijau tua segar
+  ColorHexCode_ID: '#3CB371'
+  ColorLikePhrase_ID: Seperti kadal hijau
+  ColorCombinationPhrase_ID: 24% merah, 70% hijau, 44% biru

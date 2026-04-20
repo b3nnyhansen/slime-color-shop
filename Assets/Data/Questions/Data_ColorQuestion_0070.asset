@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 72
   G: 61
   B: 139
-  ColorName: Biru batu tua
-  ColorHexCode: '#483D8B'
-  ColorLikePhrase: Seperti selai plum
-  ColorCombinationPhrase: 28% merah, 24% hijau, 55% biru
+  ColorName_EN: Dark slate blue
+  ColorHexCode_EN: '#483D8B'
+  ColorLikePhrase_EN: Like plum jelly
+  ColorCombinationPhrase_EN: 28% red, 24% green, 55% blue
+  ColorName_ID: Biru batu tua
+  ColorHexCode_ID: '#483D8B'
+  ColorLikePhrase_ID: Seperti selai plum
+  ColorCombinationPhrase_ID: 28% merah, 24% hijau, 55% biru

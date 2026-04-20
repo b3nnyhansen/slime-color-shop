@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 218
   G: 165
   B: 32
-  ColorName: Emas kekuningan
-  ColorHexCode: '#DAA520'
-  ColorLikePhrase: Seperti keju cheddar
-  ColorCombinationPhrase: 85% merah, 65% hijau, 13% biru
+  ColorName_EN: Golden rod
+  ColorHexCode_EN: '#DAA520'
+  ColorLikePhrase_EN: Like cheddar cheese
+  ColorCombinationPhrase_EN: 85% red, 65% green, 13% blue
+  ColorName_ID: Emas kekuningan
+  ColorHexCode_ID: '#DAA520'
+  ColorLikePhrase_ID: Seperti keju cheddar
+  ColorCombinationPhrase_ID: 85% merah, 65% hijau, 13% biru

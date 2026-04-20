@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 255
   G: 160
   B: 122
-  ColorName: Merah salmon muda
-  ColorHexCode: '#FFA07A'
-  ColorLikePhrase: Seperti terumbu karang
-  ColorCombinationPhrase: 100% merah, 63% hijau, 48% biru
+  ColorName_EN: Light salmon
+  ColorHexCode_EN: '#FFA07A'
+  ColorLikePhrase_EN: Like a coral reef
+  ColorCombinationPhrase_EN: 100% red, 63% green, 48% blue
+  ColorName_ID: Merah salmon muda
+  ColorHexCode_ID: '#FFA07A'
+  ColorLikePhrase_ID: Seperti terumbu karang
+  ColorCombinationPhrase_ID: 100% merah, 63% hijau, 48% biru

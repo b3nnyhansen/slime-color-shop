@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 255
   B: 0
-  ColorName: Hijau segar
-  ColorHexCode: '#00FF00'
-  ColorLikePhrase: Seperti rumput segar
-  ColorCombinationPhrase: 56% merah, 93% hijau, 56% biru
+  ColorName_EN: Lime
+  ColorHexCode_EN: '#00FF00'
+  ColorLikePhrase_EN: Like fresh grass
+  ColorCombinationPhrase_EN: 56% red, 93% green, 56% blue
+  ColorName_ID: Hijau segar
+  ColorHexCode_ID: '#00FF00'
+  ColorLikePhrase_ID: Seperti rumput segar
+  ColorCombinationPhrase_ID: 56% merah, 93% hijau, 56% biru

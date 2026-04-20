@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 0
   G: 128
   B: 0
-  ColorName: Hijau
-  ColorHexCode: '#008000'
-  ColorLikePhrase: Seperti bayam
-  ColorCombinationPhrase: 100% hijau
+  ColorName_EN: Green
+  ColorHexCode_EN: '#008000'
+  ColorLikePhrase_EN: Like spinach
+  ColorCombinationPhrase_EN: 100% green
+  ColorName_ID: Hijau
+  ColorHexCode_ID: '#008000'
+  ColorLikePhrase_ID: Seperti bayam
+  ColorCombinationPhrase_ID: 100% hijau

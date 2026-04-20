@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 250
   G: 250
   B: 210
-  ColorName: Kuning emas muda
-  ColorHexCode: '#FAFAD2'
-  ColorLikePhrase: Seperti puding custard
-  ColorCombinationPhrase: 98% merah, 98% hijau, 82% biru
+  ColorName_EN: Light golden rod yellow
+  ColorHexCode_EN: '#FAFAD2'
+  ColorLikePhrase_EN: Like custard
+  ColorCombinationPhrase_EN: 98% red, 98% green, 82% blue
+  ColorName_ID: Kuning emas muda
+  ColorHexCode_ID: '#FAFAD2'
+  ColorLikePhrase_ID: Seperti puding custard
+  ColorCombinationPhrase_ID: 98% merah, 98% hijau, 82% biru

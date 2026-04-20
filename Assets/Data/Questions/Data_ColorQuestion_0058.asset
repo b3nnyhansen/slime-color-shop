@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 30
   G: 144
   B: 255
-  ColorName: Biru cerah
-  ColorHexCode: '#1E90FF'
-  ColorLikePhrase: Seperti es loli biru
-  ColorCombinationPhrase: 12% merah, 56% hijau, 100% biru
+  ColorName_EN: Dodger blue
+  ColorHexCode_EN: '#1E90FF'
+  ColorLikePhrase_EN: Like blue popsicle
+  ColorCombinationPhrase_EN: 12% red, 56% green, 100% blue
+  ColorName_ID: Biru cerah
+  ColorHexCode_ID: '#1E90FF'
+  ColorLikePhrase_ID: Seperti es loli biru
+  ColorCombinationPhrase_ID: 12% merah, 56% hijau, 100% biru

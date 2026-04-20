@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 245
   G: 222
   B: 179
-  ColorName: Gandum
-  ColorHexCode: '#F5DEB3'
-  ColorLikePhrase: Seperti adonan kue
-  ColorCombinationPhrase: 96% merah, 87% hijau, 70% biru
+  ColorName_EN: Wheat
+  ColorHexCode_EN: '#F5DEB3'
+  ColorLikePhrase_EN: Like cookie dough
+  ColorCombinationPhrase_EN: 96% red, 87% green, 70% blue
+  ColorName_ID: Gandum
+  ColorHexCode_ID: '#F5DEB3'
+  ColorLikePhrase_ID: Seperti adonan kue
+  ColorCombinationPhrase_ID: 96% merah, 87% hijau, 70% biru

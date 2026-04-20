@@ -8,11 +8,20 @@ namespace SlimeColorShop
     public class BlackScreen : Singleton<BlackScreen>
     {
         [SerializeField] private CanvasGroup canvasGroupComponent;
+        private bool isBlackedOut;
+        public bool IsBlackedOut
+        {
+            get
+            {
+                return isBlackedOut;
+            }
+        }
         
         protected override void DoAwakeEvent()
         {
             canvasGroupComponent.alpha = 0f;
             canvasGroupComponent.blocksRaycasts = false;
+            isBlackedOut = false;
         }
 
         private float duration;
@@ -58,7 +67,7 @@ namespace SlimeColorShop
                 UniversalAudioManager.Instance.UpdateAudioVolume(1f - canvasGroupComponent.alpha);
                 yield return new WaitForFixedUpdate();
             }
-            canvasGroupComponent.blocksRaycasts = false;
+            isBlackedOut = true;
             onPostTransitionAction?.Invoke();
         }
 
@@ -68,14 +77,15 @@ namespace SlimeColorShop
             float delta = Time.fixedDeltaTime / duration;
             
             canvasGroupComponent.alpha = 1f;
-            canvasGroupComponent.blocksRaycasts = true;
             while (canvasGroupComponent.alpha > 0f)
             {
                 canvasGroupComponent.alpha -= delta;
-                UniversalAudioManager.Instance.UpdateAudioVolume(canvasGroupComponent.alpha);
                 yield return new WaitForFixedUpdate();
             }
             canvasGroupComponent.blocksRaycasts = false;
+
+            UniversalAudioManager.Instance.UpdateAudioVolume();
+            isBlackedOut = false;
             onPostTransitionAction?.Invoke();
         }
     }

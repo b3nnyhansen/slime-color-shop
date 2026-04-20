@@ -15,7 +15,11 @@ MonoBehaviour:
   R: 240
   G: 255
   B: 240
-  ColorName: Putih melon madu
-  ColorHexCode: '#F0FFF0'
-  ColorLikePhrase: Seperti melon madu
-  ColorCombinationPhrase: 94% merah, 100% hijau, 94% biru
+  ColorName_EN: Honeydew
+  ColorHexCode_EN: '#F0FFF0'
+  ColorLikePhrase_EN: Like a honeydew
+  ColorCombinationPhrase_EN: 94% red, 100% green, 94% blue
+  ColorName_ID: Putih melon madu
+  ColorHexCode_ID: '#F0FFF0'
+  ColorLikePhrase_ID: Seperti melon madu
+  ColorCombinationPhrase_ID: 94% merah, 100% hijau, 94% biru
