@@ -243,16 +243,17 @@ namespace SlimeColorShop.Gameplay
         }
         private void UpdateColorQuestionText(ColorQuestionDisplayEnum displayOption)
         {
+            GameLanguageEnum language = inventoryManager.GetGameLanguage();
             switch (displayOption)
             {
                 case ColorQuestionDisplayEnum.HEX:
-                    colorQuestionText.text = currentColorQuestion.GetColorHexCode();
+                    colorQuestionText.text = currentColorQuestion.GetColorHexCode(language);
                     break;
                 case ColorQuestionDisplayEnum.LIKE_PHRASE:
-                    colorQuestionText.text = currentColorQuestion.GetLikePhrase();
+                    colorQuestionText.text = currentColorQuestion.GetLikePhrase(language);
                     break;
                 case ColorQuestionDisplayEnum.COMBINATION_PHRASE:
-                    colorQuestionText.text = currentColorQuestion.GetLikePhrase();
+                    colorQuestionText.text = currentColorQuestion.GetLikePhrase(language);
                     break;
                 case ColorQuestionDisplayEnum.SUCCESS:
                     colorQuestionText.text = "Yay! Warna ini sesuai permintaanku!";
@@ -261,7 +262,7 @@ namespace SlimeColorShop.Gameplay
                     colorQuestionText.text = "Warna ini tidak sesuai permintaanku...";
                     break;
                 default:
-                    colorQuestionText.text = currentColorQuestion.GetColorName();
+                    colorQuestionText.text = currentColorQuestion.GetColorName(language);
                     break;
             }
         }
@@ -308,5 +309,13 @@ namespace SlimeColorShop.Gameplay
             inventoryManager.AddCoin(coinIncreaseValue);
         }
         #endregion
+
+        public override void UpdateSceneLanguage()
+        {
+            // gameplayOverlayManager.UpdateSceneLanguage();
+            // bonusDisplay.UpdateSceneLanguage();
+            // pauseButton.GetComponentInChildren<TextMeshProUGUI>().text = inventoryManager.IsGameLanguageEN() ? "Pause" : "Jeda";
+            UpdateColorQuestionText(currentDisplayOption);
+        }
     }
 }

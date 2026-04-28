@@ -431,6 +431,18 @@ PrefabInstance:
       propertyPath: m_text
       value: HOME
       objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: enText
+      value: HOME
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: idText
+      value: HOME
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: inText
+      value: HOME
+      objectReference: {fileID: 0}
     - target: {fileID: 4826596178120546427, guid: 8c314acce0db03e468151c40355d327b, type: 3}
       propertyPath: m_Sprite
       value: 

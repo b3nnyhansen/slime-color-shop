@@ -15,6 +15,8 @@ namespace SlimeColorShop
         protected TextMeshProUGUI buttonTextComponent;
         protected Color originalButtonBackgroundColor;
         protected Color originalButtonFontColor;
+        [SerializeField] protected string enText;
+        [SerializeField] protected string idText;
 
         public virtual void Init(Action onClickAction = null)
         {
@@ -33,6 +35,8 @@ namespace SlimeColorShop
             originalButtonBackgroundColor = imageComponent.color;
             if(buttonTextComponent != null)
                 originalButtonFontColor = buttonTextComponent.color;
+
+            SetButtonTextLanguage();
             SetOnClickAction();
         }
 
@@ -72,14 +76,14 @@ namespace SlimeColorShop
         {
             if(buttonTextComponent == null)
                 return;
+            buttonTextComponent.fontSize = fontSize;
+
             RectTransform rectTransform = buttonTextComponent.GetComponent<RectTransform>();
             LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
             float preferredWidth = Utility.GetPreferredWidth(rectTransform);
             
             if(preferredWidth > minSize)
-                buttonTextComponent.fontSize = fontSize * minSize / preferredWidth * 0.95f;
-            else
-                buttonTextComponent.fontSize = fontSize;
+                buttonTextComponent.fontSize *= minSize / preferredWidth * 0.95f;
         }
 
         public virtual void SetButtonFontColor(Color color)
@@ -98,6 +102,12 @@ namespace SlimeColorShop
         {
             SetButtonColor(originalButtonBackgroundColor);
             SetButtonFontColor(originalButtonFontColor);
+        }
+
+        public virtual void SetButtonTextLanguage()
+        {
+            string text = InventoryManager.Instance.IsGameLanguageEN() ? enText : idText;
+            SetButtonText(text);
         }
     }
 }

@@ -211,6 +211,18 @@ PrefabInstance:
       propertyPath: m_text
       value: HOME
       objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: enText
+      value: HOME
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: idText
+      value: HOME
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: inText
+      value: HOME
+      objectReference: {fileID: 0}
     - target: {fileID: 4826596178120546427, guid: 8c314acce0db03e468151c40355d327b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -657,6 +669,18 @@ PrefabInstance:
     - target: {fileID: 1781209335824231600, guid: 8c314acce0db03e468151c40355d327b, type: 3}
       propertyPath: m_fontSizeBase
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: enText
+      value: CANCEL
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: idText
+      value: BATAL
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: inText
+      value: BATAL
       objectReference: {fileID: 0}
     - target: {fileID: 4826596178120546427, guid: 8c314acce0db03e468151c40355d327b, type: 3}
       propertyPath: m_Color.b
@@ -1200,6 +1224,8 @@ MonoBehaviour:
   buyButton: {fileID: 1149162258}
   cancelButton: {fileID: 509637336}
   messageText: {fileID: 524053495}
+  enMessage: Are you sure you want to buy this item?
+  idMessage: Apa kamu yakin ingin membeli barang ini?
 --- !u!225 &894466449
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1650,6 +1676,18 @@ PrefabInstance:
     - target: {fileID: 1781209335824231600, guid: 8c314acce0db03e468151c40355d327b, type: 3}
       propertyPath: m_fontSizeBase
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: enText
+      value: BUY
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: idText
+      value: BELI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: inText
+      value: BELI
       objectReference: {fileID: 0}
     - target: {fileID: 4826596178120546427, guid: 8c314acce0db03e468151c40355d327b, type: 3}
       propertyPath: m_Color.b

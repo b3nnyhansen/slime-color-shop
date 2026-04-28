@@ -22,7 +22,9 @@ namespace SlimeColorShop
         [SerializeField] private AudioDatabase audioDatabase;
         [SerializeField] private PlayerDataEntry bgmData;
         [SerializeField] private PlayerDataEntry sfxData;
+        [SerializeField] private PlayerDataEntry languageData;
         [SerializeField] private GameButton settingButton;
+        [SerializeField] private GameButtonV2WithText languageButton;
         [SerializeField] private SettingFormHandler settingFormHandler;
         [SerializeField] private AdManager adManager;
         
@@ -44,6 +46,20 @@ namespace SlimeColorShop
                 delegate
                 {
                     settingFormHandler.ShowCanvasGroup();
+                }
+            );
+            languageButton.Init(
+                IsGameLanguageEN(),
+                delegate
+                {
+                    if (IsGameLanguageEN())
+                        languageData.SaveData((int) GameLanguageEnum.ID);
+                    else
+                        languageData.SaveData((int) GameLanguageEnum.EN);
+                    
+                    BaseSceneManager currentSceneManager = FindFirstObjectByType<BaseSceneManager>();
+                    if (currentSceneManager != null)
+                        currentSceneManager.UpdateSceneLanguage();
                 }
             );
         }
@@ -209,6 +225,22 @@ namespace SlimeColorShop
         public AudioClip GetAudioClip(AudioEnum audioEnum)
         {
             return audioDatabase.GetAudioClip(audioEnum);
+        }
+
+        public GameLanguageEnum GetGameLanguage()
+        {
+            int languageValue = (int)languageData.LoadData();
+            int minValue = (int)GameLanguageEnum.MIN;
+            int maxValue = (int)GameLanguageEnum.MAX;
+
+            if (languageValue < minValue || languageValue > maxValue)
+                return GameLanguageEnum.EN;
+            return (GameLanguageEnum) languageValue;
+        }
+
+        public bool IsGameLanguageEN()
+        {
+            return GetGameLanguage() == GameLanguageEnum.EN;
         }
     }
 }

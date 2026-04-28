@@ -1019,6 +1019,18 @@ PrefabInstance:
       propertyPath: m_text
       value: HOME
       objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: enText
+      value: HOME
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: idText
+      value: HOME
+      objectReference: {fileID: 0}
+    - target: {fileID: 3764127134059260563, guid: 8c314acce0db03e468151c40355d327b, type: 3}
+      propertyPath: inText
+      value: HOME
+      objectReference: {fileID: 0}
     - target: {fileID: 4826596178120546427, guid: 8c314acce0db03e468151c40355d327b, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2047,7 +2059,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionDatabase: {fileID: 11400000, guid: 6178d4dbe3605b64a8cff7da7827baea, type: 2}
-  encyclopediaItemButtonObject: {fileID: 3071943910022374812, guid: e0869f4138bafa446a4a369439f76caf, type: 3}
+  encyclopediaItemButtonObject: {fileID: 8092765821340101590, guid: e0869f4138bafa446a4a369439f76caf, type: 3}
   scrollViewContentTransform: {fileID: 282583391}
   itemViewer: {fileID: 2073506126}
   returnButton: {fileID: 1084769148}

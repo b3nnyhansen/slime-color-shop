@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Indicator_Clickable_Background_2_0: -8156220517388790994
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,6 +9,8 @@ namespace SlimeColorShop.Shop
         [SerializeField] private GameButton buyButton;
         [SerializeField] private GameButton cancelButton;
         [SerializeField] private TextMeshProUGUI messageText;
+        [SerializeField] private string enMessage;
+        [SerializeField] private string idMessage;
 
         public void Init(
             Action onBuyButtonClickAction
@@ -16,18 +18,24 @@ namespace SlimeColorShop.Shop
         {
             buyButton.Init(onBuyButtonClickAction);
             cancelButton.Init(HideCanvasGroup);
+            SetMessageTextLanguage();
             base.Init();
         }
 
         public void Show()
         {
-            SetMessageText("Apa kamu ingin membeli barang ini?");
             ShowCanvasGroup();
         }
 
         public void SetMessageText(string message)
         {
             messageText.text = message;
+        }
+
+        public void SetMessageTextLanguage()
+        {
+            string text = InventoryManager.Instance.IsGameLanguageEN() ? enMessage : idMessage;
+            SetMessageText(text);
         }
     }
 }

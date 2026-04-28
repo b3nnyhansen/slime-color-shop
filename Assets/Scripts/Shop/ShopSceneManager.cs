@@ -104,5 +104,11 @@ namespace SlimeColorShop.Shop
             currentPageNumber = pageNumber;
             UpdateShopGameButtonsEntry();
         }
+
+        public override void UpdateSceneLanguage()
+        {
+            returnButton.SetButtonTextLanguage();
+            shopBuyConfirmationForm.SetMessageTextLanguage();
+        }
     }
 }

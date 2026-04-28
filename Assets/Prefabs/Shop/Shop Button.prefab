@@ -211,6 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eac08098ba0f784c82eca8b9ba37e04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enText: BUY
+  idText: BELI
   displayText: {fileID: 3642432389404091799}
   canvasGroup: {fileID: 4723340601700918844}
   itemImage: {fileID: 4736350621027836707}

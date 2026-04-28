@@ -99,5 +99,13 @@ namespace SlimeColorShop.MainMenu
             SkeletonDataAsset skeletonDataAsset = spineDatabase.GetSkeletonDataAsset();
             patrollingSlimeV2.Init(skeletonDataAsset);
         }
+
+        public override void UpdateSceneLanguage()
+        {
+            playButton.SetButtonTextLanguage();
+            shopButton.SetButtonTextLanguage();
+            decorButton.SetButtonTextLanguage();
+            encyclopediaButton.SetButtonTextLanguage();
+        }
     }
 }

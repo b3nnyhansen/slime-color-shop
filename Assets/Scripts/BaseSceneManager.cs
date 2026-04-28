@@ -14,5 +14,10 @@ namespace SlimeColorShop
         {
             LoadScene((int)sceneNameEnum);
         }
+
+        public virtual void UpdateSceneLanguage()
+        {
+            
+        }
     }
 }

@@ -6,7 +6,7 @@ namespace SlimeColorShop.Encyclopedia
     public class EncyclopediaSceneManager : BaseSceneManager
     {
         [SerializeField] private ColorQuestionDatabase questionDatabase;
-        [SerializeField] private GameButton encyclopediaItemButtonObject;
+        [SerializeField] private EncyclopediaButton encyclopediaItemButtonObject;
         [SerializeField] private RectTransform scrollViewContentTransform;
         [SerializeField] private EncyclopediaQuestionItemViewer itemViewer;
         [SerializeField] private GameButton returnButton;
@@ -33,7 +33,8 @@ namespace SlimeColorShop.Encyclopedia
         {
             foreach(ColorQuestionEntry entry in questionDatabase.Entries)
             {
-                GameButton newButton = Instantiate(encyclopediaItemButtonObject, scrollViewContentTransform);
+                GameLanguageEnum language = InventoryManager.Instance.GetGameLanguage();
+                EncyclopediaButton newButton = Instantiate(encyclopediaItemButtonObject, scrollViewContentTransform);
                 int displayState = questionDatabase.LoadData(entry);
                 newButton.Init(
                     delegate {
@@ -41,11 +42,23 @@ namespace SlimeColorShop.Encyclopedia
                     }
                 );
                 
-                string buttonName = (displayState & 1) > 0 ? entry.GetColorName() : "???";
-                newButton.SetButtonText(buttonName);
-                newButton.SetButtonColor(entry);
-                newButton.SetButtonFontSize(60f);
+                newButton.SetDisplayState((displayState & 1) > 0);
+                newButton.SetEnText(entry.GetColorNameEN());
+                newButton.SetIdText(entry.GetColorNameID());
+                newButton.SetButtonTextLanguage();
             }
+        }
+
+        public override void UpdateSceneLanguage()
+        {
+            returnButton.SetButtonTextLanguage();
+            foreach (Transform child in scrollViewContentTransform)
+            {
+                EncyclopediaButton button = child.GetComponent<EncyclopediaButton>();
+                if (button != null)
+                    button.SetButtonTextLanguage();
+            }
+            itemViewer.SetTexts();
         }
     }
 }

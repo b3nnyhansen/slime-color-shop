@@ -26,62 +26,66 @@ namespace SlimeColorShop.Data
                 Math.Abs(B - b) <= threshold;
         }
 
-        public string GetColorName(ColorQuestionLanguage language = ColorQuestionLanguage.EN)
+        public string GetColorName(GameLanguageEnum language = GameLanguageEnum.EN)
         {
             switch (language)
             {
-                case ColorQuestionLanguage.EN:
+                case GameLanguageEnum.EN:
                     return ColorName_EN;
-                case ColorQuestionLanguage.ID:
+                case GameLanguageEnum.ID:
                     return ColorName_ID;
                 default:
                     return ColorName_EN;
             }
         }
 
-        public string GetColorHexCode(ColorQuestionLanguage language = ColorQuestionLanguage.EN)
+        public string GetColorNameEN()
+        {
+            return ColorName_EN;
+        }
+
+        public string GetColorNameID()
+        {
+            return ColorName_ID;
+        }
+
+        public string GetColorHexCode(GameLanguageEnum language = GameLanguageEnum.EN)
         {
             switch (language)
             {
-                case ColorQuestionLanguage.EN:
+                case GameLanguageEnum.EN:
                     return ColorHexCode_EN;
-                case ColorQuestionLanguage.ID:
+                case GameLanguageEnum.ID:
                     return ColorHexCode_ID;
                 default:
                     return ColorHexCode_EN;
             }
         }
 
-        public string GetLikePhrase(ColorQuestionLanguage language = ColorQuestionLanguage.EN)
+        public string GetLikePhrase(GameLanguageEnum language = GameLanguageEnum.EN)
         {
             switch (language)
             {
-                case ColorQuestionLanguage.EN:
+                case GameLanguageEnum.EN:
                     return ColorLikePhrase_EN;
-                case ColorQuestionLanguage.ID:
+                case GameLanguageEnum.ID:
                     return ColorLikePhrase_ID;
                 default:
                     return ColorLikePhrase_EN;
             }
         }
 
-        public string GetCombinationPhrase(ColorQuestionLanguage language = ColorQuestionLanguage.EN)
+        public string GetCombinationPhrase(GameLanguageEnum language = GameLanguageEnum.EN)
         {
             switch (language)
             {
-                case ColorQuestionLanguage.EN:
+                case GameLanguageEnum.EN:
                     return ColorCombinationPhrase_EN;
-                case ColorQuestionLanguage.ID:
+                case GameLanguageEnum.ID:
                     return ColorCombinationPhrase_ID;
                 default:
                     return ColorCombinationPhrase_EN;
             }
         }
-    }
-
-    public enum ColorQuestionLanguage
-    {
-        EN,
-        ID
     }
 }
