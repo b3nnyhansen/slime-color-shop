@@ -28,8 +28,10 @@ namespace SlimeColorShop.Gameplay
         private bool isProcessingAnswer = false;
         private int score;
 
-        void Start()
+        protected override void DoStartEvent()
         {
+            base.DoStartEvent();
+            
             Instance = this;
             inventoryManager = InventoryManager.Instance;
             score = 0;

@@ -17,8 +17,10 @@ namespace SlimeColorShop.Shop
         int maxPageNumber;
         int maxDisplayCount;
 
-        void Start()
+        protected override void DoStartEvent()
         {
+            base.DoStartEvent();
+            
             returnButton.Init(
                 delegate
                 {

@@ -11,8 +11,10 @@ namespace SlimeColorShop.Encyclopedia
         [SerializeField] private EncyclopediaQuestionItemViewer itemViewer;
         [SerializeField] private GameButton returnButton;
 
-        void Start()
+        protected override void DoStartEvent()
         {
+            base.DoStartEvent();
+            
             InitScene();
             InventoryManager.Instance.LoadBannerAd();
         }

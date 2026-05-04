@@ -15,8 +15,10 @@ namespace SlimeColorShop.Decor
         private int selectedDecorationButtonId;
         private int selectedShopItemEntryId;
 
-        void Start()
+        protected override void DoStartEvent()
         {
+            base.DoStartEvent();
+            
             returnButton.Init(
                 delegate
                 {

@@ -18,8 +18,10 @@ namespace SlimeColorShop.MainMenu
         [SerializeField] private PatrollingSlimeV2 patrollingSlimeV2;
         [SerializeField] private SpineDatabase spineDatabase;
 
-        void Start()
+        protected override void DoStartEvent()
         {
+            base.DoStartEvent();
+            
             decorationHandler.Init();
             playButton.Init(
                 delegate
