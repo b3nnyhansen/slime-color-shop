@@ -643,6 +643,7 @@ MonoBehaviour:
   languageButton: {fileID: 1870342604984057583}
   settingFormHandler: {fileID: 4544075906514611111}
   adManager: {fileID: 8855606309880908885}
+  aspectRatioFitter: {fileID: 6766027547560051288}
 --- !u!1 &6939131289703584307
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,12 +27,16 @@ namespace SlimeColorShop
         [SerializeField] private GameButtonV2WithText languageButton;
         [SerializeField] private SettingFormHandler settingFormHandler;
         [SerializeField] private AdManager adManager;
+        [SerializeField] private AspectRatioFitter aspectRatioFitter;
         
         private const int maximumEnergy = 180;
         private Vector2 coinChangePosition = new Vector2(+90, -50);
 
         protected override void DoAwakeEvent()
         {
+            float screenRatio = (float) Screen.width / Screen.height;
+            aspectRatioFitter.aspectRatio = screenRatio;
+
             SetCoinText();
             energyManager.Init(Instance);
             settingFormHandler.Init();

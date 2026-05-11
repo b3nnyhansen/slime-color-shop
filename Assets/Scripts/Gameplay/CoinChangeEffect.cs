@@ -12,7 +12,7 @@ namespace SlimeColorShop
             if (change < 0)
             {
                 textComponent.color = Color.red;
-                textComponent.text = string.Format("-{0}", change.ToString());
+                textComponent.text = string.Format("{0}", change.ToString());
             }
             else
             {

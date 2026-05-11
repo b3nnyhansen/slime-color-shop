@@ -32,6 +32,7 @@ namespace SlimeColorShop.Decor
         }
         public void SetShopItemEntry(ShopItemEntry shopItemEntry)
         {
+            SetPlacementData(shopItemEntry);
             this.shopItemEntry = shopItemEntry;
             SetDecorationImageSprite();
         }
@@ -56,7 +57,13 @@ namespace SlimeColorShop.Decor
                 imageComponent.sprite = sprite;
                 imageComponent.color = Color.white;
             }
-                
+        }
+        private void SetPlacementData(ShopItemEntry shopItemEntry)
+        {
+            if (this.shopItemEntry != null)
+                this.shopItemEntry.UnsetPlacementData();
+            if (shopItemEntry != null)
+                shopItemEntry.SetPlacementData();
         }
     }
 }

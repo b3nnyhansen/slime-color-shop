@@ -10,6 +10,7 @@ namespace SlimeColorShop.Decor
         [SerializeField] private DecorationSelectButton removeDecorButton;
         [SerializeField] private DecorationSelectButton decorationSelectButtonObject;
         [SerializeField] private RectTransform selectionTransform;
+        [SerializeField] DecorationSelectButton[] decorationSelectButtons;
         private DecorSceneManager decorSceneManager;
 
         public void Init(DecorSceneManager decorSceneManager, ShopItemDatabase shopItemDatabase)
@@ -30,12 +31,21 @@ namespace SlimeColorShop.Decor
                 DecorationSelectButton instance = Instantiate(decorationSelectButtonObject, selectionTransform);
                 instance.Init(i, shopItemEntry, ChangeDecoration);
             }
+            decorationSelectButtons = selectionTransform.GetComponentsInChildren<DecorationSelectButton>();
         }
         
         private void ChangeDecoration(int shopItemEntryId)
         {
             decorSceneManager.SetSelectedShopItemEntryId(shopItemEntryId);
             decorSceneManager.SaveDecoration();
+            SetSelectButtonsInteractable();
+        }
+
+        public void SetSelectButtonsInteractable()
+        {
+            Debug.Log("Called");
+            for (int i = 0; i < decorationSelectButtons.Length; i++)
+                decorationSelectButtons[i].SetInteractable();
         }
     }
 }

@@ -39,5 +39,14 @@ namespace SlimeColorShop.Decor
         {
             imageComponent.sprite = sprite;
         }
+        public void SetInteractable()
+        {
+            if (shopItemEntry == null)
+                return;
+            if (shopItemEntry.IsPlaced())
+                buttonComponent.interactable = false;
+            else
+                buttonComponent.interactable = true;
+        }
     }
 }

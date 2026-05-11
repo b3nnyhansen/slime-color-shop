@@ -7,6 +7,7 @@ namespace SlimeColorShop.Data
     {
         public int Cost;
         public Sprite ItemSprite;
+        public string PlacementId => string.Format("{0}_PLACEMENT", SaveId);
         
         public override void SaveData(object data = null)
         {
@@ -26,6 +27,31 @@ namespace SlimeColorShop.Data
         public Sprite GetItemSprite()
         {
             return ItemSprite;
+        }
+
+        public void SetPlacementData(int value)
+        {
+            PlayerPrefs.SetInt(PlacementId, value);
+        }
+
+        public void SetPlacementData()
+        {
+            SetPlacementData(1);
+        }
+
+        public void UnsetPlacementData()
+        {
+            SetPlacementData(0);
+        }
+
+        public int LoadPlacementData()
+        {
+            return PlayerPrefs.GetInt(PlacementId, 0);
+        }
+
+        public bool IsPlaced()
+        {
+            return LoadPlacementData() == 1;
         }
     }
 }
