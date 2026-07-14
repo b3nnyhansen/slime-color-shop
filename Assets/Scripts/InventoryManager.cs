@@ -28,6 +28,7 @@ namespace SlimeColorShop
         [SerializeField] private SettingFormHandler settingFormHandler;
         [SerializeField] private AdManager adManager;
         [SerializeField] private AspectRatioFitter aspectRatioFitter;
+        [SerializeField] private LeaderboardEntry leaderboardEntry;
         
         private const int maximumEnergy = 180;
         private Vector2 coinChangePosition = new Vector2(+90, -50);
@@ -42,6 +43,7 @@ namespace SlimeColorShop
             settingFormHandler.Init();
             InitButtons();
             adManager.Init();
+            leaderboardEntry.LoadData();
         }
 
         private void InitButtons()
@@ -57,9 +59,9 @@ namespace SlimeColorShop
                 delegate
                 {
                     if (IsGameLanguageEN())
-                        languageData.SaveData((int) GameLanguageEnum.ID);
+                        languageData.SaveData((int) GameLanguageEnum.ID, true);
                     else
-                        languageData.SaveData((int) GameLanguageEnum.EN);
+                        languageData.SaveData((int) GameLanguageEnum.EN, true);
                     
                     BaseSceneManager currentSceneManager = FindFirstObjectByType<BaseSceneManager>();
                     if (currentSceneManager != null)
@@ -147,7 +149,7 @@ namespace SlimeColorShop
         }
         public void SaveCoinData(int value)
         {
-            coinData.SaveData(value);
+            coinData.SaveData(value, true);
         }
         public void SaveLastLoginData()
         {
@@ -156,7 +158,7 @@ namespace SlimeColorShop
         }
         public void SaveLastLoginData(long value)
         {
-            lastLoginData.SaveData(value);
+            lastLoginData.SaveData(value, true);
         }
 
         public void SaveMaxScoreData(int value)
@@ -169,13 +171,13 @@ namespace SlimeColorShop
         public void ChangeBGMSetting()
         {
             bool isMuted = IsBGMMuted();
-            bgmData.SaveData(isMuted ? 1 : 0);
+            bgmData.SaveData(isMuted ? 1 : 0, true);
         }
 
         public void ChangeSFXSetting()
         {
             bool isMuted = IsSFXMuted();
-            sfxData.SaveData(isMuted ? 1 : 0);
+            sfxData.SaveData(isMuted ? 1 : 0, true);
         }
         #endregion
 
@@ -245,6 +247,12 @@ namespace SlimeColorShop
         public bool IsGameLanguageEN()
         {
             return GetGameLanguage() == GameLanguageEnum.EN;
+        }
+
+        public void SubmitScoreToLeaderboard(int score)
+        {
+            int createdAt = (int)Utility.GetCurrentTimestamp();
+            leaderboardEntry.SubmitScore(score, createdAt);
         }
     }
 }

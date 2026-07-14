@@ -6,7 +6,7 @@ namespace SlimeColorShop.Data
     {
         public string SaveId;
 
-        public abstract void SaveData(object data);
+        public abstract void SaveData(object data, bool saveImmediately = false);
         public abstract object LoadData();
     }
 }

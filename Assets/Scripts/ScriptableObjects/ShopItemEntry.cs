@@ -9,9 +9,11 @@ namespace SlimeColorShop.Data
         public Sprite ItemSprite;
         public string PlacementId => string.Format("{0}_PLACEMENT", SaveId);
         
-        public override void SaveData(object data = null)
+        public override void SaveData(object data = null, bool saveImmediately = false)
         {
             PlayerPrefs.SetInt(SaveId, 1);
+            if (saveImmediately)
+                PlayerPrefs.Save();
         }
 
         public override object LoadData()

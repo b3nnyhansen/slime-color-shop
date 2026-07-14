@@ -77,14 +77,17 @@ namespace SlimeColorShop.Data
 
         public string GetCombinationPhrase(GameLanguageEnum language = GameLanguageEnum.EN)
         {
+            int r = Mathf.RoundToInt(R * 100f / 255f),
+                g = Mathf.RoundToInt(G * 100f / 255f),
+                b = Mathf.RoundToInt(B * 100f / 255f);
             switch (language)
             {
                 case GameLanguageEnum.EN:
-                    return ColorCombinationPhrase_EN;
+                    return string.Format("{0}% red, {1}% green, {2}% blue", r, g, b);
                 case GameLanguageEnum.ID:
-                    return ColorCombinationPhrase_ID;
+                    return string.Format("{0}% merah, {1}% hijau, {2}% biru", r, g, b);
                 default:
-                    return ColorCombinationPhrase_EN;
+                    return string.Format("{0}% red, {1}% green, {2}% blue", r, g, b);
             }
         }
     }

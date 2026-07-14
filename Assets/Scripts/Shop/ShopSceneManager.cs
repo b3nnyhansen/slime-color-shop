@@ -95,7 +95,7 @@ namespace SlimeColorShop.Shop
             else
             {
                 InventoryManager.Instance.AddCoin(-cost);
-                onHoldShopItemEntry.SaveData();
+                onHoldShopItemEntry.SaveData(saveImmediately: true);
                 UpdateShopGameButtonsDisplay();
                 shopBuyConfirmationForm.HideCanvasGroup();
             }

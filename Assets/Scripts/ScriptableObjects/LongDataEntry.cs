@@ -7,9 +7,11 @@ namespace SlimeColorShop.Data
     {
         public string DefaultValue;
 
-        public override void SaveData(object data)
+        public override void SaveData(object data, bool saveImmediately = false)
         {
             PlayerPrefs.SetString(SaveId, data.ToString());
+            if (saveImmediately)
+                PlayerPrefs.Save();
         }
 
         public override object LoadData()

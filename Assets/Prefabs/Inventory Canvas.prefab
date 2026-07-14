@@ -644,6 +644,7 @@ MonoBehaviour:
   settingFormHandler: {fileID: 4544075906514611111}
   adManager: {fileID: 8855606309880908885}
   aspectRatioFitter: {fileID: 6766027547560051288}
+  leaderboardEntry: {fileID: 11400000, guid: 57b1d94e9372d6c40b0c5d24fc13cfc8, type: 2}
 --- !u!1 &6939131289703584307
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,6 +18,7 @@ namespace SlimeColorShop.Gameplay
         [SerializeField] private ColorQuestionDatabase questionDatabase;
         [SerializeField] private SlimeDatabase slimeDatabase;
         [SerializeField] private TextMeshProUGUI colorQuestionText;
+        [SerializeField] private Image colorQuestionTextV2;
         private Slime obsoleteTargetSlime;
         [SerializeField] private SlimeV2 targetSlime;
         [SerializeField] private GameplayOverlayManager gameplayOverlayManager;
@@ -25,6 +26,7 @@ namespace SlimeColorShop.Gameplay
         [SerializeField] private Button pauseButton;
         [SerializeField] private SpineDatabase spineDatabase;
         private ColorQuestionEntry currentColorQuestion;
+        private ColorQuestionEntryV2 currentColorQuestionV2;
         private bool isProcessingAnswer = false;
         private int score;
 
@@ -70,9 +72,20 @@ namespace SlimeColorShop.Gameplay
 
         private void InitQuestion()
         {
-            int id = UnityEngine.Random.Range(0, questionDatabase.EntryCount);
-            currentColorQuestion = questionDatabase.GetEntry(id);
-            UpdateColorQuestionText(id);
+            // int id = UnityEngine.Random.Range(0, questionDatabase.EntryCount);
+            // currentColorQuestion = questionDatabase.GetEntry(id);
+            // UpdateColorQuestionText(id);
+            InitQuestionV2();
+        }
+
+        private void InitQuestionV2()
+        {
+            currentColorQuestionV2 = new ColorQuestionEntryV2(
+                UnityEngine.Random.Range(0, 256),
+                UnityEngine.Random.Range(0, 256),
+                UnityEngine.Random.Range(0, 256)
+            );
+            UpdateColorQuestionText();
         }
 
         private void InitSlime()
@@ -126,10 +139,14 @@ namespace SlimeColorShop.Gameplay
             if (isProcessingAnswer)
                 return;
 
-            bool isChoice = currentColorQuestion.IsAnswerCorrect(
+            bool isChoice = IsAnswerCorrect(r, g, b);
+            StartCoroutine(ShowResult(isChoice));
+        }
+        public bool IsAnswerCorrect(int r, int g, int b)
+        {
+            return currentColorQuestionV2.IsAnswerCorrect(
                 r, g, b, GetThreshold()
             );
-            StartCoroutine(ShowResult(isChoice));
         }
 
         public void ColorSlimeTarget(Color newColor)
@@ -209,6 +226,7 @@ namespace SlimeColorShop.Gameplay
             gameplayOverlayManager.ShowGameOverScreen(
                 score, inventoryManager.LoadMaxScoreData()
             );
+            inventoryManager.SubmitScoreToLeaderboard(score);
             inventoryManager.ShowInterstitial();
             UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_TIMEUP);
         }
@@ -218,16 +236,13 @@ namespace SlimeColorShop.Gameplay
         ColorQuestionDisplayEnum currentDisplayOption;
         private enum ColorQuestionDisplayEnum
         {
-            NORMAL,
-            HEX,
-            LIKE_PHRASE,
-            COMBINATION_PHRASE,
+            IMAGE,
+            PERCENTAGE,
             SUCCESS,
             FAILURE
         }
         ColorQuestionDisplayEnum[] regularQuestionDisplayEnums = {
-            ColorQuestionDisplayEnum.NORMAL, ColorQuestionDisplayEnum.HEX,
-            ColorQuestionDisplayEnum.LIKE_PHRASE, ColorQuestionDisplayEnum.COMBINATION_PHRASE
+            ColorQuestionDisplayEnum.IMAGE, ColorQuestionDisplayEnum.PERCENTAGE
         };
         private void UpdateColorQuestionText(int colorQuestionId = 0)
         {
@@ -248,23 +263,25 @@ namespace SlimeColorShop.Gameplay
             GameLanguageEnum language = inventoryManager.GetGameLanguage();
             switch (displayOption)
             {
-                case ColorQuestionDisplayEnum.HEX:
-                    colorQuestionText.text = currentColorQuestion.GetColorHexCode(language);
-                    break;
-                case ColorQuestionDisplayEnum.LIKE_PHRASE:
-                    colorQuestionText.text = currentColorQuestion.GetLikePhrase(language);
-                    break;
-                case ColorQuestionDisplayEnum.COMBINATION_PHRASE:
-                    colorQuestionText.text = currentColorQuestion.GetLikePhrase(language);
+                case ColorQuestionDisplayEnum.PERCENTAGE:
+                    colorQuestionText.text = currentColorQuestionV2.GetCombinationPhrase(language);
+                    colorQuestionTextV2.color = Color.clear;
                     break;
                 case ColorQuestionDisplayEnum.SUCCESS:
                     colorQuestionText.text = "Yay! Warna ini sesuai permintaanku!";
+                    colorQuestionTextV2.color = Color.clear;
                     break;
                 case ColorQuestionDisplayEnum.FAILURE:
                     colorQuestionText.text = "Warna ini tidak sesuai permintaanku...";
+                    colorQuestionTextV2.color = Color.clear;
                     break;
                 default:
-                    colorQuestionText.text = currentColorQuestion.GetColorName(language);
+                    colorQuestionText.text = "";
+                    colorQuestionTextV2.color = new Color(
+                        currentColorQuestionV2.R / 255f,
+                        currentColorQuestionV2.G / 255f,
+                        currentColorQuestionV2.B / 255f
+                    );
                     break;
             }
         }
@@ -273,13 +290,7 @@ namespace SlimeColorShop.Gameplay
             int threshold;
             switch (currentDisplayOption)
             {
-                case ColorQuestionDisplayEnum.HEX:
-                    threshold = 5;
-                    break;
-                case ColorQuestionDisplayEnum.LIKE_PHRASE:
-                    threshold = 15;
-                    break;
-                case ColorQuestionDisplayEnum.COMBINATION_PHRASE:
+                case ColorQuestionDisplayEnum.PERCENTAGE:
                     threshold = 15;
                     break;
                 default:
@@ -296,13 +307,7 @@ namespace SlimeColorShop.Gameplay
             int coinIncreaseValue = 5;
             switch (currentDisplayOption)
             {
-                case ColorQuestionDisplayEnum.HEX:
-                    coinIncreaseValue = 15;
-                    break;
-                case ColorQuestionDisplayEnum.LIKE_PHRASE:
-                    coinIncreaseValue = 10;
-                    break;
-                case ColorQuestionDisplayEnum.COMBINATION_PHRASE:
+                case ColorQuestionDisplayEnum.PERCENTAGE:
                     coinIncreaseValue = 10;
                     break;
             }
@@ -318,6 +323,42 @@ namespace SlimeColorShop.Gameplay
             // bonusDisplay.UpdateSceneLanguage();
             // pauseButton.GetComponentInChildren<TextMeshProUGUI>().text = inventoryManager.IsGameLanguageEN() ? "Pause" : "Jeda";
             UpdateColorQuestionText(currentDisplayOption);
+        }
+
+        public class ColorQuestionEntryV2
+        {
+            private int r, g, b;
+            public int R { get { return r; } }
+            public int G { get { return g; } }
+            public int B { get { return b; } }
+            public ColorQuestionEntryV2(int r, int g, int b)
+            {
+                this.r = r;
+                this.g = g;
+                this.b = b;
+            }
+            public bool IsAnswerCorrect(int r, int g, int b, int threshold = 0)
+            {
+                return
+                    Math.Abs(this.r - r) <= threshold &&
+                    Math.Abs(this.g - g) <= threshold &&
+                    Math.Abs(this.b - b) <= threshold;
+            }
+            public string GetCombinationPhrase(GameLanguageEnum language = GameLanguageEnum.EN)
+            {
+                int _r = Mathf.RoundToInt(R * 100f / 255f),
+                    _g = Mathf.RoundToInt(G * 100f / 255f),
+                    _b = Mathf.RoundToInt(B * 100f / 255f);
+                switch (language)
+                {
+                    case GameLanguageEnum.EN:
+                        return string.Format("{0}% red, {1}% green, {2}% blue", _r, _g, _b);
+                    case GameLanguageEnum.ID:
+                        return string.Format("{0}% merah, {1}% hijau, {2}% biru", _r, _g, _b);
+                    default:
+                        return string.Format("{0}% red, {1}% green, {2}% blue", _r, _g, _b);
+                }
+            }
         }
     }
 }

@@ -61,7 +61,7 @@ namespace SlimeColorShop.Decor
         public void SaveDecoration()
         {
             DecorationEntry decorationEntry = decorationDatabase.GetEntry(selectedDecorationButtonId);
-            decorationEntry.SaveData(selectedShopItemEntryId);
+            decorationEntry.SaveData(selectedShopItemEntryId, true);
             
             ShopItemEntry shopItemEntry = selectedShopItemEntryId < 0 ? null : shopItemDatabase.GetEntry(selectedShopItemEntryId);
             decorationHandler.SetDecorationButtonShopItemEntry(selectedDecorationButtonId, shopItemEntry);
