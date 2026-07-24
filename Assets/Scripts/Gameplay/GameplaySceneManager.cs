@@ -81,9 +81,9 @@ namespace SlimeColorShop.Gameplay
         private void InitQuestionV2()
         {
             currentColorQuestionV2 = new ColorQuestionEntryV2(
-                UnityEngine.Random.Range(0, 256),
-                UnityEngine.Random.Range(0, 256),
-                UnityEngine.Random.Range(0, 256)
+                UnityEngine.Random.Range(0, 11),
+                UnityEngine.Random.Range(0, 11),
+                UnityEngine.Random.Range(0, 11)
             );
             UpdateColorQuestionText();
         }
@@ -291,10 +291,10 @@ namespace SlimeColorShop.Gameplay
             switch (currentDisplayOption)
             {
                 case ColorQuestionDisplayEnum.PERCENTAGE:
-                    threshold = 15;
+                    threshold = 31;
                     break;
                 default:
-                    threshold = 10;
+                    threshold = 31;
                     break;
             }
             return threshold;
@@ -333,9 +333,9 @@ namespace SlimeColorShop.Gameplay
             public int B { get { return b; } }
             public ColorQuestionEntryV2(int r, int g, int b)
             {
-                this.r = r;
-                this.g = g;
-                this.b = b;
+                this.r = r < 6 ? r * 25 : r * 25 + 3;
+                this.g = g < 6 ? g * 25 : r * 25 + 3;
+                this.b = b < 6 ? b * 25 : r * 25 + 3;
             }
             public bool IsAnswerCorrect(int r, int g, int b, int threshold = 0)
             {
@@ -346,9 +346,9 @@ namespace SlimeColorShop.Gameplay
             }
             public string GetCombinationPhrase(GameLanguageEnum language = GameLanguageEnum.EN)
             {
-                int _r = Mathf.RoundToInt(R * 100f / 255f),
-                    _g = Mathf.RoundToInt(G * 100f / 255f),
-                    _b = Mathf.RoundToInt(B * 100f / 255f);
+                int _r = Mathf.CeilToInt(R * 100f / 255f),
+                    _g = Mathf.CeilToInt(G * 100f / 255f),
+                    _b = Mathf.CeilToInt(B * 100f / 255f);
                 switch (language)
                 {
                     case GameLanguageEnum.EN:

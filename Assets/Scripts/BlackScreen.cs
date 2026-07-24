@@ -64,7 +64,8 @@ namespace SlimeColorShop
             while (canvasGroupComponent.alpha < 1f)
             {
                 canvasGroupComponent.alpha += delta;
-                UniversalAudioManager.Instance.UpdateAudioVolume(1f - canvasGroupComponent.alpha);
+                if (!InventoryManager.Instance.IsBGMMuted())
+                    UniversalAudioManager.Instance.UpdateAudioVolume(1f - canvasGroupComponent.alpha);
                 yield return new WaitForFixedUpdate();
             }
             isBlackedOut = true;

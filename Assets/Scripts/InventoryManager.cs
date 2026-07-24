@@ -254,5 +254,10 @@ namespace SlimeColorShop
             int createdAt = (int)Utility.GetCurrentTimestamp();
             leaderboardEntry.SubmitScore(score, createdAt);
         }
+
+        public LeaderboardEntry GetLeaderboardEntry()
+        {
+            return leaderboardEntry;
+        }
     }
 }

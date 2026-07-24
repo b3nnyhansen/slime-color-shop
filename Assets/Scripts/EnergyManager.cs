@@ -21,9 +21,9 @@ namespace SlimeColorShop
             this.inventoryManager = inventoryManager;
             SetOnCountdownEndAction(onCountdownEndAction);
 
-            ComputeTimeDifference();
+            SetEnergyTimeText("");
             SetEnergyValueText();
-            StartCoroutine(Idle());
+            // StartCoroutine(Idle());
         }
 
         private void ComputeTimeDifference()

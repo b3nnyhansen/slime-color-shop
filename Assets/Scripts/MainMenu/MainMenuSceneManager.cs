@@ -13,26 +13,30 @@ namespace SlimeColorShop.MainMenu
         [SerializeField] private GameButton shopButton;
         [SerializeField] private GameButton decorButton;
         [SerializeField] private GameButton encyclopediaButton;
+        [SerializeField] private GameButton leaderboardButton;
         [SerializeField] private ShowTextEffect showTextEffectObject;
         [SerializeField] private SlimeDatabase slimeDatabase;
         [SerializeField] private PatrollingSlimeV2 patrollingSlimeV2;
         [SerializeField] private SpineDatabase spineDatabase;
+        [SerializeField] private LeaderboardFormHandler leaderboardFormHandler;
 
         protected override void DoStartEvent()
         {
             base.DoStartEvent();
             
             decorationHandler.Init();
+            leaderboardFormHandler.Init();
             playButton.Init(
                 delegate
                 {
-                    if (InventoryManager.Instance.IsEnergyEmpty())
-                    {
-                        RectTransform rectTransform = playButton.GetComponent<RectTransform>();
-                        ShowTextEffect instance = Instantiate(showTextEffectObject, rectTransform);
-                        instance.Init(Vector2.zero, "Not enough energy!", Color.red);
-                        return;
-                    }
+                    // if (InventoryManager.Instance.IsEnergyEmpty())
+                    // {
+                    //     RectTransform rectTransform = playButton.GetComponent<RectTransform>();
+                    //     ShowTextEffect instance = Instantiate(showTextEffectObject, rectTransform);
+                    //     instance.Init(Vector2.zero, "Not enough energy!", Color.red);
+                    //     return;
+                    // }
+                    InventoryManager.Instance.SaveEnergyData();
                     BlackScreen.Instance.DoFadeOut(
                         onPostTransitionAction: delegate
                         {
@@ -54,15 +58,22 @@ namespace SlimeColorShop.MainMenu
                     LoadScene(SceneNameEnum.DECOR);
                 }
             );
-            encyclopediaButton.Init(
+            // encyclopediaButton.Init(
+            //     delegate
+            //     {
+            //         LoadScene(SceneNameEnum.ENCYCLOPEDIA);
+            //     }
+            // );
+            leaderboardButton.Init(
                 delegate
                 {
-                    LoadScene(SceneNameEnum.ENCYCLOPEDIA);
+                    leaderboardFormHandler.Show();
                 }
             );
 
             InitPatrollingSlime();
 
+            UniversalAudioManager.Instance.UpdateAudioVolume();
             if (BlackScreen.Instance.IsBlackedOut)
             {
                 BlackScreen.Instance.DoFadeIn(
