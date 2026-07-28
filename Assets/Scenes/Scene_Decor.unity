@@ -446,7 +446,7 @@ PrefabInstance:
     - target: {fileID: 4826596178120546427, guid: 8c314acce0db03e468151c40355d327b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6206636944955622666, guid: 7a03823120f53a3459cb8378e5dc7d20, type: 3}
+      objectReference: {fileID: 89881996876820253, guid: 733ae1b304d496b4290cf37df9accc0b, type: 3}
     - target: {fileID: 7736828013766263790, guid: 8c314acce0db03e468151c40355d327b, type: 3}
       propertyPath: m_Name
       value: Return Button
@@ -1401,6 +1401,7 @@ MonoBehaviour:
   removeDecorButton: {fileID: 1891169762}
   decorationSelectButtonObject: {fileID: 6665793506491678679, guid: 3b16dbb3a060cde44917c7f8a2cbd1be, type: 3}
   selectionTransform: {fileID: 1582275731}
+  decorationSelectButtons: []
 --- !u!1 &1890319566
 GameObject:
   m_ObjectHideFlags: 0

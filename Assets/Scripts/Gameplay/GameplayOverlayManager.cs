@@ -32,10 +32,10 @@ namespace SlimeColorShop.Gameplay
             Show();
         }
 
-        public void ShowGameOverScreen(int score=0, int maxScore=0)
+        public void ShowGameOverScreen(int score=0, int maxScore=0, int coin=0)
         {
             pauseScreen.Hide();
-            gameOverScreen.ShowScore(score, maxScore);
+            gameOverScreen.ShowScore(score, maxScore, coin);
             Show();
         }
     }

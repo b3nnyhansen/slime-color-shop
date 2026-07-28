@@ -22,7 +22,7 @@ namespace SlimeColorShop
             SetOnCountdownEndAction(onCountdownEndAction);
 
             SetEnergyTimeText("");
-            SetEnergyValueText();
+            SetEnergyValueText(true);
             // StartCoroutine(Idle());
         }
 
@@ -57,9 +57,10 @@ namespace SlimeColorShop
             this.onCountdownEndAction = onCountdownEndAction;
         }
 
-        public void SetEnergyValueText()
+        public void SetEnergyValueText(bool emptyString = false)
         {
-            string text = inventoryManager.LoadEnergyData().ToString();
+            int value = inventoryManager.LoadEnergyData();
+            string text = (emptyString || value < 1) ? "--" : value.ToString();
             SetEnergyValueText(text);
         }
 
@@ -84,6 +85,7 @@ namespace SlimeColorShop
 
         IEnumerator Countdown()
         {
+            SetEnergyValueText();
             int energyValue = inventoryManager.LoadEnergyData();
             while (energyValue > 0)
             {

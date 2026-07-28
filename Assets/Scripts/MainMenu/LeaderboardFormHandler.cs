@@ -38,9 +38,9 @@ namespace SlimeColorShop.MainMenu
                 if (i < leaderboardEntry.CurrentEntriesCount)
                 {
                     LeaderboardRowEntry row = leaderboardEntry.Rows[i];
+                    string numberText = (i+1).ToString();
                     string scoreText = row.GetScoreText();
-                    string timestampText = row.GetCreatedAtText();
-                    leaderboardFormRows[i].Init(scoreText, timestampText);
+                    leaderboardFormRows[i].Init(numberText, scoreText);
                 }
                 else
                 {

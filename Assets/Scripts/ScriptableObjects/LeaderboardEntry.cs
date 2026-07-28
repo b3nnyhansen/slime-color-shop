@@ -8,8 +8,8 @@ namespace SlimeColorShop.Data
     public class LeaderboardEntry : ScriptableObject
     {
         public string SaveId;
-        private List<LeaderboardRowEntry> rows = new List<LeaderboardRowEntry>();
-        private const int MaxEntries = 10;
+        public List<LeaderboardRowEntry> rows = new List<LeaderboardRowEntry>();
+        private const int MaxEntries = 5;
         public int MaxEntriesCount
         {
             get { return MaxEntries; }

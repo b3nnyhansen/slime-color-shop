@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acb7b796da5201643a81f408365fdd3f, type: 3}
   m_Name: Data_Player_Language
   m_EditorClassIdentifier: 
-  SaveId: 
+  SaveId: PLAYER_LANGUAGE
   DefaultValue: 0

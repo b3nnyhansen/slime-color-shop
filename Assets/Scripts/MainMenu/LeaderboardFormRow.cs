@@ -5,23 +5,23 @@ namespace SlimeColorShop.MainMenu
 {
     public class LeaderboardFormRow : MonoBehaviour
     {
+        [SerializeField] private TextMeshProUGUI numberText;
         [SerializeField] private TextMeshProUGUI scoreText;
-        [SerializeField] private TextMeshProUGUI timestampText;
 
-        public void Init(string scoreText, string timestampText)
+        public void Init(string numberText, string scoreText)
         {
+            SetNumberText(numberText);
             SetScoreText(scoreText);
-            SetTimestampText(timestampText);
+        }
+
+        public void SetNumberText(string numberText)
+        {
+            this.numberText.text = numberText;
         }
 
         public void SetScoreText(string scoreText)
         {
             this.scoreText.text = scoreText;
-        }
-
-        public void SetTimestampText(string timestampText)
-        {
-            this.timestampText.text = timestampText;
         }
     }
 }

@@ -36,15 +36,17 @@ namespace SlimeColorShop.Gameplay
             if (!isChangingSize)
                 StartCoroutine( TranslateIndicatorBarOverTime() );
             
-            if(!isSparkling && IsBonusTakingEffect())
+            if (IsBonusTakingEffect())
             {
-                isSparkling = true;
-                StartCoroutine( Sparkle() );
+                if (!isSparkling)
+                {
+                    isSparkling = true;
+                    StartCoroutine( Sparkle() );
+                }
+                return;
             }
-            else
-            {
-                isSparkling = false;
-            }
+
+            isSparkling = false;
         }
 
         private void SetTargetHeight()

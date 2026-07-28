@@ -28,7 +28,7 @@ namespace SlimeColorShop.Gameplay
         private ColorQuestionEntry currentColorQuestion;
         private ColorQuestionEntryV2 currentColorQuestionV2;
         private bool isProcessingAnswer = false;
-        private int score;
+        private int score, coin;
 
         protected override void DoStartEvent()
         {
@@ -37,6 +37,7 @@ namespace SlimeColorShop.Gameplay
             Instance = this;
             inventoryManager = InventoryManager.Instance;
             score = 0;
+            coin = 0;
             InitQuestion();
             colorPicker.Init();
             InitSlimeV2();
@@ -198,6 +199,18 @@ namespace SlimeColorShop.Gameplay
             );
         }
 
+        public void LoadGameplayScene()
+        {
+            InventoryManager.Instance.SaveEnergyData();
+            BlackScreen.Instance.DoFadeOut(
+                onPostTransitionAction: delegate
+                {
+                    UniversalAudioManager.Instance.StopBGMAudio();
+                    LoadScene(SceneNameEnum.GAMEPLAY);
+                }
+            );
+        }
+
         #region PAUSE_AND_GAME_OVER_CONTROL
         public void PauseGame()
         {
@@ -224,7 +237,7 @@ namespace SlimeColorShop.Gameplay
         public void ShowGameOverScreen()
         {
             gameplayOverlayManager.ShowGameOverScreen(
-                score, inventoryManager.LoadMaxScoreData()
+                score, inventoryManager.LoadMaxScoreData(), coin
             );
             inventoryManager.SubmitScoreToLeaderboard(score);
             inventoryManager.ShowInterstitial();
@@ -313,6 +326,7 @@ namespace SlimeColorShop.Gameplay
             }
             if (bonusDisplay.IsBonusTakingEffect())
                 coinIncreaseValue *= 2;
+            coin += coinIncreaseValue;
             inventoryManager.AddCoin(coinIncreaseValue);
         }
         #endregion
@@ -328,6 +342,7 @@ namespace SlimeColorShop.Gameplay
         public class ColorQuestionEntryV2
         {
             private int r, g, b;
+            private int rPerc, gPerc, bPerc;
             public int R { get { return r; } }
             public int G { get { return g; } }
             public int B { get { return b; } }
@@ -336,6 +351,9 @@ namespace SlimeColorShop.Gameplay
                 this.r = r < 6 ? r * 25 : r * 25 + 3;
                 this.g = g < 6 ? g * 25 : r * 25 + 3;
                 this.b = b < 6 ? b * 25 : r * 25 + 3;
+                rPerc = r * 10;
+                gPerc = g * 10;
+                bPerc = b * 10;
             }
             public bool IsAnswerCorrect(int r, int g, int b, int threshold = 0)
             {
@@ -346,17 +364,14 @@ namespace SlimeColorShop.Gameplay
             }
             public string GetCombinationPhrase(GameLanguageEnum language = GameLanguageEnum.EN)
             {
-                int _r = Mathf.CeilToInt(R * 100f / 255f),
-                    _g = Mathf.CeilToInt(G * 100f / 255f),
-                    _b = Mathf.CeilToInt(B * 100f / 255f);
                 switch (language)
                 {
                     case GameLanguageEnum.EN:
-                        return string.Format("{0}% red, {1}% green, {2}% blue", _r, _g, _b);
+                        return string.Format("{0}% red, {1}% green, {2}% blue", rPerc, gPerc, bPerc);
                     case GameLanguageEnum.ID:
-                        return string.Format("{0}% merah, {1}% hijau, {2}% biru", _r, _g, _b);
+                        return string.Format("{0}% merah, {1}% hijau, {2}% biru", rPerc, gPerc, bPerc);
                     default:
-                        return string.Format("{0}% red, {1}% green, {2}% blue", _r, _g, _b);
+                        return string.Format("{0}% red, {1}% green, {2}% blue", rPerc, gPerc, bPerc);
                 }
             }
         }

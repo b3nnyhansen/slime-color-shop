@@ -7,8 +7,11 @@ namespace SlimeColorShop.Gameplay
     public class GameOverScreen : MonoBehaviour
     {
         [SerializeField] private CanvasGroup canvasGroupComponent;
-        [SerializeField] private Button menuButton;
+        [SerializeField] private GameButtonV3 menuButton;
+        [SerializeField] private GameButtonV3 replayButton;
         [SerializeField] private TextMeshProUGUI scoreText;
+        [SerializeField] private TextMeshProUGUI coinText;
+        [SerializeField] private Image headerImage;
 
         public void Init()
         {
@@ -17,10 +20,16 @@ namespace SlimeColorShop.Gameplay
 
         private void InitButtons()
         {
-            menuButton.onClick.AddListener(
+            menuButton.Init(
                 delegate
                 {
                     GameplaySceneManager.Instance.LoadMainMenuScene();
+                }
+            );
+            replayButton.Init(
+                delegate
+                {
+                    GameplaySceneManager.Instance.LoadGameplayScene();
                 }
             );
         }
@@ -35,15 +44,39 @@ namespace SlimeColorShop.Gameplay
             Utility.HideCanvasGroup(canvasGroupComponent);
         }
 
-        public void SetScoreText(int score, int maxScore)
+        public void SetScoreText(int score)
         {
-            scoreText.text = string.Format("Score: {0}\nMax Score: {1}", score, maxScore);
+            scoreText.text = string.Format("{0}", score);
         }
 
-        public void ShowScore(int score, int maxScore)
+        public void SetCoinText(int coin)
         {
-            SetScoreText(score, maxScore);
+            scoreText.text = string.Format("{0}", coin);
+        }
+
+        public void ShowScore(int score, int maxScore, int coin)
+        {
+            if (score < maxScore)
+            {
+                HideHeaderImage();
+            }
+            else
+            {
+                ShowHeaderImage();
+            }
+            SetScoreText(score);
+            SetCoinText(coin);
             Show();
+        }
+
+        public void ShowHeaderImage()
+        {
+            headerImage.color = Color.white;
+        }
+
+        public void HideHeaderImage()
+        {
+            headerImage.color = Color.clear;
         }
     }
 }

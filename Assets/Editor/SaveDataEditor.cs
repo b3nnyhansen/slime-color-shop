@@ -17,6 +17,16 @@ namespace SlimeColorShop.Editor
         {
             PlayerPrefs.DeleteAll();
         }
+
+        [MenuItem("Assets/Editor/Show Save Value/PERSONAL_RECORD")]
+        public static void Show_PERSONAL_RECORD()
+        {
+            string key = "PERSONAL_RECORD";
+            string saveData = PlayerPrefs.GetString(key, "");
+            Debug.Log(
+                string.Format("'{0}': '{1}'", key, saveData)
+            );
+        }
     }
 }
 #endif

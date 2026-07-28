@@ -118,7 +118,8 @@ namespace SlimeColorShop.MainMenu
             playButton.SetButtonTextLanguage();
             shopButton.SetButtonTextLanguage();
             decorButton.SetButtonTextLanguage();
-            encyclopediaButton.SetButtonTextLanguage();
+            // encyclopediaButton.SetButtonTextLanguage();
+            leaderboardButton.SetButtonTextLanguage();
         }
     }
 }
