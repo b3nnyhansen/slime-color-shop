@@ -2,19 +2,16 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using SlimeColorShop.Data;
 using SlimeColorShop.Audio;
 
 namespace SlimeColorShop
 {
-    public class GameButtonV2WithText : MonoBehaviour
+    public class GameButtonV2WithText : BaseGameButton
     {
-        protected Action onClickAction;
         [SerializeField] protected TextMeshProUGUI textComponent;
-        protected Button buttonComponent;
         protected bool isOn;
-        [SerializeField] protected String onText;
-        [SerializeField] protected String offText;
+        [SerializeField] protected string onText;
+        [SerializeField] protected string offText;
 
         public virtual void Init(bool isOn = true, Action onClickAction = null)
         {
@@ -25,7 +22,7 @@ namespace SlimeColorShop
             SetOnClickAction();
         }
 
-        protected virtual void SetOnClickAction()
+        protected override void SetOnClickAction()
         {
             buttonComponent.onClick.AddListener(
                 delegate

@@ -8,17 +8,18 @@ namespace SlimeColorShop.MainMenu
 {
     public class MainMenuSceneManager : BaseSceneManager
     {
-        [SerializeField] private DecorationHandler decorationHandler;
+        [SerializeField] private DecorationHandlerV2 decorationHandler;
         [SerializeField] private GameButton playButton;
-        [SerializeField] private GameButton shopButton;
-        [SerializeField] private GameButton decorButton;
-        [SerializeField] private GameButton encyclopediaButton;
-        [SerializeField] private GameButton leaderboardButton;
+        // [SerializeField] private GameButton shopButton;
+        // [SerializeField] private GameButton decorButton;
+        // [SerializeField] private GameButton encyclopediaButton;
+        [SerializeField] private GameButtonV3 leaderboardButton;
         [SerializeField] private ShowTextEffect showTextEffectObject;
         [SerializeField] private SlimeDatabase slimeDatabase;
         [SerializeField] private PatrollingSlimeV2 patrollingSlimeV2;
         [SerializeField] private SpineDatabase spineDatabase;
         [SerializeField] private LeaderboardFormHandler leaderboardFormHandler;
+        [SerializeField] private DecorationSelectFormHandler decorationSelectFormHandler;
 
         protected override void DoStartEvent()
         {
@@ -26,6 +27,7 @@ namespace SlimeColorShop.MainMenu
             
             decorationHandler.Init();
             leaderboardFormHandler.Init();
+            decorationSelectFormHandler.Init();
             playButton.Init(
                 delegate
                 {
@@ -46,24 +48,6 @@ namespace SlimeColorShop.MainMenu
                     );
                 }
             );
-            shopButton.Init(
-                delegate
-                {
-                    LoadScene(SceneNameEnum.SHOP);
-                }
-            );
-            decorButton.Init(
-                delegate
-                {
-                    LoadScene(SceneNameEnum.DECOR);
-                }
-            );
-            // encyclopediaButton.Init(
-            //     delegate
-            //     {
-            //         LoadScene(SceneNameEnum.ENCYCLOPEDIA);
-            //     }
-            // );
             leaderboardButton.Init(
                 delegate
                 {
@@ -116,10 +100,7 @@ namespace SlimeColorShop.MainMenu
         public override void UpdateSceneLanguage()
         {
             playButton.SetButtonTextLanguage();
-            shopButton.SetButtonTextLanguage();
-            decorButton.SetButtonTextLanguage();
-            // encyclopediaButton.SetButtonTextLanguage();
-            leaderboardButton.SetButtonTextLanguage();
+            // leaderboardButton.SetButtonTextLanguage();
         }
     }
 }

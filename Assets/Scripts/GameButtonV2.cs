@@ -7,11 +7,8 @@ using SlimeColorShop.Audio;
 
 namespace SlimeColorShop
 {
-    public class GameButtonV2 : MonoBehaviour
+    public class GameButtonV2 : BaseGameButton
     {
-        protected Action onClickAction;
-        protected Image imageComponent;
-        protected Button buttonComponent;
         protected bool isOn;
         [SerializeField] protected Sprite onSprite;
         [SerializeField] protected Sprite offSprite;
@@ -26,7 +23,7 @@ namespace SlimeColorShop
             SetOnClickAction();
         }
 
-        protected virtual void SetOnClickAction()
+        protected override void SetOnClickAction()
         {
             buttonComponent.onClick.AddListener(
                 delegate

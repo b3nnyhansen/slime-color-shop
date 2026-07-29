@@ -7,22 +7,17 @@ using SlimeColorShop.Audio;
 
 namespace SlimeColorShop
 {
-    public class GameButton : MonoBehaviour
+    public class GameButton : BaseGameButton
     {
-        protected Action onClickAction;
-        protected Image imageComponent;
-        protected Button buttonComponent;
         protected TextMeshProUGUI buttonTextComponent;
         protected Color originalButtonBackgroundColor;
         protected Color originalButtonFontColor;
         [SerializeField] protected string enText;
         [SerializeField] protected string idText;
 
-        public virtual void Init(Action onClickAction = null)
+        public override void Init(Action onClickAction = null)
         {
-            this.onClickAction = onClickAction;
-            imageComponent = gameObject.GetComponent<Image>();
-            buttonComponent = gameObject.GetComponent<Button>();
+            base.Init(onClickAction);
             try
             {
                 buttonTextComponent = transform.GetChild(0).GetComponent<TextMeshProUGUI>();
@@ -37,18 +32,6 @@ namespace SlimeColorShop
                 originalButtonFontColor = buttonTextComponent.color;
 
             SetButtonTextLanguage();
-            SetOnClickAction();
-        }
-
-        protected virtual void SetOnClickAction()
-        {
-            buttonComponent.onClick.AddListener(
-                delegate
-                {
-                    onClickAction?.Invoke();
-                    UniversalAudioManager.Instance.PlaySFX(AudioEnum.SFX_BUTTON_CLICK);
-                }
-            );
         }
 
         public virtual void SetButtonText(string text)
